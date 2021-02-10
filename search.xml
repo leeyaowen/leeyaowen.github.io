@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>在NexT中增加canvas nest特效</title>
+    <url>/2021/02/10/20210210-add-canvas-nest/</url>
+    <content><![CDATA[<p>剛開始使用Hexo<br>想增加幾何線條的特效，滑鼠移動過去時會吸引線條<br>方法是在<code>themes/next/layout/_layout.swig</code>中的<code>&lt;body&gt;</code>區塊增加以下code</p>
+<figure class="highlight html"><figcaption><span>HTML</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">color</span>=<span class="string">&quot;0,0,0&quot;</span> <span class="attr">opacity</span>=<span class="string">&#x27;0.5&#x27;</span> <span class="attr">zIndex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">count</span>=<span class="string">&quot;99&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>準備踏入股票市場</title>
+    <url>/2021/02/10/20210210-stock/</url>
+    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
+]]></content>
+      <categories>
+        <category>stock</category>
+      </categories>
+      <tags>
+        <tag>stock</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+</search>
