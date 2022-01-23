@@ -15,6 +15,19 @@
       </tags>
   </entry>
   <entry>
+    <title>準備踏入股票市場</title>
+    <url>/2021/02/10/20210210-stock/</url>
+    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
+]]></content>
+      <categories>
+        <category>stock</category>
+      </categories>
+      <tags>
+        <tag>stock</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
     <url>/2021/02/11/20210211-S2A-75-sample/</url>
     <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
@@ -32,16 +45,26 @@
       </tags>
   </entry>
   <entry>
-    <title>準備踏入股票市場</title>
-    <url>/2021/02/10/20210210-stock/</url>
-    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
+    <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
+    <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
+    <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
+<a id="more"></a>
+<p>選擇月報表後可以看到以下資料，點擊下載csv檔可以獲得該月資料<br><img src="https://photos.smugmug.com/photos/i-wZJPz2X/0/66c8270f/XL/i-wZJPz2X-XL.png"><br>這邊以收集2021年資料為例，將其整理至一資料夾，如下圖<br><img src="https://photos.smugmug.com/photos/i-LzkqMhQ/0/0f3f4c60/O/i-LzkqMhQ.png"></p>
+<p>之後以R繪製雨量資料</p>
+<figure class="highlight r"><figcaption><span>R</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">####load packages####</span></span><br><span class="line">library(dplyr)</span><br><span class="line">library(magrittr)</span><br><span class="line">library(ggplot2)</span><br><span class="line">library(stringr)</span><br><span class="line"></span><br><span class="line"><span class="comment">####bind data####</span></span><br><span class="line">filenames&lt;-list.files(<span class="string">&quot;./Binlang&quot;</span>,pattern = <span class="string">&quot;.csv&quot;</span>)</span><br><span class="line">precpdf&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[<span class="number">1</span>]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">  mutate(month=str_sub(filenames[<span class="number">1</span>],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">2</span>:<span class="built_in">length</span>(filenames)) &#123;</span><br><span class="line">  dttemp&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[i]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">    mutate(month=str_sub(filenames[i],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line">  precpdf&lt;-bind_rows(precpdf,dttemp)</span><br><span class="line">&#125;</span><br><span class="line">precpdf$Precp&lt;-<span class="built_in">as.numeric</span>(precpdf$Precp)</span><br><span class="line">precpdf&lt;-precpdf %&gt;%</span><br><span class="line">  group_by(month) %&gt;%</span><br><span class="line">  summarise(precp=<span class="built_in">sum</span>(Precp,na.rm = <span class="built_in">T</span>)) %&gt;%</span><br><span class="line">  ungroup()</span><br><span class="line"></span><br><span class="line"><span class="comment">####plot####</span></span><br><span class="line">p&lt;-ggplot(data = precpdf,aes(x=month,y=precp))+</span><br><span class="line">  geom_bar(stat = <span class="string">&quot;identity&quot;</span>)+</span><br><span class="line">  labs(title = <span class="string">&quot;Binlang&quot;</span>)+</span><br><span class="line">  geom_text(aes(y=precp,label=precp),vjust=-<span class="number">0.5</span>)+</span><br><span class="line">  theme_classic()+</span><br><span class="line">  theme(plot.title = element_text(hjust = <span class="number">0.5</span>))+</span><br><span class="line">  scale_y_continuous(limits = <span class="built_in">c</span>(<span class="number">0</span>,<span class="number">850</span>))</span><br><span class="line">p</span><br><span class="line">ggsave(filename = <span class="string">&quot;Binlang_2021_precp.png&quot;</span>,width = <span class="number">15</span>,height = <span class="number">10</span>,units = <span class="string">&quot;cm&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://photos.smugmug.com/photos/i-6KH9vX8/0/fe20c42a/XL/i-6KH9vX8-XL.png"></p>
 ]]></content>
       <categories>
-        <category>stock</category>
+        <category>R</category>
       </categories>
       <tags>
-        <tag>stock</tag>
-        <tag>life</tag>
+        <tag>code</tag>
+        <tag>R</tag>
+        <tag>coding</tag>
+        <tag>cwb</tag>
+        <tag>data visualization</tag>
+        <tag>ggplot2</tag>
       </tags>
   </entry>
 </search>
