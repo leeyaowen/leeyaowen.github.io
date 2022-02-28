@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>在NexT中增加canvas nest特效</title>
+    <url>/2021/02/10/20210210-add-canvas-nest/</url>
+    <content><![CDATA[<p>剛開始使用Hexo<br>想增加幾何線條的特效，滑鼠移動過去時會吸引線條<br>方法是在<code>themes/next/layout/_layout.swig</code>中的<code>&lt;body&gt;</code>區塊增加以下code</p>
+<figure class="highlight html"><figcaption><span>HTML</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">color</span>=<span class="string">&quot;0,0,0&quot;</span> <span class="attr">opacity</span>=<span class="string">&#x27;0.5&#x27;</span> <span class="attr">zIndex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">count</span>=<span class="string">&quot;99&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
     <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
     <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
@@ -15,45 +29,29 @@
         <category>R</category>
       </categories>
       <tags>
+        <tag>code</tag>
         <tag>R</tag>
         <tag>coding</tag>
-        <tag>code</tag>
         <tag>cwb</tag>
         <tag>data visualization</tag>
         <tag>ggplot2</tag>
       </tags>
   </entry>
   <entry>
-    <title>在NexT中增加canvas nest特效</title>
-    <url>/2021/02/10/20210210-add-canvas-nest/</url>
-    <content><![CDATA[<p>剛開始使用Hexo<br>想增加幾何線條的特效，滑鼠移動過去時會吸引線條<br>方法是在<code>themes/next/layout/_layout.swig</code>中的<code>&lt;body&gt;</code>區塊增加以下code</p>
-<figure class="highlight html"><figcaption><span>HTML</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">color</span>=<span class="string">&quot;0,0,0&quot;</span> <span class="attr">opacity</span>=<span class="string">&#x27;0.5&#x27;</span> <span class="attr">zIndex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">count</span>=<span class="string">&quot;99&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>hexo</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+    <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
+    <url>/2021/02/11/20210211-S2A-75-sample/</url>
+    <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
 <a id="more"></a>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-qn9CTM2/0/9e0d2fe4/X3/i-qn9CTM2-X3.jpg"><br>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-kFhhHmG/0/da3345b5/X3/i-kFhhHmG-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-jjjCvxj/0/5450fa45/X3/i-jjjCvxj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-R5gZhJj/0/bfa9213d/X3/i-R5gZhJj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-7cQfqLf/0/a7eb03b4/X3/i-7cQfqLf-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-hWvHvHs/0/e4faf719/X3/i-hWvHvHs-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-LNVJ8T9/0/44b4f220/X3/i-LNVJ8T9-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-hv2VfRC/0/aea0fb80/X3/i-hv2VfRC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-WrjdcbC/0/df9fcaae/X3/i-WrjdcbC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-sS8BtnD/0/ec5c9cf2/X3/i-sS8BtnD-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-V8sXTBg/0/d6d97473/X3/i-V8sXTBg-X3.jpg"></p>
 ]]></content>
       <categories>
         <category>photography</category>
       </categories>
       <tags>
         <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
         <tag>film</tag>
         <tag>bronica s2a</tag>
+        <tag>nikkor 75mm</tag>
       </tags>
   </entry>
   <entry>
@@ -71,6 +69,25 @@
         <tag>photovogue</tag>
         <tag>vogue</tag>
         <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<a id="more"></a>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
       </tags>
   </entry>
   <entry>
@@ -107,8 +124,8 @@
         <category>python</category>
       </categories>
       <tags>
-        <tag>coding</tag>
         <tag>code</tag>
+        <tag>coding</tag>
         <tag>python</tag>
         <tag>flickrapi</tag>
         <tag>web crawler</tag>
@@ -116,20 +133,19 @@
       </tags>
   </entry>
   <entry>
-    <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
-    <url>/2021/02/11/20210211-S2A-75-sample/</url>
-    <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
-<a id="more"></a>
-<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-qn9CTM2/0/9e0d2fe4/X3/i-qn9CTM2-X3.jpg"><br>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-kFhhHmG/0/da3345b5/X3/i-kFhhHmG-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-jjjCvxj/0/5450fa45/X3/i-jjjCvxj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-R5gZhJj/0/bfa9213d/X3/i-R5gZhJj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-7cQfqLf/0/a7eb03b4/X3/i-7cQfqLf-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-hWvHvHs/0/e4faf719/X3/i-hWvHvHs-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-LNVJ8T9/0/44b4f220/X3/i-LNVJ8T9-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-hv2VfRC/0/aea0fb80/X3/i-hv2VfRC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-WrjdcbC/0/df9fcaae/X3/i-WrjdcbC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-sS8BtnD/0/ec5c9cf2/X3/i-sS8BtnD-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-V8sXTBg/0/d6d97473/X3/i-V8sXTBg-X3.jpg"></p>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <url>/2022/02/28/20220221-photovogue/</url>
+    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
 ]]></content>
       <categories>
         <category>photography</category>
       </categories>
       <tags>
         <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>nikkor 75mm</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>canon</tag>
+        <tag>tamron 35mm f/1.8</tag>
       </tags>
   </entry>
   <entry>
