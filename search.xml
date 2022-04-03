@@ -45,25 +45,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
-<a id="more"></a>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
     <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
     <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
@@ -87,6 +68,25 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<a id="more"></a>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[PhotoVogue]No. 289</title>
     <url>/2022/02/02/20220202-photovogue/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
@@ -101,25 +101,6 @@
         <tag>photovogue</tag>
         <tag>vogue</tag>
         <tag>pixel 4a 5g</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[R]去除字串的多餘空白-從gdata到stringr</title>
-    <url>/2022/02/11/20220211-gdata-to-stringr/</url>
-    <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
-<p>如<code>&#39;abc&#39;</code>與<code>&#39;abc &#39;</code>是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於<strong>多了一個物種</strong><br>先前看到gdata有<code>trim</code>這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除<br>使用stringr的<code>str_trim</code>則不同，有both, left, right三個選擇</p>
-<p>gdata是一個有蠻多處理資料function的package，但其最後更新為2017年<br>stringr主要就是專門做字串處理，且為tidyverse之下的一員，針對字串處理的function豐富，也比較不用擔心沒人維護</p>
-<p>考量我也沒有在用gdata的其他功能，以及stringr有更多方便處理字串的function，就跳槽啦!</p>
-]]></content>
-      <categories>
-        <category>R</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-        <tag>coding</tag>
-        <tag>stringr</tag>
-        <tag>資料處理</tag>
-        <tag>去除空白</tag>
       </tags>
   </entry>
   <entry>
@@ -143,6 +124,25 @@
         <tag>flickrapi</tag>
         <tag>web crawler</tag>
         <tag>網路爬蟲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[R]去除字串的多餘空白-從gdata到stringr</title>
+    <url>/2022/02/11/20220211-gdata-to-stringr/</url>
+    <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
+<p>如<code>&#39;abc&#39;</code>與<code>&#39;abc &#39;</code>是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於<strong>多了一個物種</strong><br>先前看到gdata有<code>trim</code>這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除<br>使用stringr的<code>str_trim</code>則不同，有both, left, right三個選擇</p>
+<p>gdata是一個有蠻多處理資料function的package，但其最後更新為2017年<br>stringr主要就是專門做字串處理，且為tidyverse之下的一員，針對字串處理的function豐富，也比較不用擔心沒人維護</p>
+<p>考量我也沒有在用gdata的其他功能，以及stringr有更多方便處理字串的function，就跳槽啦!</p>
+]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+        <tag>coding</tag>
+        <tag>stringr</tag>
+        <tag>資料處理</tag>
+        <tag>去除空白</tag>
       </tags>
   </entry>
   <entry>
@@ -191,7 +191,7 @@
 <figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">h, w = <span class="number">3130</span>, <span class="number">2075</span> <span class="comment"># 關鍵的高與寬，不知道就沒法做囉~~~</span></span><br><span class="line">img = np.fromfile(<span class="string">&#x27;./1110315EOS30dateVIBE400-22-raw.raw&#x27;</span>, dtype=<span class="string">&#x27;uint8&#x27;</span>)</span><br><span class="line">img2jpg = np.reshape(img, (h, w, <span class="number">3</span>))</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img2jpg)[<span class="number">1</span>].tofile(<span class="string">&#x27;./raw2jpg.jpg&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>經過轉回jpg過程，可以獲得下圖<br><img src="https://photos.smugmug.com/photos/i-CWzmDMw/0/dafc4518/X4/i-CWzmDMw-X4.jpg"></p>
-<p>但是如果拿原圖去仔細比較RGB數值會有些微差異，因為存jpg就是要走一次壓縮流程</p>
+<p>但是如果拿原始jpg去仔細比較RGB數值會有些微差異，因為存jpg就是要走一次壓縮流程</p>
 <p>以後有人要原圖，可以給給看這種檔案?</p>
 ]]></content>
       <categories>
