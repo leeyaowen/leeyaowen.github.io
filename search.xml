@@ -15,19 +15,6 @@
       </tags>
   </entry>
   <entry>
-    <title>準備踏入股票市場</title>
-    <url>/2021/02/10/20210210-stock/</url>
-    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
-]]></content>
-      <categories>
-        <category>stock</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
     <url>/2021/02/11/20210211-S2A-75-sample/</url>
     <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
@@ -45,127 +32,16 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
-<a id="more"></a>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+    <title>準備踏入股票市場</title>
+    <url>/2021/02/10/20210210-stock/</url>
+    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
 ]]></content>
       <categories>
-        <category>photography</category>
+        <category>stock</category>
       </categories>
       <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]利用flickrapi爬取Flickr的圖片</title>
-    <url>/2022/02/03/20220203-flickr-crawler/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
-<a id="more"></a>
-<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
-<p>以下就是code的部分</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-
-<p>使用自行注意著作權問題喔~</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>python</tag>
-        <tag>coding</tag>
-        <tag>flickrapi</tag>
-        <tag>web crawler</tag>
-        <tag>網路爬蟲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
-    <url>/2022/03/19/20220319-img-resize/</url>
-    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
-<a id="more"></a>
-<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>python</tag>
-        <tag>coding</tag>
-        <tag>opencv</tag>
-        <tag>numpy</tag>
-        <tag>resize</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 290/No. 291</title>
-    <url>/2022/02/28/20220221-photovogue/</url>
-    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>canon</tag>
-        <tag>tamron 35mm f/1.8</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]想要RAW檔?可以先拿.raw壓壓驚</title>
-    <url>/2022/04/03/20220403-jpg2raw/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-S37M65H/0/ef628152/O/i-S37M65H.png"><br>我們廢話不多說，先上個<a href="https://github.com/leeyaowen/jpg2raw/releases">Windows載點</a><br>如首圖，只要將exe檔跟jpg檔放在同一目錄下就可以執行了</p>
-<a id="more"></a>
-<p>好像很多人喜歡跟攝影要原檔，那.raw可以嗎?<br>透過載下來的程式可以將jpg轉換為.raw副檔名(詳細code自己上我<a href="https://github.com/leeyaowen/jpg2raw/blob/main/jpg2raw.py">github</a>看吧)<br>按下執行後會出現以下視窗<br><img src="https://photos.smugmug.com/photos/i-F6VhFxn/0/b9bbe724/O/i-F6VhFxn.png"><br>如果上圖兩行字有跑完，那應該是完成轉換了<br>資料夾內會多出一個RawFile資料夾<br><img src="https://photos.smugmug.com/photos/i-CJWfRsT/0/c64feca8/O/i-CJWfRsT.png"><br><img src="https://photos.smugmug.com/photos/i-DcGdrrd/0/22692647/O/i-DcGdrrd.png"><br>我們可以嘗試用Win10內的圖片瀏覽器開啟，會發現不能開<br><img src="https://photos.smugmug.com/photos/i-HfmFw5v/0/43845256/O/i-HfmFw5v.png"><br>那換丟到Photoshop呢?<br><img src="https://photos.smugmug.com/photos/i-Hm6Rj2d/0/b5ffed91/O/i-Hm6Rj2d.png"><br><img src="https://photos.smugmug.com/photos/i-GZh9Msr/0/84ea6975/O/i-GZh9Msr.png"><br>看起來解的不成功，首圖都是彩色的才對</p>
-<p>這樣是不是很有RAW的感覺?你沒辦法隨便解開</p>
-<p>那這樣要怎麼還原?我們可以用以下方式</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">h, w = <span class="number">3130</span>, <span class="number">2075</span> <span class="comment"># 關鍵的高與寬，不知道就沒法做囉~~~</span></span><br><span class="line">img = np.fromfile(<span class="string">&#x27;./1110315EOS30dateVIBE400-22-raw.raw&#x27;</span>, dtype=<span class="string">&#x27;uint8&#x27;</span>)</span><br><span class="line">img2jpg = np.reshape(img, (h, w, <span class="number">3</span>))</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img2jpg)[<span class="number">1</span>].tofile(<span class="string">&#x27;./raw2jpg.jpg&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>經過轉回jpg過程，可以獲得下圖<br><img src="https://photos.smugmug.com/photos/i-CWzmDMw/0/dafc4518/X4/i-CWzmDMw-X4.jpg"></p>
-<p>但是如果拿原圖去仔細比較RGB數值會有些微差異，因為存jpg就是要走一次壓縮流程</p>
-<p>以後有人要原圖，可以給給看這種檔案?</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>python</tag>
-        <tag>coding</tag>
-        <tag>opencv</tag>
-        <tag>numpy</tag>
-        <tag>raw</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
-    <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
-    <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
-<a id="more"></a>
-<p>選擇月報表後可以看到以下資料，點擊下載csv檔可以獲得該月資料<br><img src="https://photos.smugmug.com/photos/i-wZJPz2X/0/66c8270f/XL/i-wZJPz2X-XL.png"><br>這邊以收集2021年資料為例，將其整理至一資料夾，如下圖<br><img src="https://photos.smugmug.com/photos/i-LzkqMhQ/0/0f3f4c60/O/i-LzkqMhQ.png"></p>
-<p>之後以R繪製雨量資料</p>
-<figure class="highlight r"><figcaption><span>R</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">####load packages####</span></span><br><span class="line">library(dplyr)</span><br><span class="line">library(magrittr)</span><br><span class="line">library(ggplot2)</span><br><span class="line">library(stringr)</span><br><span class="line"></span><br><span class="line"><span class="comment">####bind data####</span></span><br><span class="line">filenames&lt;-list.files(<span class="string">&quot;./Binlang&quot;</span>,pattern = <span class="string">&quot;.csv&quot;</span>)</span><br><span class="line">precpdf&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[<span class="number">1</span>]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">  mutate(month=str_sub(filenames[<span class="number">1</span>],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">2</span>:<span class="built_in">length</span>(filenames)) &#123;</span><br><span class="line">  dttemp&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[i]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">    mutate(month=str_sub(filenames[i],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line">  precpdf&lt;-bind_rows(precpdf,dttemp)</span><br><span class="line">&#125;</span><br><span class="line">precpdf$Precp&lt;-<span class="built_in">as.numeric</span>(precpdf$Precp)</span><br><span class="line">precpdf&lt;-precpdf %&gt;%</span><br><span class="line">  group_by(month) %&gt;%</span><br><span class="line">  summarise(precp=<span class="built_in">sum</span>(Precp,na.rm = <span class="built_in">T</span>)) %&gt;%</span><br><span class="line">  ungroup()</span><br><span class="line"></span><br><span class="line"><span class="comment">####plot####</span></span><br><span class="line">p&lt;-ggplot(data = precpdf,aes(x=month,y=precp))+</span><br><span class="line">  geom_bar(stat = <span class="string">&quot;identity&quot;</span>)+</span><br><span class="line">  labs(title = <span class="string">&quot;Binlang&quot;</span>)+</span><br><span class="line">  geom_text(aes(y=precp,label=precp),vjust=-<span class="number">0.5</span>)+</span><br><span class="line">  theme_classic()+</span><br><span class="line">  theme(plot.title = element_text(hjust = <span class="number">0.5</span>))+</span><br><span class="line">  scale_y_continuous(limits = <span class="built_in">c</span>(<span class="number">0</span>,<span class="number">850</span>))</span><br><span class="line">p</span><br><span class="line">ggsave(filename = <span class="string">&quot;Binlang_2021_precp.png&quot;</span>,width = <span class="number">15</span>,height = <span class="number">10</span>,units = <span class="string">&quot;cm&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://photos.smugmug.com/photos/i-6KH9vX8/0/fe20c42a/XL/i-6KH9vX8-XL.png"></p>
-]]></content>
-      <categories>
-        <category>R</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>R</tag>
-        <tag>cwb</tag>
-        <tag>data visualization</tag>
-        <tag>ggplot2</tag>
+        <tag>stock</tag>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -188,6 +64,46 @@
       </tags>
   </entry>
   <entry>
+    <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
+    <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
+    <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
+<a id="more"></a>
+<p>選擇月報表後可以看到以下資料，點擊下載csv檔可以獲得該月資料<br><img src="https://photos.smugmug.com/photos/i-wZJPz2X/0/66c8270f/XL/i-wZJPz2X-XL.png"><br>這邊以收集2021年資料為例，將其整理至一資料夾，如下圖<br><img src="https://photos.smugmug.com/photos/i-LzkqMhQ/0/0f3f4c60/O/i-LzkqMhQ.png"></p>
+<p>之後以R繪製雨量資料</p>
+<figure class="highlight r"><figcaption><span>R</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">####load packages####</span></span><br><span class="line">library(dplyr)</span><br><span class="line">library(magrittr)</span><br><span class="line">library(ggplot2)</span><br><span class="line">library(stringr)</span><br><span class="line"></span><br><span class="line"><span class="comment">####bind data####</span></span><br><span class="line">filenames&lt;-list.files(<span class="string">&quot;./Binlang&quot;</span>,pattern = <span class="string">&quot;.csv&quot;</span>)</span><br><span class="line">precpdf&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[<span class="number">1</span>]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">  mutate(month=str_sub(filenames[<span class="number">1</span>],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">2</span>:<span class="built_in">length</span>(filenames)) &#123;</span><br><span class="line">  dttemp&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[i]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">    mutate(month=str_sub(filenames[i],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line">  precpdf&lt;-bind_rows(precpdf,dttemp)</span><br><span class="line">&#125;</span><br><span class="line">precpdf$Precp&lt;-<span class="built_in">as.numeric</span>(precpdf$Precp)</span><br><span class="line">precpdf&lt;-precpdf %&gt;%</span><br><span class="line">  group_by(month) %&gt;%</span><br><span class="line">  summarise(precp=<span class="built_in">sum</span>(Precp,na.rm = <span class="built_in">T</span>)) %&gt;%</span><br><span class="line">  ungroup()</span><br><span class="line"></span><br><span class="line"><span class="comment">####plot####</span></span><br><span class="line">p&lt;-ggplot(data = precpdf,aes(x=month,y=precp))+</span><br><span class="line">  geom_bar(stat = <span class="string">&quot;identity&quot;</span>)+</span><br><span class="line">  labs(title = <span class="string">&quot;Binlang&quot;</span>)+</span><br><span class="line">  geom_text(aes(y=precp,label=precp),vjust=-<span class="number">0.5</span>)+</span><br><span class="line">  theme_classic()+</span><br><span class="line">  theme(plot.title = element_text(hjust = <span class="number">0.5</span>))+</span><br><span class="line">  scale_y_continuous(limits = <span class="built_in">c</span>(<span class="number">0</span>,<span class="number">850</span>))</span><br><span class="line">p</span><br><span class="line">ggsave(filename = <span class="string">&quot;Binlang_2021_precp.png&quot;</span>,width = <span class="number">15</span>,height = <span class="number">10</span>,units = <span class="string">&quot;cm&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://photos.smugmug.com/photos/i-6KH9vX8/0/fe20c42a/XL/i-6KH9vX8-XL.png"></p>
+]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>R</tag>
+        <tag>coding</tag>
+        <tag>cwb</tag>
+        <tag>data visualization</tag>
+        <tag>ggplot2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<a id="more"></a>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[R]去除字串的多餘空白-從gdata到stringr</title>
     <url>/2022/02/11/20220211-gdata-to-stringr/</url>
     <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
@@ -199,11 +115,95 @@
         <category>R</category>
       </categories>
       <tags>
-        <tag>coding</tag>
         <tag>R</tag>
+        <tag>coding</tag>
         <tag>stringr</tag>
         <tag>資料處理</tag>
         <tag>去除空白</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]利用flickrapi爬取Flickr的圖片</title>
+    <url>/2022/02/03/20220203-flickr-crawler/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
+<a id="more"></a>
+<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
+<p>以下就是code的部分</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>使用自行注意著作權問題喔~</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>flickrapi</tag>
+        <tag>web crawler</tag>
+        <tag>網路爬蟲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <url>/2022/02/28/20220221-photovogue/</url>
+    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>canon</tag>
+        <tag>tamron 35mm f/1.8</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
+    <url>/2022/03/19/20220319-img-resize/</url>
+    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
+<a id="more"></a>
+<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>numpy</tag>
+        <tag>resize</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]想要RAW檔?可以先拿.raw壓壓驚</title>
+    <url>/2022/04/03/20220403-jpg2raw/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-S37M65H/0/ef628152/O/i-S37M65H.png"><br>我們廢話不多說，先上個<a href="https://github.com/leeyaowen/jpg2raw/releases">Windows載點</a><br>如首圖，只要將exe檔跟jpg檔放在同一目錄下就可以執行了</p>
+<a id="more"></a>
+<p>好像很多人喜歡跟攝影要原檔，那.raw可以嗎?<br>透過載下來的程式可以將jpg轉換為.raw副檔名(詳細code自己上我<a href="https://github.com/leeyaowen/jpg2raw/blob/main/jpg2raw.py">github</a>看吧)<br>按下執行後會出現以下視窗<br><img src="https://photos.smugmug.com/photos/i-F6VhFxn/0/b9bbe724/O/i-F6VhFxn.png"><br>如果上圖兩行字有跑完，那應該是完成轉換了<br>資料夾內會多出一個RawFile資料夾<br><img src="https://photos.smugmug.com/photos/i-CJWfRsT/0/c64feca8/O/i-CJWfRsT.png"><br><img src="https://photos.smugmug.com/photos/i-DcGdrrd/0/22692647/O/i-DcGdrrd.png"><br>我們可以嘗試用Win10內的圖片瀏覽器開啟，會發現不能開<br><img src="https://photos.smugmug.com/photos/i-HfmFw5v/0/43845256/O/i-HfmFw5v.png"><br>那換丟到Photoshop呢?<br><img src="https://photos.smugmug.com/photos/i-Hm6Rj2d/0/b5ffed91/O/i-Hm6Rj2d.png"><br><img src="https://photos.smugmug.com/photos/i-GZh9Msr/0/84ea6975/O/i-GZh9Msr.png"><br>看起來解的不成功，首圖都是彩色的才對</p>
+<p>這樣是不是很有RAW的感覺?你沒辦法隨便解開</p>
+<p>那這樣要怎麼還原?我們可以用以下方式</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">h, w = <span class="number">3130</span>, <span class="number">2075</span> <span class="comment"># 關鍵的高與寬，不知道就沒法做囉~~~</span></span><br><span class="line">img = np.fromfile(<span class="string">&#x27;./1110315EOS30dateVIBE400-22-raw.raw&#x27;</span>, dtype=<span class="string">&#x27;uint8&#x27;</span>)</span><br><span class="line">img2jpg = np.reshape(img, (h, w, <span class="number">3</span>))</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img2jpg)[<span class="number">1</span>].tofile(<span class="string">&#x27;./raw2jpg.jpg&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>經過轉回jpg過程，可以獲得下圖<br><img src="https://photos.smugmug.com/photos/i-CWzmDMw/0/dafc4518/X4/i-CWzmDMw-X4.jpg"></p>
+<p>但是如果拿原圖去仔細比較RGB數值會有些微差異，因為存jpg就是要走一次壓縮流程</p>
+<p>以後有人要原圖，可以給給看這種檔案?</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>numpy</tag>
+        <tag>raw</tag>
       </tags>
   </entry>
 </search>
