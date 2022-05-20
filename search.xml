@@ -32,6 +32,23 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<a id="more"></a>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
     <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
     <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
@@ -52,23 +69,6 @@
         <tag>cwb</tag>
         <tag>data visualization</tag>
         <tag>ggplot2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
-<a id="more"></a>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
       </tags>
   </entry>
   <entry>
@@ -101,6 +101,25 @@
       </tags>
   </entry>
   <entry>
+    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
+    <url>/2022/03/19/20220319-img-resize/</url>
+    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
+<a id="more"></a>
+<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>numpy</tag>
+        <tag>resize</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[python]想要RAW檔?可以先拿.raw壓壓驚</title>
     <url>/2022/04/03/20220403-jpg2raw/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-S37M65H/0/ef628152/O/i-S37M65H.png"><br>我們廢話不多說，先上個<a href="https://github.com/leeyaowen/jpg2raw/releases">Windows載點</a><br>如首圖，只要將exe檔跟jpg檔放在同一目錄下就可以執行了</p>
@@ -127,59 +146,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
-    <url>/2022/03/19/20220319-img-resize/</url>
-    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
-<a id="more"></a>
-<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>opencv</tag>
-        <tag>numpy</tag>
-        <tag>resize</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
-<a id="more"></a>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>Minolta V2</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[photography]改善黃斑對焦老化變淡問題</title>
     <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
     <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
@@ -199,6 +165,21 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>Minolta V2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[R]去除字串的多餘空白-從gdata到stringr</title>
     <url>/2022/02/11/20220211-gdata-to-stringr/</url>
     <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
@@ -215,6 +196,25 @@
         <tag>stringr</tag>
         <tag>資料處理</tag>
         <tag>去除空白</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<a id="more"></a>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
       </tags>
   </entry>
   <entry>
