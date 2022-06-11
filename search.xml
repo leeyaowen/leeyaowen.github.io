@@ -15,23 +15,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
-<a id="more"></a>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>準備踏入股票市場</title>
     <url>/2021/02/10/20210210-stock/</url>
     <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
@@ -42,6 +25,25 @@
       <tags>
         <tag>stock</tag>
         <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<a id="more"></a>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
       </tags>
   </entry>
   <entry>
@@ -59,6 +61,69 @@
         <tag>film</tag>
         <tag>bronica s2a</tag>
         <tag>nikkor 75mm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
+    <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
+    <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
+<a id="more"></a>
+<p>選擇月報表後可以看到以下資料，點擊下載csv檔可以獲得該月資料<br><img src="https://photos.smugmug.com/photos/i-wZJPz2X/0/66c8270f/XL/i-wZJPz2X-XL.png"><br>這邊以收集2021年資料為例，將其整理至一資料夾，如下圖<br><img src="https://photos.smugmug.com/photos/i-LzkqMhQ/0/0f3f4c60/O/i-LzkqMhQ.png"></p>
+<p>之後以R繪製雨量資料</p>
+<figure class="highlight r"><figcaption><span>R</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">####load packages####</span></span><br><span class="line">library(dplyr)</span><br><span class="line">library(magrittr)</span><br><span class="line">library(ggplot2)</span><br><span class="line">library(stringr)</span><br><span class="line"></span><br><span class="line"><span class="comment">####bind data####</span></span><br><span class="line">filenames&lt;-list.files(<span class="string">&quot;./Binlang&quot;</span>,pattern = <span class="string">&quot;.csv&quot;</span>)</span><br><span class="line">precpdf&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[<span class="number">1</span>]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">  mutate(month=str_sub(filenames[<span class="number">1</span>],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">2</span>:<span class="built_in">length</span>(filenames)) &#123;</span><br><span class="line">  dttemp&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[i]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">    mutate(month=str_sub(filenames[i],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line">  precpdf&lt;-bind_rows(precpdf,dttemp)</span><br><span class="line">&#125;</span><br><span class="line">precpdf$Precp&lt;-<span class="built_in">as.numeric</span>(precpdf$Precp)</span><br><span class="line">precpdf&lt;-precpdf %&gt;%</span><br><span class="line">  group_by(month) %&gt;%</span><br><span class="line">  summarise(precp=<span class="built_in">sum</span>(Precp,na.rm = <span class="built_in">T</span>)) %&gt;%</span><br><span class="line">  ungroup()</span><br><span class="line"></span><br><span class="line"><span class="comment">####plot####</span></span><br><span class="line">p&lt;-ggplot(data = precpdf,aes(x=month,y=precp))+</span><br><span class="line">  geom_bar(stat = <span class="string">&quot;identity&quot;</span>)+</span><br><span class="line">  labs(title = <span class="string">&quot;Binlang&quot;</span>)+</span><br><span class="line">  geom_text(aes(y=precp,label=precp),vjust=-<span class="number">0.5</span>)+</span><br><span class="line">  theme_classic()+</span><br><span class="line">  theme(plot.title = element_text(hjust = <span class="number">0.5</span>))+</span><br><span class="line">  scale_y_continuous(limits = <span class="built_in">c</span>(<span class="number">0</span>,<span class="number">850</span>))</span><br><span class="line">p</span><br><span class="line">ggsave(filename = <span class="string">&quot;Binlang_2021_precp.png&quot;</span>,width = <span class="number">15</span>,height = <span class="number">10</span>,units = <span class="string">&quot;cm&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://photos.smugmug.com/photos/i-6KH9vX8/0/fe20c42a/XL/i-6KH9vX8-XL.png"></p>
+]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>R</tag>
+        <tag>coding</tag>
+        <tag>cwb</tag>
+        <tag>data visualization</tag>
+        <tag>ggplot2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<a id="more"></a>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]利用flickrapi爬取Flickr的圖片</title>
+    <url>/2022/02/03/20220203-flickr-crawler/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
+<a id="more"></a>
+<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
+<p>以下就是code的部分</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>使用自行注意著作權問題喔~</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>flickrapi</tag>
+        <tag>web crawler</tag>
+        <tag>網路爬蟲</tag>
       </tags>
   </entry>
   <entry>
@@ -192,68 +257,60 @@
       </tags>
   </entry>
   <entry>
-    <title>[python]利用flickrapi爬取Flickr的圖片</title>
-    <url>/2022/02/03/20220203-flickr-crawler/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
+    <title>[嘉義大學回憶]國文選課實錄</title>
+    <url>/2022/06/11/20220611-NCYUlesson/</url>
+    <content><![CDATA[<p><strong>此文為備份Facebook網誌用，如實記錄當時發生事實</strong></p>
+<h2 id="101學年度上學期"><a href="#101學年度上學期" class="headerlink" title="101學年度上學期"></a>101學年度上學期</h2><p>經過篩選選上了<strong>禪詩與人生(馬炳旺)</strong></p>
 <a id="more"></a>
-<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
-<p>以下就是code的部分</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
 
-<p>使用自行注意著作權問題喔~</p>
+<ul>
+<li><p>2013.2.20 </p>
+<p>接到中文系公告如下:  </p>
+</li>
+</ul>
+<h3 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h3><p>一、 因本系原先所開設之課程「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」輸入錯誤為「『大學國文〈II〉：禪詩與人生』馬炳旺老師授課」；2013.01.03中文系已聯繫民雄教務組，請李燈銘先生更正。特此公告，謹此致歉，煩請 貴單位轉知同學，十分感謝。</p>
+<p>二、 如已選上「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」之學生，無願意繼續上課；請於本學期網路加退選期間(2/21~3/1)上網退選；或改選其他開在所屬學院之國文課程。  </p>
+<p>嘉大中文系辦公室 敬上</p>
+<hr>
+<p>由於在班會時間才接獲通知，雖覺有些疑點，但7.8.9堂又有生態學無法前往教務處詢問，便決定2/21再前往教務處詢問。(當日晚上看教學平台及校務行政系統皆發現禪師與人生還在自己的頁面上)</p>
+<ul>
+<li>2013.2.21  </li>
+</ul>
+<p>下午前往教務處詢問，教務處似乎不清楚有這回事，便協助打到民雄中文系詢問，問的結果是<strong>禪詩與人生直接換課為閱讀與寫作(不需退選或作其他任何動作)</strong></p>
+<p>晚上告知系上同學卻接獲不同的答案，此訊息為<strong>更改的課為另一堂禪詩與人生(教師未定)(但此答案與上述公告不符)</strong></p>
+<p>於是又立刻打了電話到中文系詢問，此次的答案為<strong>中文系自己也不清楚，說要再去問教務組，請我明天再連絡</strong></p>
+<ul>
+<li>2013.2.22  </li>
+</ul>
+<p>中午吃飯前再度至教務處詢問，一樣協助打電話至中文系，此次答案為<strong>我們沒有禪詩與人生這堂課了，必須要退選並進行加簽才能有閱讀與寫作這堂課，但承諾我們加簽余育婷老師的課一定會成功</strong>  </p>
+<p>下午再度聽到答案的分歧，系上同學再次詢問的答案為<strong>禪詩與人生本來就沒開，是系統出了問題，將把我們併到閱讀與寫作那班上課(100人？)</strong>  </p>
+<p>最後我們的決定是”退選禪詩與人生再加簽”<br>(此時校務行政系統上同時存在公告上的二堂課)<br>下午上完課教務處也下班了，本日就此結束  </p>
+<ul>
+<li>2013.2.25</li>
+</ul>
+<p>3.4節拿著加簽單到余育婷老師的教室，由於老師提早到教室，我們便前去詢問加簽事宜，但此時老師告訴我們<strong>中文系說額滿了就不能加簽(我們沒有聽錯，講了我們的原因之後老師也去問了一次確認這個事實)</strong></p>
+<p>此時有人發現了我們原先上禪詩與人生的隔壁教室，<strong>老師在裡面！</strong>向老師解釋過我們所遭遇的問題後他讓我們到教務處進行<strong>加簽回去的手續</strong></p>
+<hr>
+<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><ol>
+<li>原先的公告完全是假的  </li>
+<li>我們發現疑點卻繞了一大圈還連原點都繞不回，就現在來說我們是沒有課的  </li>
+<li>中文系自己內部根本不清楚這些課，每次問都得到不太一樣的答案，有時理直氣壯，有時回答吞吞吐吐  </li>
+<li>教務處相當願意幫助我們，這次事件讓我對教務處留下不錯的印象  </li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ul>
+<li><p>2013.2.25</p>
+<p>今天到系館二樓發現新的公告，所述內容依然錯誤…</p>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>NCYU</category>
       </categories>
       <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>flickrapi</tag>
-        <tag>web crawler</tag>
-        <tag>網路爬蟲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
-    <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
-    <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
-<a id="more"></a>
-<p>選擇月報表後可以看到以下資料，點擊下載csv檔可以獲得該月資料<br><img src="https://photos.smugmug.com/photos/i-wZJPz2X/0/66c8270f/XL/i-wZJPz2X-XL.png"><br>這邊以收集2021年資料為例，將其整理至一資料夾，如下圖<br><img src="https://photos.smugmug.com/photos/i-LzkqMhQ/0/0f3f4c60/O/i-LzkqMhQ.png"></p>
-<p>之後以R繪製雨量資料</p>
-<figure class="highlight r"><figcaption><span>R</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">####load packages####</span></span><br><span class="line">library(dplyr)</span><br><span class="line">library(magrittr)</span><br><span class="line">library(ggplot2)</span><br><span class="line">library(stringr)</span><br><span class="line"></span><br><span class="line"><span class="comment">####bind data####</span></span><br><span class="line">filenames&lt;-list.files(<span class="string">&quot;./Binlang&quot;</span>,pattern = <span class="string">&quot;.csv&quot;</span>)</span><br><span class="line">precpdf&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[<span class="number">1</span>]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">  mutate(month=str_sub(filenames[<span class="number">1</span>],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">2</span>:<span class="built_in">length</span>(filenames)) &#123;</span><br><span class="line">  dttemp&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[i]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">    mutate(month=str_sub(filenames[i],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line">  precpdf&lt;-bind_rows(precpdf,dttemp)</span><br><span class="line">&#125;</span><br><span class="line">precpdf$Precp&lt;-<span class="built_in">as.numeric</span>(precpdf$Precp)</span><br><span class="line">precpdf&lt;-precpdf %&gt;%</span><br><span class="line">  group_by(month) %&gt;%</span><br><span class="line">  summarise(precp=<span class="built_in">sum</span>(Precp,na.rm = <span class="built_in">T</span>)) %&gt;%</span><br><span class="line">  ungroup()</span><br><span class="line"></span><br><span class="line"><span class="comment">####plot####</span></span><br><span class="line">p&lt;-ggplot(data = precpdf,aes(x=month,y=precp))+</span><br><span class="line">  geom_bar(stat = <span class="string">&quot;identity&quot;</span>)+</span><br><span class="line">  labs(title = <span class="string">&quot;Binlang&quot;</span>)+</span><br><span class="line">  geom_text(aes(y=precp,label=precp),vjust=-<span class="number">0.5</span>)+</span><br><span class="line">  theme_classic()+</span><br><span class="line">  theme(plot.title = element_text(hjust = <span class="number">0.5</span>))+</span><br><span class="line">  scale_y_continuous(limits = <span class="built_in">c</span>(<span class="number">0</span>,<span class="number">850</span>))</span><br><span class="line">p</span><br><span class="line">ggsave(filename = <span class="string">&quot;Binlang_2021_precp.png&quot;</span>,width = <span class="number">15</span>,height = <span class="number">10</span>,units = <span class="string">&quot;cm&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://photos.smugmug.com/photos/i-6KH9vX8/0/fe20c42a/XL/i-6KH9vX8-XL.png"></p>
-]]></content>
-      <categories>
-        <category>R</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>R</tag>
-        <tag>coding</tag>
-        <tag>cwb</tag>
-        <tag>data visualization</tag>
-        <tag>ggplot2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
-<a id="more"></a>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
+        <tag>NCYU</tag>
+        <tag>選課</tag>
+        <tag>嘉義大學</tag>
+        <tag>嘉義大學選課</tag>
       </tags>
   </entry>
 </search>
