@@ -20,15 +20,6 @@
     var CONFIG = {"hostname":"leeyaowen.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D44Z42GHF8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D44Z42GHF8');
-</script>
   <meta name="description" content="以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，多餘的空白是會造成資料處理上的麻煩之一 如&#39;abc&#39;與&#39;abc &#39;是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於多了一個物種先前看到gdata有trim這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[R]去除字串的多餘空白-從gdata到stringr">
