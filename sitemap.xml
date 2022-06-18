@@ -182,20 +182,6 @@
 
   
   <url>
-    <loc>https://leeyaowen.github.io/tags/stock/</loc>
-    <lastmod>2022-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/life/</loc>
-    <lastmod>2022-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://leeyaowen.github.io/tags/hexo/</loc>
     <lastmod>2022-06-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -239,6 +225,20 @@
   
   <url>
     <loc>https://leeyaowen.github.io/tags/nikkor-75mm/</loc>
+    <lastmod>2022-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/stock/</loc>
+    <lastmod>2022-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/life/</loc>
     <lastmod>2022-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -364,20 +364,6 @@
   </url>
   
   <url>
-    <loc>https://leeyaowen.github.io/tags/rangefinder/</loc>
-    <lastmod>2022-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/%E9%BB%83%E6%96%91%E5%B0%8D%E7%84%A6/</loc>
-    <lastmod>2022-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://leeyaowen.github.io/tags/opencv/</loc>
     <lastmod>2022-06-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -399,6 +385,34 @@
   </url>
   
   <url>
+    <loc>https://leeyaowen.github.io/tags/raw/</loc>
+    <lastmod>2022-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/rangefinder/</loc>
+    <lastmod>2022-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/%E9%BB%83%E6%96%91%E5%B0%8D%E7%84%A6/</loc>
+    <lastmod>2022-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/Minolta-V2/</loc>
+    <lastmod>2022-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://leeyaowen.github.io/tags/herbarium/</loc>
     <lastmod>2022-06-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -407,20 +421,6 @@
   
   <url>
     <loc>https://leeyaowen.github.io/tags/still-life/</loc>
-    <lastmod>2022-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/raw/</loc>
-    <lastmod>2022-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/Minolta-V2/</loc>
     <lastmod>2022-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -457,13 +457,6 @@
 
   
   <url>
-    <loc>https://leeyaowen.github.io/categories/stock/</loc>
-    <lastmod>2022-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://leeyaowen.github.io/categories/hexo/</loc>
     <lastmod>2022-06-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -472,6 +465,13 @@
   
   <url>
     <loc>https://leeyaowen.github.io/categories/photography/</loc>
+    <lastmod>2022-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/categories/stock/</loc>
     <lastmod>2022-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
