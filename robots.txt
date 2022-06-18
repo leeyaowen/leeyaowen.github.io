@@ -3,7 +3,6 @@ Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
-Allow: /button.like.co/
 Disallow: /vendors/
 Disallow: /fonts/
 Disallow: /vendors/
