@@ -87,23 +87,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
-<a id="more"></a>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[python]利用flickrapi爬取Flickr的圖片</title>
     <url>/2022/02/03/20220203-flickr-crawler/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
@@ -127,6 +110,23 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<a id="more"></a>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[R]去除字串的多餘空白-從gdata到stringr</title>
     <url>/2022/02/11/20220211-gdata-to-stringr/</url>
     <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
@@ -146,6 +146,22 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <url>/2022/02/28/20220221-photovogue/</url>
+    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>canon</tag>
+        <tag>tamron 35mm f/1.8</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
     <url>/2022/03/19/20220319-img-resize/</url>
     <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
@@ -162,22 +178,6 @@
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>resize</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 290/No. 291</title>
-    <url>/2022/02/28/20220221-photovogue/</url>
-    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>canon</tag>
-        <tag>tamron 35mm f/1.8</tag>
       </tags>
   </entry>
   <entry>
@@ -204,21 +204,6 @@
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>raw</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>Minolta V2</tag>
       </tags>
   </entry>
   <entry>
@@ -254,6 +239,21 @@
         <tag>vogue</tag>
         <tag>herbarium</tag>
         <tag>still life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>Minolta V2</tag>
       </tags>
   </entry>
   <entry>
@@ -311,6 +311,24 @@
         <tag>選課</tag>
         <tag>嘉義大學</tag>
         <tag>嘉義大學選課</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]T65</title>
+    <url>/2022/06/21/20220621-photovogue/</url>
+    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>still life</tag>
+        <tag>bird</tag>
+        <tag>duck</tag>
+        <tag>animal</tag>
       </tags>
   </entry>
 </search>
