@@ -45,6 +45,25 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<a id="more"></a>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
     <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
     <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
@@ -65,25 +84,6 @@
         <tag>cwb</tag>
         <tag>data visualization</tag>
         <tag>ggplot2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
-<a id="more"></a>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
       </tags>
   </entry>
   <entry>
@@ -146,22 +146,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 290/No. 291</title>
-    <url>/2022/02/28/20220221-photovogue/</url>
-    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>canon</tag>
-        <tag>tamron 35mm f/1.8</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
     <url>/2022/03/19/20220319-img-resize/</url>
     <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
@@ -178,6 +162,41 @@
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>resize</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <url>/2022/02/28/20220221-photovogue/</url>
+    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>canon</tag>
+        <tag>tamron 35mm f/1.8</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[photography]改善黃斑對焦老化變淡問題</title>
+    <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
+    <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
+<p>送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗</p>
+<p>網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等<br>最後我找到不用拆開我覺得最好的方式-貼黑色貼紙</p>
+<p>根據網路方法，在觀景窗黃斑位置貼上同大小的黑色貼紙可以明顯改善問題，結果會變得有點像裂像對焦一樣<br>有人是使用電火布，不過馬上就看到另一個人跟我有相同想法:殘膠會嚴重</p>
+<p>那…我手邊最棒的材料不就是保護相機鏡頭用的鐵人膠帶嗎?<br>就決定是你了!<br>我沒有仔細測量過黃斑大小與位置，就是挑盡量中央貼，結果如圖，他變得有點黃斑對焦與裂像對焦的融合，至少比原先容易對焦<br><img src="https://photos.smugmug.com/photos/i-Gs4qh3C/0/016a8e97/X5/i-Gs4qh3C-X5.jpg"></p>
+<p>Ref: <a href="http://rick_oleson.tripod.com/index-165.html">Brighten your Rangefinder</a></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>rangefinder</tag>
+        <tag>黃斑對焦</tag>
       </tags>
   </entry>
   <entry>
@@ -204,25 +223,6 @@
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>raw</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[photography]改善黃斑對焦老化變淡問題</title>
-    <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
-    <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
-<p>送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗</p>
-<p>網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等<br>最後我找到不用拆開我覺得最好的方式-貼黑色貼紙</p>
-<p>根據網路方法，在觀景窗黃斑位置貼上同大小的黑色貼紙可以明顯改善問題，結果會變得有點像裂像對焦一樣<br>有人是使用電火布，不過馬上就看到另一個人跟我有相同想法:殘膠會嚴重</p>
-<p>那…我手邊最棒的材料不就是保護相機鏡頭用的鐵人膠帶嗎?<br>就決定是你了!<br>我沒有仔細測量過黃斑大小與位置，就是挑盡量中央貼，結果如圖，他變得有點黃斑對焦與裂像對焦的融合，至少比原先容易對焦<br><img src="https://photos.smugmug.com/photos/i-Gs4qh3C/0/016a8e97/X5/i-Gs4qh3C-X5.jpg"></p>
-<p>Ref: <a href="http://rick_oleson.tripod.com/index-165.html">Brighten your Rangefinder</a></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>rangefinder</tag>
-        <tag>黃斑對焦</tag>
       </tags>
   </entry>
   <entry>
@@ -366,6 +366,28 @@
         <tag>嘉義大學車管會</tag>
         <tag>車輛管理委員會</tag>
         <tag>靠卡</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
+    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
+<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
+<a id="more"></a>  
+<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
+<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
+<p>目前完成滑鼠座標偵測<br>Todoist<br>[ ] 畫線畫點<br>[ ] 設定資料庫</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Java</tag>
+        <tag>JDK</tag>
+        <tag>Eclipse</tag>
+        <tag>WindowBuilder</tag>
       </tags>
   </entry>
 </search>
