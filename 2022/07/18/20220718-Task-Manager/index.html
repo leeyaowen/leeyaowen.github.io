@@ -28,7 +28,7 @@
 <meta property="og:description" content="在Windows 10專業版中工作管理員被禁用該怎麼辦?其實Google給很多答案，包含編輯群組原則、改機碼&#x2F;登錄編輯程式(regedit)等這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google那如果有bat檔下指令就快多了這裡就寫了一個">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-18T11:38:07.000Z">
-<meta property="article:modified_time" content="2022-07-18T11:57:30.206Z">
+<meta property="article:modified_time" content="2022-07-18T11:59:24.100Z">
 <meta property="article:author" content="Yao Wen Lee">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="coding">
@@ -237,7 +237,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-07-18 19:38:07 / Modified: 19:57:30" itemprop="dateCreated datePublished" datetime="2022-07-18T19:38:07+08:00">2022-07-18</time>
+              <time title="Created: 2022-07-18 19:38:07 / Modified: 19:59:24" itemprop="dateCreated datePublished" datetime="2022-07-18T19:38:07+08:00">2022-07-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,7 +262,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>558</span>
+              <span>556</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -284,7 +284,7 @@
         <p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
 <a id="more"></a>  
 <p>有需要可以直接到<a target="_blank" rel="noopener" href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
-<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  
+<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  
         <div>
     <script type="text/javascript">
       document.write(
