@@ -15,6 +15,19 @@
       </tags>
   </entry>
   <entry>
+    <title>準備踏入股票市場</title>
+    <url>/2021/02/10/20210210-stock/</url>
+    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
+]]></content>
+      <categories>
+        <category>stock</category>
+      </categories>
+      <tags>
+        <tag>stock</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
     <url>/2021/02/11/20210211-S2A-75-sample/</url>
     <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
@@ -29,6 +42,25 @@
         <tag>film</tag>
         <tag>bronica s2a</tag>
         <tag>nikkor 75mm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<a id="more"></a>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
       </tags>
   </entry>
   <entry>
@@ -55,6 +87,29 @@
       </tags>
   </entry>
   <entry>
+    <title>[python]利用flickrapi爬取Flickr的圖片</title>
+    <url>/2022/02/03/20220203-flickr-crawler/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
+<a id="more"></a>
+<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
+<p>以下就是code的部分</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>使用自行注意著作權問題喔~</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>flickrapi</tag>
+        <tag>web crawler</tag>
+        <tag>網路爬蟲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[PhotoVogue]No. 289</title>
     <url>/2022/02/02/20220202-photovogue/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
@@ -69,6 +124,25 @@
         <tag>photovogue</tag>
         <tag>vogue</tag>
         <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[R]去除字串的多餘空白-從gdata到stringr</title>
+    <url>/2022/02/11/20220211-gdata-to-stringr/</url>
+    <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
+<p>如<code>&#39;abc&#39;</code>與<code>&#39;abc &#39;</code>是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於<strong>多了一個物種</strong><br>先前看到gdata有<code>trim</code>這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除<br>使用stringr的<code>str_trim</code>則不同，有both, left, right三個選擇</p>
+<p>gdata是一個有蠻多處理資料function的package，但其最後更新為2017年<br>stringr主要就是專門做字串處理，且為tidyverse之下的一員，針對字串處理的function豐富，也比較不用擔心沒人維護</p>
+<p>考量我也沒有在用gdata的其他功能，以及stringr有更多方便處理字串的function，就跳槽啦!</p>
+]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+        <tag>coding</tag>
+        <tag>stringr</tag>
+        <tag>資料處理</tag>
+        <tag>去除空白</tag>
       </tags>
   </entry>
   <entry>
@@ -88,22 +162,22 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
+    <url>/2022/03/19/20220319-img-resize/</url>
+    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
 <a id="more"></a>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
+<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>photography</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>numpy</tag>
+        <tag>resize</tag>
       </tags>
   </entry>
   <entry>
@@ -133,38 +207,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
-    <url>/2022/03/19/20220319-img-resize/</url>
-    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
-<a id="more"></a>
-<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>opencv</tag>
-        <tag>numpy</tag>
-        <tag>resize</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>準備踏入股票市場</title>
-    <url>/2021/02/10/20210210-stock/</url>
-    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
-]]></content>
-      <categories>
-        <category>stock</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[photography]改善黃斑對焦老化變淡問題</title>
     <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
     <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
@@ -184,6 +226,21 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>Minolta V2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[PhotoVogue]T64</title>
     <url>/2022/06/07/20220607-photovogue/</url>
     <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
@@ -197,6 +254,63 @@
         <tag>vogue</tag>
         <tag>herbarium</tag>
         <tag>still life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[嘉義大學回憶]國文選課實錄</title>
+    <url>/2022/06/11/20220611-NCYUlesson/</url>
+    <content><![CDATA[<p><strong>此文為備份Facebook網誌用，如實記錄當時發生事實</strong></p>
+<h2 id="101學年度上學期"><a href="#101學年度上學期" class="headerlink" title="101學年度上學期"></a>101學年度上學期</h2><p>經過篩選選上了<strong>禪詩與人生(馬炳旺)</strong></p>
+<a id="more"></a>
+
+<ul>
+<li><p>2013.2.20 </p>
+<p>接到中文系公告如下:  </p>
+</li>
+</ul>
+<h3 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h3><p>一、 因本系原先所開設之課程「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」輸入錯誤為「『大學國文〈II〉：禪詩與人生』馬炳旺老師授課」；2013.01.03中文系已聯繫民雄教務組，請李燈銘先生更正。特此公告，謹此致歉，煩請 貴單位轉知同學，十分感謝。</p>
+<p>二、 如已選上「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」之學生，無願意繼續上課；請於本學期網路加退選期間(2/21~3/1)上網退選；或改選其他開在所屬學院之國文課程。  </p>
+<p>嘉大中文系辦公室 敬上</p>
+<hr>
+<p>由於在班會時間才接獲通知，雖覺有些疑點，但7.8.9堂又有生態學無法前往教務處詢問，便決定2/21再前往教務處詢問。(當日晚上看教學平台及校務行政系統皆發現禪師與人生還在自己的頁面上)</p>
+<ul>
+<li>2013.2.21  </li>
+</ul>
+<p>下午前往教務處詢問，教務處似乎不清楚有這回事，便協助打到民雄中文系詢問，問的結果是<strong>禪詩與人生直接換課為閱讀與寫作(不需退選或作其他任何動作)</strong></p>
+<p>晚上告知系上同學卻接獲不同的答案，此訊息為<strong>更改的課為另一堂禪詩與人生(教師未定)(但此答案與上述公告不符)</strong></p>
+<p>於是又立刻打了電話到中文系詢問，此次的答案為<strong>中文系自己也不清楚，說要再去問教務組，請我明天再連絡</strong></p>
+<ul>
+<li>2013.2.22  </li>
+</ul>
+<p>中午吃飯前再度至教務處詢問，一樣協助打電話至中文系，此次答案為<strong>我們沒有禪詩與人生這堂課了，必須要退選並進行加簽才能有閱讀與寫作這堂課，但承諾我們加簽余育婷老師的課一定會成功</strong>  </p>
+<p>下午再度聽到答案的分歧，系上同學再次詢問的答案為<strong>禪詩與人生本來就沒開，是系統出了問題，將把我們併到閱讀與寫作那班上課(100人？)</strong>  </p>
+<p>最後我們的決定是”退選禪詩與人生再加簽”<br>(此時校務行政系統上同時存在公告上的二堂課)<br>下午上完課教務處也下班了，本日就此結束  </p>
+<ul>
+<li>2013.2.25</li>
+</ul>
+<p>3.4節拿著加簽單到余育婷老師的教室，由於老師提早到教室，我們便前去詢問加簽事宜，但此時老師告訴我們<strong>中文系說額滿了就不能加簽(我們沒有聽錯，講了我們的原因之後老師也去問了一次確認這個事實)</strong></p>
+<p>此時有人發現了我們原先上禪詩與人生的隔壁教室，<strong>老師在裡面！</strong>向老師解釋過我們所遭遇的問題後他讓我們到教務處進行<strong>加簽回去的手續</strong></p>
+<hr>
+<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><ol>
+<li>原先的公告完全是假的  </li>
+<li>我們發現疑點卻繞了一大圈還連原點都繞不回，就現在來說我們是沒有課的  </li>
+<li>中文系自己內部根本不清楚這些課，每次問都得到不太一樣的答案，有時理直氣壯，有時回答吞吞吐吐  </li>
+<li>教務處相當願意幫助我們，這次事件讓我對教務處留下不錯的印象  </li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ul>
+<li><p>2013.2.25</p>
+<p>今天到系館二樓發現新的公告，所述內容依然錯誤…</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>NCYU</category>
+      </categories>
+      <tags>
+        <tag>NCYU</tag>
+        <tag>選課</tag>
+        <tag>嘉義大學</tag>
+        <tag>嘉義大學選課</tag>
       </tags>
   </entry>
   <entry>
@@ -218,26 +332,29 @@
       </tags>
   </entry>
   <entry>
-    <title>[python]利用flickrapi爬取Flickr的圖片</title>
-    <url>/2022/02/03/20220203-flickr-crawler/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
-<a id="more"></a>
-<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
-<p>以下就是code的部分</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-
-<p>使用自行注意著作權問題喔~</p>
+    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
+    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
+<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
+<a id="more"></a>  
+<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
+<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
+<p>目前完成滑鼠座標偵測<br>Todoist  </p>
+<ul>
+<li><input disabled="" type="checkbox"> 畫線畫點  </li>
+<li><input disabled="" type="checkbox"> 設定資料庫</li>
+</ul>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>Java</category>
       </categories>
       <tags>
         <tag>code</tag>
         <tag>coding</tag>
-        <tag>python</tag>
-        <tag>flickrapi</tag>
-        <tag>web crawler</tag>
-        <tag>網路爬蟲</tag>
+        <tag>Java</tag>
+        <tag>JDK</tag>
+        <tag>Eclipse</tag>
+        <tag>WindowBuilder</tag>
       </tags>
   </entry>
   <entry>
@@ -275,32 +392,6 @@
         <tag>嘉義大學車管會</tag>
         <tag>車輛管理委員會</tag>
         <tag>靠卡</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
-    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
-<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
-<a id="more"></a>  
-<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
-<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
-<p>目前完成滑鼠座標偵測<br>Todoist  </p>
-<ul>
-<li><input disabled="" type="checkbox"> 畫線畫點  </li>
-<li><input disabled="" type="checkbox"> 設定資料庫</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Java</tag>
-        <tag>JDK</tag>
-        <tag>Eclipse</tag>
-        <tag>WindowBuilder</tag>
       </tags>
   </entry>
   <entry>
@@ -358,7 +449,7 @@
       </tags>
   </entry>
   <entry>
-    <title>[Win10 pro]在Window 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
+    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
     <url>/2022/07/18/20220718-Task-Manager/</url>
     <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
 <a id="more"></a>  
@@ -378,97 +469,6 @@
         <tag>taskmgr</tag>
         <tag>bat</tag>
         <tag>Batchfile</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[嘉義大學回憶]國文選課實錄</title>
-    <url>/2022/06/11/20220611-NCYUlesson/</url>
-    <content><![CDATA[<p><strong>此文為備份Facebook網誌用，如實記錄當時發生事實</strong></p>
-<h2 id="101學年度上學期"><a href="#101學年度上學期" class="headerlink" title="101學年度上學期"></a>101學年度上學期</h2><p>經過篩選選上了<strong>禪詩與人生(馬炳旺)</strong></p>
-<a id="more"></a>
-
-<ul>
-<li><p>2013.2.20 </p>
-<p>接到中文系公告如下:  </p>
-</li>
-</ul>
-<h3 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h3><p>一、 因本系原先所開設之課程「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」輸入錯誤為「『大學國文〈II〉：禪詩與人生』馬炳旺老師授課」；2013.01.03中文系已聯繫民雄教務組，請李燈銘先生更正。特此公告，謹此致歉，煩請 貴單位轉知同學，十分感謝。</p>
-<p>二、 如已選上「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」之學生，無願意繼續上課；請於本學期網路加退選期間(2/21~3/1)上網退選；或改選其他開在所屬學院之國文課程。  </p>
-<p>嘉大中文系辦公室 敬上</p>
-<hr>
-<p>由於在班會時間才接獲通知，雖覺有些疑點，但7.8.9堂又有生態學無法前往教務處詢問，便決定2/21再前往教務處詢問。(當日晚上看教學平台及校務行政系統皆發現禪師與人生還在自己的頁面上)</p>
-<ul>
-<li>2013.2.21  </li>
-</ul>
-<p>下午前往教務處詢問，教務處似乎不清楚有這回事，便協助打到民雄中文系詢問，問的結果是<strong>禪詩與人生直接換課為閱讀與寫作(不需退選或作其他任何動作)</strong></p>
-<p>晚上告知系上同學卻接獲不同的答案，此訊息為<strong>更改的課為另一堂禪詩與人生(教師未定)(但此答案與上述公告不符)</strong></p>
-<p>於是又立刻打了電話到中文系詢問，此次的答案為<strong>中文系自己也不清楚，說要再去問教務組，請我明天再連絡</strong></p>
-<ul>
-<li>2013.2.22  </li>
-</ul>
-<p>中午吃飯前再度至教務處詢問，一樣協助打電話至中文系，此次答案為<strong>我們沒有禪詩與人生這堂課了，必須要退選並進行加簽才能有閱讀與寫作這堂課，但承諾我們加簽余育婷老師的課一定會成功</strong>  </p>
-<p>下午再度聽到答案的分歧，系上同學再次詢問的答案為<strong>禪詩與人生本來就沒開，是系統出了問題，將把我們併到閱讀與寫作那班上課(100人？)</strong>  </p>
-<p>最後我們的決定是”退選禪詩與人生再加簽”<br>(此時校務行政系統上同時存在公告上的二堂課)<br>下午上完課教務處也下班了，本日就此結束  </p>
-<ul>
-<li>2013.2.25</li>
-</ul>
-<p>3.4節拿著加簽單到余育婷老師的教室，由於老師提早到教室，我們便前去詢問加簽事宜，但此時老師告訴我們<strong>中文系說額滿了就不能加簽(我們沒有聽錯，講了我們的原因之後老師也去問了一次確認這個事實)</strong></p>
-<p>此時有人發現了我們原先上禪詩與人生的隔壁教室，<strong>老師在裡面！</strong>向老師解釋過我們所遭遇的問題後他讓我們到教務處進行<strong>加簽回去的手續</strong></p>
-<hr>
-<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><ol>
-<li>原先的公告完全是假的  </li>
-<li>我們發現疑點卻繞了一大圈還連原點都繞不回，就現在來說我們是沒有課的  </li>
-<li>中文系自己內部根本不清楚這些課，每次問都得到不太一樣的答案，有時理直氣壯，有時回答吞吞吐吐  </li>
-<li>教務處相當願意幫助我們，這次事件讓我對教務處留下不錯的印象  </li>
-</ol>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ul>
-<li><p>2013.2.25</p>
-<p>今天到系館二樓發現新的公告，所述內容依然錯誤…</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>NCYU</category>
-      </categories>
-      <tags>
-        <tag>NCYU</tag>
-        <tag>嘉義大學</tag>
-        <tag>選課</tag>
-        <tag>嘉義大學選課</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[R]去除字串的多餘空白-從gdata到stringr</title>
-    <url>/2022/02/11/20220211-gdata-to-stringr/</url>
-    <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
-<p>如<code>&#39;abc&#39;</code>與<code>&#39;abc &#39;</code>是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於<strong>多了一個物種</strong><br>先前看到gdata有<code>trim</code>這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除<br>使用stringr的<code>str_trim</code>則不同，有both, left, right三個選擇</p>
-<p>gdata是一個有蠻多處理資料function的package，但其最後更新為2017年<br>stringr主要就是專門做字串處理，且為tidyverse之下的一員，針對字串處理的function豐富，也比較不用擔心沒人維護</p>
-<p>考量我也沒有在用gdata的其他功能，以及stringr有更多方便處理字串的function，就跳槽啦!</p>
-]]></content>
-      <categories>
-        <category>R</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-        <tag>coding</tag>
-        <tag>stringr</tag>
-        <tag>資料處理</tag>
-        <tag>去除空白</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>Minolta V2</tag>
       </tags>
   </entry>
 </search>
