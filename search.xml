@@ -15,20 +15,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
-    <url>/2021/02/11/20210211-S2A-75-sample/</url>
-    <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
-<a id="more"></a>
-<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-qn9CTM2/0/9e0d2fe4/X3/i-qn9CTM2-X3.jpg"><br>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-kFhhHmG/0/da3345b5/X3/i-kFhhHmG-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-jjjCvxj/0/5450fa45/X3/i-jjjCvxj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-R5gZhJj/0/bfa9213d/X3/i-R5gZhJj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-7cQfqLf/0/a7eb03b4/X3/i-7cQfqLf-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-hWvHvHs/0/e4faf719/X3/i-hWvHvHs-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-LNVJ8T9/0/44b4f220/X3/i-LNVJ8T9-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-hv2VfRC/0/aea0fb80/X3/i-hv2VfRC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-WrjdcbC/0/df9fcaae/X3/i-WrjdcbC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-sS8BtnD/0/ec5c9cf2/X3/i-sS8BtnD-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-V8sXTBg/0/d6d97473/X3/i-V8sXTBg-X3.jpg"></p>
+    <title>準備踏入股票市場</title>
+    <url>/2021/02/10/20210210-stock/</url>
+    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
 ]]></content>
       <categories>
-        <category>photography</category>
+        <category>stock</category>
       </categories>
       <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>nikkor 75mm</tag>
+        <tag>stock</tag>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -55,26 +51,20 @@
       </tags>
   </entry>
   <entry>
-    <title>[python]利用flickrapi爬取Flickr的圖片</title>
-    <url>/2022/02/03/20220203-flickr-crawler/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
+    <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
+    <url>/2021/02/11/20210211-S2A-75-sample/</url>
+    <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
 <a id="more"></a>
-<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
-<p>以下就是code的部分</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-
-<p>使用自行注意著作權問題喔~</p>
+<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-qn9CTM2/0/9e0d2fe4/X3/i-qn9CTM2-X3.jpg"><br>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-kFhhHmG/0/da3345b5/X3/i-kFhhHmG-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-jjjCvxj/0/5450fa45/X3/i-jjjCvxj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-R5gZhJj/0/bfa9213d/X3/i-R5gZhJj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-7cQfqLf/0/a7eb03b4/X3/i-7cQfqLf-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-hWvHvHs/0/e4faf719/X3/i-hWvHvHs-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-LNVJ8T9/0/44b4f220/X3/i-LNVJ8T9-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-hv2VfRC/0/aea0fb80/X3/i-hv2VfRC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-WrjdcbC/0/df9fcaae/X3/i-WrjdcbC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-sS8BtnD/0/ec5c9cf2/X3/i-sS8BtnD-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-V8sXTBg/0/d6d97473/X3/i-V8sXTBg-X3.jpg"></p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>photography</category>
       </categories>
       <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>flickrapi</tag>
-        <tag>web crawler</tag>
-        <tag>網路爬蟲</tag>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>nikkor 75mm</tag>
       </tags>
   </entry>
   <entry>
@@ -94,38 +84,6 @@
         <tag>bronica s2a</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
-    <url>/2022/03/19/20220319-img-resize/</url>
-    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
-<a id="more"></a>
-<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>opencv</tag>
-        <tag>numpy</tag>
-        <tag>resize</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>準備踏入股票市場</title>
-    <url>/2021/02/10/20210210-stock/</url>
-    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
-]]></content>
-      <categories>
-        <category>stock</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -159,6 +117,29 @@
         <tag>vogue</tag>
         <tag>canon</tag>
         <tag>tamron 35mm f/1.8</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]利用flickrapi爬取Flickr的圖片</title>
+    <url>/2022/02/03/20220203-flickr-crawler/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
+<a id="more"></a>
+<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
+<p>以下就是code的部分</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>使用自行注意著作權問題喔~</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>flickrapi</tag>
+        <tag>web crawler</tag>
+        <tag>網路爬蟲</tag>
       </tags>
   </entry>
   <entry>
@@ -207,9 +188,9 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]T64</title>
-    <url>/2022/06/07/20220607-photovogue/</url>
-    <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
 ]]></content>
       <categories>
         <category>photography</category>
@@ -218,8 +199,26 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-        <tag>herbarium</tag>
-        <tag>still life</tag>
+        <tag>Minolta V2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
+    <url>/2022/03/19/20220319-img-resize/</url>
+    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
+<a id="more"></a>
+<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>numpy</tag>
+        <tag>resize</tag>
       </tags>
   </entry>
   <entry>
@@ -239,6 +238,22 @@
         <tag>photography</tag>
         <tag>rangefinder</tag>
         <tag>黃斑對焦</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]T64</title>
+    <url>/2022/06/07/20220607-photovogue/</url>
+    <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>herbarium</tag>
+        <tag>still life</tag>
       </tags>
   </entry>
   <entry>
@@ -296,98 +311,6 @@
         <tag>選課</tag>
         <tag>嘉義大學</tag>
         <tag>嘉義大學選課</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>Minolta V2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Veyon]教室管理開源軟體-廣播、遠端監控、遠端控制</title>
-    <url>/2022/07/15/20220715-veyon/</url>
-    <content><![CDATA[<h2 id="Veyon-Virtual-Eye-On-Networks"><a href="#Veyon-Virtual-Eye-On-Networks" class="headerlink" title="Veyon - Virtual Eye On Networks"></a><a href="https://veyon.io/en/">Veyon</a> - Virtual Eye On Networks</h2><p>Veyon是一款可供教師教學、管理教室的免費開源軟體<br>其功能主要包含廣播教學、監控畫面、遠距開關機、傳輸檔案等</p>
-<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><blockquote>
-<p>先至其官網<a href="https://veyon.io/en/download/">下載</a>，注意版本<br><img src="https://photos.smugmug.com/photos/i-Z5RxJwq/0/ec8e15f9/X2/i-Z5RxJwq-X2.jpg"></p>
-</blockquote>
-<a id="more"></a> 
-<p>執行安裝程序</p>
-<blockquote>
-<p><img src="https://photos.smugmug.com/photos/i-5FVXpWz/0/6b2060b4/O/i-5FVXpWz.jpg"><br><img src="https://photos.smugmug.com/photos/i-PDd3pFc/0/0e94dbd7/O/i-PDd3pFc.jpg"></p>
-<ul>
-<li><strong>↓如為學生端可不安裝Veyon Master</strong>  </li>
-</ul>
-<p><img src="https://photos.smugmug.com/photos/i-Hh2MNSK/0/c74fcc2a/O/i-Hh2MNSK.jpg"><br>最後完成安裝<br><img src="https://photos.smugmug.com/photos/i-gfbv5L7/0/2d05e12f/O/i-gfbv5L7.jpg"></p>
-</blockquote>
-<h3 id="組態設定"><a href="#組態設定" class="headerlink" title="組態設定"></a>組態設定</h3><ul>
-<li><p>教師端</p>
-<blockquote>
-<p><strong>身份驗證-選擇金鑰身份驗證</strong><br><img src="https://photos.smugmug.com/photos/i-QsZdX6S/0/a12aefd3/O/i-QsZdX6S.jpg"><br><strong>建立金鑰配對，匯出public金鑰導入學生端使用</strong><br><img src="https://photos.smugmug.com/photos/i-fLNbXz8/0/8160dabd/O/i-fLNbXz8.jpg"><br><img src="https://photos.smugmug.com/photos/i-pH7NxzH/0/e654e316/O/i-pH7NxzH.jpg"><br>可於位置建立教室名稱，電腦新增電腦名稱與IP、MAC位址<br><img src="https://photos.smugmug.com/photos/i-h3TmWqq/0/ea7ad6c3/O/i-h3TmWqq.jpg">  </p>
-</blockquote>
-</li>
-<li><p>學生端</p>
-<blockquote>
-<p>可至檢視-進階，在服務選項選擇隱藏通知區域與自動啟動<br><strong>匯入piblic金鑰</strong><br>可將使用介面改為英文(學生有想亂搞還是沒用啦~~~)  </p>
-</blockquote>
-</li>
-</ul>
-<h3 id="教師端檢視畫面"><a href="#教師端檢視畫面" class="headerlink" title="教師端檢視畫面"></a>教師端檢視畫面</h3><p><img src="https://photos.smugmug.com/photos/i-X6S9cnn/0/f0e4324d/X2/i-X6S9cnn-X2.jpg"><br>組態設定完成後可於Veyon Master程式中看見類似上圖畫面，目前學生端只測試3台匯入key，所以只有3台有畫面，這3台是可以遠端操控的，比如<strong>關機</strong>  </p>
-<h3 id="命令列-veyon-cli-新增要管控電腦"><a href="#命令列-veyon-cli-新增要管控電腦" class="headerlink" title="命令列(veyon-cli)新增要管控電腦"></a>命令列(veyon-cli)新增要管控電腦</h3><ul>
-<li><p>新增位置<br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects add location &quot;PC-B&quot;</code>  </p>
-</li>
-<li><p>新增電腦-csv檔匯入(格式為IP,MAC,電腦名稱)，<strong>注意!，不用欄位名稱</strong><br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects import c:\maclist.csv location &quot;PC-B&quot; format &quot;%host%,%mac%,%name%&quot;</code>  </p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3></li>
-<li><p>還有很多功能，可以自行嘗試  </p>
-</li>
-<li><p><a href="https://github.com/veyon/veyon">Veyon GitHub</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>open source software</category>
-      </categories>
-      <tags>
-        <tag>Veyon</tag>
-        <tag>open source software</tag>
-        <tag>free</tag>
-        <tag>learning</tag>
-        <tag>teaching</tag>
-        <tag>開源軟體</tag>
-        <tag>教室管理</tag>
-        <tag>TTSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
-    <url>/2022/07/18/20220718-Task-Manager/</url>
-    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
-<a id="more"></a>  
-<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
-<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
-      <categories>
-        <category>Win10</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Windows</tag>
-        <tag>Win10 pro</tag>
-        <tag>Windows專業版</tag>
-        <tag>工作管理員</tag>
-        <tag>Task Manager</tag>
-        <tag>taskmgr</tag>
-        <tag>bat</tag>
-        <tag>Batchfile</tag>
       </tags>
   </entry>
   <entry>
@@ -469,6 +392,83 @@
         <tag>JDK</tag>
         <tag>Eclipse</tag>
         <tag>WindowBuilder</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Veyon]教室管理開源軟體-廣播、遠端監控、遠端控制</title>
+    <url>/2022/07/15/20220715-veyon/</url>
+    <content><![CDATA[<h2 id="Veyon-Virtual-Eye-On-Networks"><a href="#Veyon-Virtual-Eye-On-Networks" class="headerlink" title="Veyon - Virtual Eye On Networks"></a><a href="https://veyon.io/en/">Veyon</a> - Virtual Eye On Networks</h2><p>Veyon是一款可供教師教學、管理教室的免費開源軟體<br>其功能主要包含廣播教學、監控畫面、遠距開關機、傳輸檔案等</p>
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><blockquote>
+<p>先至其官網<a href="https://veyon.io/en/download/">下載</a>，注意版本<br><img src="https://photos.smugmug.com/photos/i-Z5RxJwq/0/ec8e15f9/X2/i-Z5RxJwq-X2.jpg"></p>
+</blockquote>
+<a id="more"></a> 
+<p>執行安裝程序</p>
+<blockquote>
+<p><img src="https://photos.smugmug.com/photos/i-5FVXpWz/0/6b2060b4/O/i-5FVXpWz.jpg"><br><img src="https://photos.smugmug.com/photos/i-PDd3pFc/0/0e94dbd7/O/i-PDd3pFc.jpg"></p>
+<ul>
+<li><strong>↓如為學生端可不安裝Veyon Master</strong>  </li>
+</ul>
+<p><img src="https://photos.smugmug.com/photos/i-Hh2MNSK/0/c74fcc2a/O/i-Hh2MNSK.jpg"><br>最後完成安裝<br><img src="https://photos.smugmug.com/photos/i-gfbv5L7/0/2d05e12f/O/i-gfbv5L7.jpg"></p>
+</blockquote>
+<h3 id="組態設定"><a href="#組態設定" class="headerlink" title="組態設定"></a>組態設定</h3><ul>
+<li><p>教師端</p>
+<blockquote>
+<p><strong>身份驗證-選擇金鑰身份驗證</strong><br><img src="https://photos.smugmug.com/photos/i-QsZdX6S/0/a12aefd3/O/i-QsZdX6S.jpg"><br><strong>建立金鑰配對，匯出public金鑰導入學生端使用</strong><br><img src="https://photos.smugmug.com/photos/i-fLNbXz8/0/8160dabd/O/i-fLNbXz8.jpg"><br><img src="https://photos.smugmug.com/photos/i-pH7NxzH/0/e654e316/O/i-pH7NxzH.jpg"><br>可於位置建立教室名稱，電腦新增電腦名稱與IP、MAC位址<br><img src="https://photos.smugmug.com/photos/i-h3TmWqq/0/ea7ad6c3/O/i-h3TmWqq.jpg">  </p>
+</blockquote>
+</li>
+<li><p>學生端</p>
+<blockquote>
+<p>可至檢視-進階，在服務選項選擇隱藏通知區域與自動啟動<br><strong>匯入piblic金鑰</strong><br>可將使用介面改為英文(學生有想亂搞還是沒用啦~~~)  </p>
+</blockquote>
+</li>
+</ul>
+<h3 id="教師端檢視畫面"><a href="#教師端檢視畫面" class="headerlink" title="教師端檢視畫面"></a>教師端檢視畫面</h3><p><img src="https://photos.smugmug.com/photos/i-X6S9cnn/0/f0e4324d/X2/i-X6S9cnn-X2.jpg"><br>組態設定完成後可於Veyon Master程式中看見類似上圖畫面，目前學生端只測試3台匯入key，所以只有3台有畫面，這3台是可以遠端操控的，比如<strong>關機</strong>  </p>
+<h3 id="命令列-veyon-cli-新增要管控電腦"><a href="#命令列-veyon-cli-新增要管控電腦" class="headerlink" title="命令列(veyon-cli)新增要管控電腦"></a>命令列(veyon-cli)新增要管控電腦</h3><ul>
+<li><p>新增位置<br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects add location &quot;PC-B&quot;</code>  </p>
+</li>
+<li><p>新增電腦-csv檔匯入(格式為IP,MAC,電腦名稱)，<strong>注意!，不用欄位名稱</strong><br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects import c:\maclist.csv location &quot;PC-B&quot; format &quot;%host%,%mac%,%name%&quot;</code>  </p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3></li>
+<li><p>還有很多功能，可以自行嘗試  </p>
+</li>
+<li><p><a href="https://github.com/veyon/veyon">Veyon GitHub</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>open source software</category>
+      </categories>
+      <tags>
+        <tag>Veyon</tag>
+        <tag>open source software</tag>
+        <tag>free</tag>
+        <tag>learning</tag>
+        <tag>teaching</tag>
+        <tag>開源軟體</tag>
+        <tag>教室管理</tag>
+        <tag>TTSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
+    <url>/2022/07/18/20220718-Task-Manager/</url>
+    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
+<a id="more"></a>  
+<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
+<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
+      <categories>
+        <category>Win10</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Windows</tag>
+        <tag>Win10 pro</tag>
+        <tag>Windows專業版</tag>
+        <tag>工作管理員</tag>
+        <tag>Task Manager</tag>
+        <tag>taskmgr</tag>
+        <tag>bat</tag>
+        <tag>Batchfile</tag>
       </tags>
   </entry>
 </search>
