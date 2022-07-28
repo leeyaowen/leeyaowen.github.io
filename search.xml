@@ -68,6 +68,25 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<a id="more"></a>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[PhotoVogue]No. 289</title>
     <url>/2022/02/02/20220202-photovogue/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
@@ -108,25 +127,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
-<a id="more"></a>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[R]去除字串的多餘空白-從gdata到stringr</title>
     <url>/2022/02/11/20220211-gdata-to-stringr/</url>
     <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
@@ -146,22 +146,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 290/No. 291</title>
-    <url>/2022/02/28/20220221-photovogue/</url>
-    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>canon</tag>
-        <tag>tamron 35mm f/1.8</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
     <url>/2022/03/19/20220319-img-resize/</url>
     <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
@@ -178,6 +162,22 @@
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>resize</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <url>/2022/02/28/20220221-photovogue/</url>
+    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>canon</tag>
+        <tag>tamron 35mm f/1.8</tag>
       </tags>
   </entry>
   <entry>
@@ -298,48 +298,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]T64</title>
-    <url>/2022/06/07/20220607-photovogue/</url>
-    <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>herbarium</tag>
-        <tag>still life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
-    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
-<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
-<a id="more"></a>  
-<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
-<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
-<p>目前完成滑鼠座標偵測<br>Todoist  </p>
-<ul>
-<li><input disabled="" type="checkbox"> 畫線畫點  </li>
-<li><input disabled="" type="checkbox"> 設定資料庫</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Java</tag>
-        <tag>JDK</tag>
-        <tag>Eclipse</tag>
-        <tag>WindowBuilder</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[PhotoVogue]T65</title>
     <url>/2022/06/21/20220621-photovogue/</url>
     <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
@@ -351,10 +309,26 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-        <tag>still life</tag>
         <tag>bird</tag>
+        <tag>still life</tag>
         <tag>duck</tag>
         <tag>animal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]T64</title>
+    <url>/2022/06/07/20220607-photovogue/</url>
+    <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>still life</tag>
+        <tag>herbarium</tag>
       </tags>
   </entry>
   <entry>
@@ -446,6 +420,32 @@
         <tag>開源軟體</tag>
         <tag>教室管理</tag>
         <tag>TTSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
+    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
+<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
+<a id="more"></a>  
+<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
+<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
+<p>目前完成滑鼠座標偵測<br>Todoist  </p>
+<ul>
+<li><input disabled="" type="checkbox"> 畫線畫點  </li>
+<li><input disabled="" type="checkbox"> 設定資料庫</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Java</tag>
+        <tag>JDK</tag>
+        <tag>Eclipse</tag>
+        <tag>WindowBuilder</tag>
       </tags>
   </entry>
   <entry>
