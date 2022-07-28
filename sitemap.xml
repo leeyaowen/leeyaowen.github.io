@@ -227,6 +227,20 @@
 
   
   <url>
+    <loc>https://leeyaowen.github.io/tags/stock/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/life/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://leeyaowen.github.io/tags/hexo/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -242,20 +256,6 @@
   
   <url>
     <loc>https://leeyaowen.github.io/tags/code/</loc>
-    <lastmod>2022-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/stock/</loc>
-    <lastmod>2022-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/life/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -339,13 +339,6 @@
   </url>
   
   <url>
-    <loc>https://leeyaowen.github.io/tags/pixel-4a-5g/</loc>
-    <lastmod>2022-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://leeyaowen.github.io/tags/python/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -368,6 +361,13 @@
   
   <url>
     <loc>https://leeyaowen.github.io/tags/%E7%B6%B2%E8%B7%AF%E7%88%AC%E8%9F%B2/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/pixel-4a-5g/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -521,6 +521,34 @@
   </url>
   
   <url>
+    <loc>https://leeyaowen.github.io/tags/Java/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/JDK/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/Eclipse/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/WindowBuilder/</loc>
+    <lastmod>2022-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://leeyaowen.github.io/tags/%E5%98%89%E7%BE%A9%E5%A4%A7%E5%AD%B8%E8%BB%8A%E7%AE%A1%E6%9C%83/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -598,34 +626,6 @@
   </url>
   
   <url>
-    <loc>https://leeyaowen.github.io/tags/Java/</loc>
-    <lastmod>2022-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/JDK/</loc>
-    <lastmod>2022-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/Eclipse/</loc>
-    <lastmod>2022-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/WindowBuilder/</loc>
-    <lastmod>2022-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://leeyaowen.github.io/tags/Windows/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -684,14 +684,14 @@
 
   
   <url>
-    <loc>https://leeyaowen.github.io/categories/hexo/</loc>
+    <loc>https://leeyaowen.github.io/categories/stock/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://leeyaowen.github.io/categories/stock/</loc>
+    <loc>https://leeyaowen.github.io/categories/hexo/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -726,14 +726,14 @@
   </url>
   
   <url>
-    <loc>https://leeyaowen.github.io/categories/open-source-software/</loc>
+    <loc>https://leeyaowen.github.io/categories/Java/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://leeyaowen.github.io/categories/Java/</loc>
+    <loc>https://leeyaowen.github.io/categories/open-source-software/</loc>
     <lastmod>2022-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
