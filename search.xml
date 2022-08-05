@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>在NexT中增加canvas nest特效</title>
-    <url>/2021/02/10/20210210-add-canvas-nest/</url>
-    <content><![CDATA[<p>剛開始使用Hexo<br>想增加幾何線條的特效，滑鼠移動過去時會吸引線條<br>方法是在<code>themes/next/layout/_layout.swig</code>中的<code>&lt;body&gt;</code>區塊增加以下code</p>
-<figure class="highlight html"><figcaption><span>HTML</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">color</span>=<span class="string">&quot;0,0,0&quot;</span> <span class="attr">opacity</span>=<span class="string">&#x27;0.5&#x27;</span> <span class="attr">zIndex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">count</span>=<span class="string">&quot;99&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
     <url>/2021/02/11/20210211-S2A-75-sample/</url>
     <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
@@ -32,6 +18,37 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<a id="more"></a>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在NexT中增加canvas nest特效</title>
+    <url>/2021/02/10/20210210-add-canvas-nest/</url>
+    <content><![CDATA[<p>剛開始使用Hexo<br>想增加幾何線條的特效，滑鼠移動過去時會吸引線條<br>方法是在<code>themes/next/layout/_layout.swig</code>中的<code>&lt;body&gt;</code>區塊增加以下code</p>
+<figure class="highlight html"><figcaption><span>HTML</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">color</span>=<span class="string">&quot;0,0,0&quot;</span> <span class="attr">opacity</span>=<span class="string">&#x27;0.5&#x27;</span> <span class="attr">zIndex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">count</span>=<span class="string">&quot;99&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>準備踏入股票市場</title>
     <url>/2021/02/10/20210210-stock/</url>
     <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
@@ -42,6 +59,25 @@
       <tags>
         <tag>stock</tag>
         <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<a id="more"></a>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
       </tags>
   </entry>
   <entry>
@@ -68,39 +104,22 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
+    <url>/2022/03/19/20220319-img-resize/</url>
+    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
 <a id="more"></a>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
-]]></content>
+<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>photography</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
-<a id="more"></a>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>numpy</tag>
+        <tag>resize</tag>
       </tags>
   </entry>
   <entry>
@@ -146,41 +165,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 290/No. 291</title>
-    <url>/2022/02/28/20220221-photovogue/</url>
-    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>canon</tag>
-        <tag>tamron 35mm f/1.8</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
-    <url>/2022/03/19/20220319-img-resize/</url>
-    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
-<a id="more"></a>
-<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>opencv</tag>
-        <tag>numpy</tag>
-        <tag>resize</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[python]想要RAW檔?可以先拿.raw壓壓驚</title>
     <url>/2022/04/03/20220403-jpg2raw/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-S37M65H/0/ef628152/O/i-S37M65H.png"><br>我們廢話不多說，先上個<a href="https://github.com/leeyaowen/jpg2raw/releases">Windows載點</a><br>如首圖，只要將exe檔跟jpg檔放在同一目錄下就可以執行了</p>
@@ -207,9 +191,9 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <url>/2022/02/28/20220221-photovogue/</url>
+    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
 ]]></content>
       <categories>
         <category>photography</category>
@@ -218,7 +202,8 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-        <tag>Minolta V2</tag>
+        <tag>canon</tag>
+        <tag>tamron 35mm f/1.8</tag>
       </tags>
   </entry>
   <entry>
@@ -241,9 +226,9 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]T64</title>
-    <url>/2022/06/07/20220607-photovogue/</url>
-    <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
 ]]></content>
       <categories>
         <category>photography</category>
@@ -252,8 +237,7 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-        <tag>herbarium</tag>
-        <tag>still life</tag>
+        <tag>Minolta V2</tag>
       </tags>
   </entry>
   <entry>
@@ -314,9 +298,9 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]T65</title>
-    <url>/2022/06/21/20220621-photovogue/</url>
-    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
+    <title>[PhotoVogue]T64</title>
+    <url>/2022/06/07/20220607-photovogue/</url>
+    <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
 ]]></content>
       <categories>
         <category>photography</category>
@@ -325,73 +309,8 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
+        <tag>herbarium</tag>
         <tag>still life</tag>
-        <tag>bird</tag>
-        <tag>duck</tag>
-        <tag>animal</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
-    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
-<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
-<a id="more"></a>  
-<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
-<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
-<p>目前完成滑鼠座標偵測<br>Todoist  </p>
-<ul>
-<li><input disabled="" type="checkbox"> 畫線畫點  </li>
-<li><input disabled="" type="checkbox"> 設定資料庫</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Java</tag>
-        <tag>JDK</tag>
-        <tag>Eclipse</tag>
-        <tag>WindowBuilder</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[嘉義大學回憶]如何才能靠卡進學校</title>
-    <url>/2022/07/03/20220703-NCYUctmc/</url>
-    <content><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p>
-<ul>
-<li><p>2017.9.18(開學第一天) </p>
-<p>直接進車輛管理會辦通行證，但接下來一週都被擋在外面靠卡失敗進不來  </p>
-<a id="more"></a>  </li>
-<li><p>2017.9.25  </p>
-<p>至車輛管理會反應靠卡問題，(應該是)工讀生表示那是廠商問題，會叫廠商盡快修理  </p>
-<p>結果一樣進不來，不過接下來一週的柵欄都是直接打開的，不管你有沒有繳管理費都可以進(如果不管理你乾脆叫清潔費好了)  </p>
-</li>
-<li><p>2017.10.08  </p>
-<p>雙十連假第二天，不知為何柵欄又放下來了，但一樣靠卡失敗  </p>
-<p>連假四天，被擋了三天，當然行政也放假去了問題無解  </p>
-</li>
-<li><p>2017.10.12  </p>
-<p>再次跟車輛管理會反應問題，結果說是電算中心跟廠商的問題，另外柵欄是駐警隊管，他們也不能開，聽起來他們就是個收資料的單位  </p>
-<p>很好，我後來到了電算中心詢問，結果電算中心表示他們只負責發學生證，這個說法是車輛管理會丟給他們的，他們的職員甚至自己都無法靠卡進校園(似乎是9/1之後繳費的都不行)  </p>
-<p>接下來再次跟車輛管理會說明電算中心並無處理這個項目，車管會笑著說：「你要問對人啊」(意思是說電算中心搞不清楚自己的業務囉？)  </p>
-<p>緊接著坐前面的工讀生跟我說：「給我你的學號，我再幫你開權限」(還沒跟我要收據看)  </p>
-<p>WTF，這不代表所有問題都在你們這邊嗎，你們有那些資料但是根本沒輸入吧，原來只要個學號就能解決問題了，再次?是不是再次真的讓人懷疑阿  </p>
-<p>剛剛下午去試了一下可以靠卡成功了，但相信應該還是有不少人被擋在外面  </p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>NCYU</category>
-      </categories>
-      <tags>
-        <tag>NCYU</tag>
-        <tag>嘉義大學</tag>
-        <tag>嘉義大學車管會</tag>
-        <tag>車輛管理委員會</tag>
-        <tag>靠卡</tag>
       </tags>
   </entry>
   <entry>
@@ -449,26 +368,21 @@
       </tags>
   </entry>
   <entry>
-    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
-    <url>/2022/07/18/20220718-Task-Manager/</url>
-    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
-<a id="more"></a>  
-<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
-<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
+    <title>[PhotoVogue]T65</title>
+    <url>/2022/06/21/20220621-photovogue/</url>
+    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
+]]></content>
       <categories>
-        <category>Win10</category>
+        <category>photography</category>
       </categories>
       <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Windows</tag>
-        <tag>Win10 pro</tag>
-        <tag>Windows專業版</tag>
-        <tag>工作管理員</tag>
-        <tag>Task Manager</tag>
-        <tag>taskmgr</tag>
-        <tag>bat</tag>
-        <tag>Batchfile</tag>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>still life</tag>
+        <tag>bird</tag>
+        <tag>duck</tag>
+        <tag>animal</tag>
       </tags>
   </entry>
   <entry>
@@ -513,8 +427,7 @@
 <li>click on the map</li>
 </ol>
 <h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><img src="https://raw.githubusercontent.com/leeyaowen/Plant-Spatial-Points-Tool/master/screenshot/Plant%20Spatial%20Points%20Tool.JPG"></p>
-<h3 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h3><p>Yao-Wen Lee (2022) Plant Spatial Points Tool. URL: <a href="https://github.com/leeyaowen/Plant-Spatial-Points-Tool">https://github.com/leeyaowen/Plant-Spatial-Points-Tool</a> DOI: 10.5281/zenodo.6931327  </p>
-]]></content>
+<h3 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h3><p align="left">Yao-Wen Lee (2022) Plant Spatial Points Tool. URL: https://github.com/leeyaowen/Plant-Spatial-Points-Tool DOI: 10.5281/zenodo.6931327</p>  ]]></content>
       <categories>
         <category>python</category>
       </categories>
@@ -528,6 +441,92 @@
         <tag>spatial pattern</tag>
         <tag>tool</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[嘉義大學回憶]如何才能靠卡進學校</title>
+    <url>/2022/07/03/20220703-NCYUctmc/</url>
+    <content><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p>
+<ul>
+<li><p>2017.9.18(開學第一天) </p>
+<p>直接進車輛管理會辦通行證，但接下來一週都被擋在外面靠卡失敗進不來  </p>
+<a id="more"></a>  </li>
+<li><p>2017.9.25  </p>
+<p>至車輛管理會反應靠卡問題，(應該是)工讀生表示那是廠商問題，會叫廠商盡快修理  </p>
+<p>結果一樣進不來，不過接下來一週的柵欄都是直接打開的，不管你有沒有繳管理費都可以進(如果不管理你乾脆叫清潔費好了)  </p>
+</li>
+<li><p>2017.10.08  </p>
+<p>雙十連假第二天，不知為何柵欄又放下來了，但一樣靠卡失敗  </p>
+<p>連假四天，被擋了三天，當然行政也放假去了問題無解  </p>
+</li>
+<li><p>2017.10.12  </p>
+<p>再次跟車輛管理會反應問題，結果說是電算中心跟廠商的問題，另外柵欄是駐警隊管，他們也不能開，聽起來他們就是個收資料的單位  </p>
+<p>很好，我後來到了電算中心詢問，結果電算中心表示他們只負責發學生證，這個說法是車輛管理會丟給他們的，他們的職員甚至自己都無法靠卡進校園(似乎是9/1之後繳費的都不行)  </p>
+<p>接下來再次跟車輛管理會說明電算中心並無處理這個項目，車管會笑著說：「你要問對人啊」(意思是說電算中心搞不清楚自己的業務囉？)  </p>
+<p>緊接著坐前面的工讀生跟我說：「給我你的學號，我再幫你開權限」(還沒跟我要收據看)  </p>
+<p>WTF，這不代表所有問題都在你們這邊嗎，你們有那些資料但是根本沒輸入吧，原來只要個學號就能解決問題了，再次?是不是再次真的讓人懷疑阿  </p>
+<p>剛剛下午去試了一下可以靠卡成功了，但相信應該還是有不少人被擋在外面  </p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>NCYU</category>
+      </categories>
+      <tags>
+        <tag>NCYU</tag>
+        <tag>嘉義大學</tag>
+        <tag>嘉義大學車管會</tag>
+        <tag>車輛管理委員會</tag>
+        <tag>靠卡</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
+    <url>/2022/07/18/20220718-Task-Manager/</url>
+    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
+<a id="more"></a>  
+<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
+<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
+      <categories>
+        <category>Win10</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Windows</tag>
+        <tag>Win10 pro</tag>
+        <tag>Windows專業版</tag>
+        <tag>工作管理員</tag>
+        <tag>Task Manager</tag>
+        <tag>taskmgr</tag>
+        <tag>bat</tag>
+        <tag>Batchfile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
+    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
+<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
+<a id="more"></a>  
+<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
+<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
+<p>目前完成滑鼠座標偵測<br>Todoist  </p>
+<ul>
+<li><input disabled="" type="checkbox"> 畫線畫點  </li>
+<li><input disabled="" type="checkbox"> 設定資料庫</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Java</tag>
+        <tag>JDK</tag>
+        <tag>Eclipse</tag>
+        <tag>WindowBuilder</tag>
       </tags>
   </entry>
 </search>
