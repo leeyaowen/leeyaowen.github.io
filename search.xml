@@ -104,6 +104,25 @@
       </tags>
   </entry>
   <entry>
+    <title>[R]去除字串的多餘空白-從gdata到stringr</title>
+    <url>/2022/02/11/20220211-gdata-to-stringr/</url>
+    <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
+<p>如<code>&#39;abc&#39;</code>與<code>&#39;abc &#39;</code>是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於<strong>多了一個物種</strong><br>先前看到gdata有<code>trim</code>這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除<br>使用stringr的<code>str_trim</code>則不同，有both, left, right三個選擇</p>
+<p>gdata是一個有蠻多處理資料function的package，但其最後更新為2017年<br>stringr主要就是專門做字串處理，且為tidyverse之下的一員，針對字串處理的function豐富，也比較不用擔心沒人維護</p>
+<p>考量我也沒有在用gdata的其他功能，以及stringr有更多方便處理字串的function，就跳槽啦!</p>
+]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+        <tag>coding</tag>
+        <tag>stringr</tag>
+        <tag>資料處理</tag>
+        <tag>去除空白</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[python]利用flickrapi爬取Flickr的圖片</title>
     <url>/2022/02/03/20220203-flickr-crawler/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
@@ -124,25 +143,6 @@
         <tag>flickrapi</tag>
         <tag>web crawler</tag>
         <tag>網路爬蟲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[R]去除字串的多餘空白-從gdata到stringr</title>
-    <url>/2022/02/11/20220211-gdata-to-stringr/</url>
-    <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
-<p>如<code>&#39;abc&#39;</code>與<code>&#39;abc &#39;</code>是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於<strong>多了一個物種</strong><br>先前看到gdata有<code>trim</code>這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除<br>使用stringr的<code>str_trim</code>則不同，有both, left, right三個選擇</p>
-<p>gdata是一個有蠻多處理資料function的package，但其最後更新為2017年<br>stringr主要就是專門做字串處理，且為tidyverse之下的一員，針對字串處理的function豐富，也比較不用擔心沒人維護</p>
-<p>考量我也沒有在用gdata的其他功能，以及stringr有更多方便處理字串的function，就跳槽啦!</p>
-]]></content>
-      <categories>
-        <category>R</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-        <tag>coding</tag>
-        <tag>stringr</tag>
-        <tag>資料處理</tag>
-        <tag>去除空白</tag>
       </tags>
   </entry>
   <entry>
@@ -241,6 +241,22 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]T64</title>
+    <url>/2022/06/07/20220607-photovogue/</url>
+    <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>herbarium</tag>
+        <tag>still life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[嘉義大學回憶]國文選課實錄</title>
     <url>/2022/06/11/20220611-NCYUlesson/</url>
     <content><![CDATA[<p><strong>此文為備份Facebook網誌用，如實記錄當時發生事實</strong></p>
@@ -298,6 +314,43 @@
       </tags>
   </entry>
   <entry>
+    <title>[嘉義大學回憶]如何才能靠卡進學校</title>
+    <url>/2022/07/03/20220703-NCYUctmc/</url>
+    <content><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p>
+<ul>
+<li><p>2017.9.18(開學第一天) </p>
+<p>直接進車輛管理會辦通行證，但接下來一週都被擋在外面靠卡失敗進不來  </p>
+<a id="more"></a>  </li>
+<li><p>2017.9.25  </p>
+<p>至車輛管理會反應靠卡問題，(應該是)工讀生表示那是廠商問題，會叫廠商盡快修理  </p>
+<p>結果一樣進不來，不過接下來一週的柵欄都是直接打開的，不管你有沒有繳管理費都可以進(如果不管理你乾脆叫清潔費好了)  </p>
+</li>
+<li><p>2017.10.08  </p>
+<p>雙十連假第二天，不知為何柵欄又放下來了，但一樣靠卡失敗  </p>
+<p>連假四天，被擋了三天，當然行政也放假去了問題無解  </p>
+</li>
+<li><p>2017.10.12  </p>
+<p>再次跟車輛管理會反應問題，結果說是電算中心跟廠商的問題，另外柵欄是駐警隊管，他們也不能開，聽起來他們就是個收資料的單位  </p>
+<p>很好，我後來到了電算中心詢問，結果電算中心表示他們只負責發學生證，這個說法是車輛管理會丟給他們的，他們的職員甚至自己都無法靠卡進校園(似乎是9/1之後繳費的都不行)  </p>
+<p>接下來再次跟車輛管理會說明電算中心並無處理這個項目，車管會笑著說：「你要問對人啊」(意思是說電算中心搞不清楚自己的業務囉？)  </p>
+<p>緊接著坐前面的工讀生跟我說：「給我你的學號，我再幫你開權限」(還沒跟我要收據看)  </p>
+<p>WTF，這不代表所有問題都在你們這邊嗎，你們有那些資料但是根本沒輸入吧，原來只要個學號就能解決問題了，再次?是不是再次真的讓人懷疑阿  </p>
+<p>剛剛下午去試了一下可以靠卡成功了，但相信應該還是有不少人被擋在外面  </p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>NCYU</category>
+      </categories>
+      <tags>
+        <tag>NCYU</tag>
+        <tag>嘉義大學</tag>
+        <tag>嘉義大學車管會</tag>
+        <tag>車輛管理委員會</tag>
+        <tag>靠卡</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[PhotoVogue]T65</title>
     <url>/2022/06/21/20220621-photovogue/</url>
     <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
@@ -309,26 +362,113 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-        <tag>bird</tag>
         <tag>still life</tag>
+        <tag>bird</tag>
         <tag>duck</tag>
         <tag>animal</tag>
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]T64</title>
-    <url>/2022/06/07/20220607-photovogue/</url>
-    <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
+    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
+    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
+<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
+<a id="more"></a>  
+<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
+<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
+<p>目前完成滑鼠座標偵測<br>Todoist  </p>
+<ul>
+<li><input disabled="" type="checkbox"> 畫線畫點  </li>
+<li><input disabled="" type="checkbox"> 設定資料庫</li>
+</ul>
 ]]></content>
       <categories>
-        <category>photography</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>still life</tag>
-        <tag>herbarium</tag>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Java</tag>
+        <tag>JDK</tag>
+        <tag>Eclipse</tag>
+        <tag>WindowBuilder</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Veyon]教室管理開源軟體-廣播、遠端監控、遠端控制</title>
+    <url>/2022/07/15/20220715-veyon/</url>
+    <content><![CDATA[<h2 id="Veyon-Virtual-Eye-On-Networks"><a href="#Veyon-Virtual-Eye-On-Networks" class="headerlink" title="Veyon - Virtual Eye On Networks"></a><a href="https://veyon.io/en/">Veyon</a> - Virtual Eye On Networks</h2><p>Veyon是一款可供教師教學、管理教室的免費開源軟體<br>其功能主要包含廣播教學、監控畫面、遠距開關機、傳輸檔案等</p>
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><blockquote>
+<p>先至其官網<a href="https://veyon.io/en/download/">下載</a>，注意版本<br><img src="https://photos.smugmug.com/photos/i-Z5RxJwq/0/ec8e15f9/X2/i-Z5RxJwq-X2.jpg"></p>
+</blockquote>
+<a id="more"></a> 
+<p>執行安裝程序</p>
+<blockquote>
+<p><img src="https://photos.smugmug.com/photos/i-5FVXpWz/0/6b2060b4/O/i-5FVXpWz.jpg"><br><img src="https://photos.smugmug.com/photos/i-PDd3pFc/0/0e94dbd7/O/i-PDd3pFc.jpg"></p>
+<ul>
+<li><strong>↓如為學生端可不安裝Veyon Master</strong>  </li>
+</ul>
+<p><img src="https://photos.smugmug.com/photos/i-Hh2MNSK/0/c74fcc2a/O/i-Hh2MNSK.jpg"><br>最後完成安裝<br><img src="https://photos.smugmug.com/photos/i-gfbv5L7/0/2d05e12f/O/i-gfbv5L7.jpg"></p>
+</blockquote>
+<h3 id="組態設定"><a href="#組態設定" class="headerlink" title="組態設定"></a>組態設定</h3><ul>
+<li><p>教師端</p>
+<blockquote>
+<p><strong>身份驗證-選擇金鑰身份驗證</strong><br><img src="https://photos.smugmug.com/photos/i-QsZdX6S/0/a12aefd3/O/i-QsZdX6S.jpg"><br><strong>建立金鑰配對，匯出public金鑰導入學生端使用</strong><br><img src="https://photos.smugmug.com/photos/i-fLNbXz8/0/8160dabd/O/i-fLNbXz8.jpg"><br><img src="https://photos.smugmug.com/photos/i-pH7NxzH/0/e654e316/O/i-pH7NxzH.jpg"><br>可於位置建立教室名稱，電腦新增電腦名稱與IP、MAC位址<br><img src="https://photos.smugmug.com/photos/i-h3TmWqq/0/ea7ad6c3/O/i-h3TmWqq.jpg">  </p>
+</blockquote>
+</li>
+<li><p>學生端</p>
+<blockquote>
+<p>可至檢視-進階，在服務選項選擇隱藏通知區域與自動啟動<br><strong>匯入piblic金鑰</strong><br>可將使用介面改為英文(學生有想亂搞還是沒用啦~~~)  </p>
+</blockquote>
+</li>
+</ul>
+<h3 id="教師端檢視畫面"><a href="#教師端檢視畫面" class="headerlink" title="教師端檢視畫面"></a>教師端檢視畫面</h3><p><img src="https://photos.smugmug.com/photos/i-X6S9cnn/0/f0e4324d/X2/i-X6S9cnn-X2.jpg"><br>組態設定完成後可於Veyon Master程式中看見類似上圖畫面，目前學生端只測試3台匯入key，所以只有3台有畫面，這3台是可以遠端操控的，比如<strong>關機</strong>  </p>
+<h3 id="命令列-veyon-cli-新增要管控電腦"><a href="#命令列-veyon-cli-新增要管控電腦" class="headerlink" title="命令列(veyon-cli)新增要管控電腦"></a>命令列(veyon-cli)新增要管控電腦</h3><ul>
+<li><p>新增位置<br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects add location &quot;PC-B&quot;</code>  </p>
+</li>
+<li><p>新增電腦-csv檔匯入(格式為IP,MAC,電腦名稱)，<strong>注意!，不用欄位名稱</strong><br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects import c:\maclist.csv location &quot;PC-B&quot; format &quot;%host%,%mac%,%name%&quot;</code>  </p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3></li>
+<li><p>還有很多功能，可以自行嘗試  </p>
+</li>
+<li><p><a href="https://github.com/veyon/veyon">Veyon GitHub</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>open source software</category>
+      </categories>
+      <tags>
+        <tag>Veyon</tag>
+        <tag>open source software</tag>
+        <tag>free</tag>
+        <tag>learning</tag>
+        <tag>teaching</tag>
+        <tag>開源軟體</tag>
+        <tag>教室管理</tag>
+        <tag>TTSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
+    <url>/2022/07/18/20220718-Task-Manager/</url>
+    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
+<a id="more"></a>  
+<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
+<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
+      <categories>
+        <category>Win10</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Windows</tag>
+        <tag>Win10 pro</tag>
+        <tag>Windows專業版</tag>
+        <tag>工作管理員</tag>
+        <tag>Task Manager</tag>
+        <tag>taskmgr</tag>
+        <tag>bat</tag>
+        <tag>Batchfile</tag>
       </tags>
   </entry>
   <entry>
@@ -387,146 +527,6 @@
         <tag>spatial pattern</tag>
         <tag>tool</tag>
         <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[嘉義大學回憶]如何才能靠卡進學校</title>
-    <url>/2022/07/03/20220703-NCYUctmc/</url>
-    <content><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p>
-<ul>
-<li><p>2017.9.18(開學第一天) </p>
-<p>直接進車輛管理會辦通行證，但接下來一週都被擋在外面靠卡失敗進不來  </p>
-<a id="more"></a>  </li>
-<li><p>2017.9.25  </p>
-<p>至車輛管理會反應靠卡問題，(應該是)工讀生表示那是廠商問題，會叫廠商盡快修理  </p>
-<p>結果一樣進不來，不過接下來一週的柵欄都是直接打開的，不管你有沒有繳管理費都可以進(如果不管理你乾脆叫清潔費好了)  </p>
-</li>
-<li><p>2017.10.08  </p>
-<p>雙十連假第二天，不知為何柵欄又放下來了，但一樣靠卡失敗  </p>
-<p>連假四天，被擋了三天，當然行政也放假去了問題無解  </p>
-</li>
-<li><p>2017.10.12  </p>
-<p>再次跟車輛管理會反應問題，結果說是電算中心跟廠商的問題，另外柵欄是駐警隊管，他們也不能開，聽起來他們就是個收資料的單位  </p>
-<p>很好，我後來到了電算中心詢問，結果電算中心表示他們只負責發學生證，這個說法是車輛管理會丟給他們的，他們的職員甚至自己都無法靠卡進校園(似乎是9/1之後繳費的都不行)  </p>
-<p>接下來再次跟車輛管理會說明電算中心並無處理這個項目，車管會笑著說：「你要問對人啊」(意思是說電算中心搞不清楚自己的業務囉？)  </p>
-<p>緊接著坐前面的工讀生跟我說：「給我你的學號，我再幫你開權限」(還沒跟我要收據看)  </p>
-<p>WTF，這不代表所有問題都在你們這邊嗎，你們有那些資料但是根本沒輸入吧，原來只要個學號就能解決問題了，再次?是不是再次真的讓人懷疑阿  </p>
-<p>剛剛下午去試了一下可以靠卡成功了，但相信應該還是有不少人被擋在外面  </p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>NCYU</category>
-      </categories>
-      <tags>
-        <tag>NCYU</tag>
-        <tag>嘉義大學</tag>
-        <tag>嘉義大學車管會</tag>
-        <tag>車輛管理委員會</tag>
-        <tag>靠卡</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
-    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
-<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
-<a id="more"></a>  
-<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
-<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
-<p>目前完成滑鼠座標偵測<br>Todoist  </p>
-<ul>
-<li><input disabled="" type="checkbox"> 畫線畫點  </li>
-<li><input disabled="" type="checkbox"> 設定資料庫</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Java</tag>
-        <tag>JDK</tag>
-        <tag>Eclipse</tag>
-        <tag>WindowBuilder</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
-    <url>/2022/07/18/20220718-Task-Manager/</url>
-    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
-<a id="more"></a>  
-<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
-<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
-      <categories>
-        <category>Win10</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Windows</tag>
-        <tag>Win10 pro</tag>
-        <tag>Windows專業版</tag>
-        <tag>工作管理員</tag>
-        <tag>Task Manager</tag>
-        <tag>taskmgr</tag>
-        <tag>bat</tag>
-        <tag>Batchfile</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Veyon]教室管理開源軟體-廣播、遠端監控、遠端控制</title>
-    <url>/2022/07/15/20220715-veyon/</url>
-    <content><![CDATA[<h2 id="Veyon-Virtual-Eye-On-Networks"><a href="#Veyon-Virtual-Eye-On-Networks" class="headerlink" title="Veyon - Virtual Eye On Networks"></a><a href="https://veyon.io/en/">Veyon</a> - Virtual Eye On Networks</h2><p>Veyon是一款可供教師教學、管理教室的免費開源軟體<br>其功能主要包含廣播教學、監控畫面、遠距開關機、傳輸檔案等</p>
-<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><blockquote>
-<p>先至其官網<a href="https://veyon.io/en/download/">下載</a>，注意版本<br><img src="https://photos.smugmug.com/photos/i-Z5RxJwq/0/ec8e15f9/X2/i-Z5RxJwq-X2.jpg"></p>
-</blockquote>
-<a id="more"></a> 
-<p>執行安裝程序</p>
-<blockquote>
-<p><img src="https://photos.smugmug.com/photos/i-5FVXpWz/0/6b2060b4/O/i-5FVXpWz.jpg"><br><img src="https://photos.smugmug.com/photos/i-PDd3pFc/0/0e94dbd7/O/i-PDd3pFc.jpg"></p>
-<ul>
-<li><strong>↓如為學生端可不安裝Veyon Master</strong>  </li>
-</ul>
-<p><img src="https://photos.smugmug.com/photos/i-Hh2MNSK/0/c74fcc2a/O/i-Hh2MNSK.jpg"><br>最後完成安裝<br><img src="https://photos.smugmug.com/photos/i-gfbv5L7/0/2d05e12f/O/i-gfbv5L7.jpg"></p>
-</blockquote>
-<h3 id="組態設定"><a href="#組態設定" class="headerlink" title="組態設定"></a>組態設定</h3><ul>
-<li><p>教師端</p>
-<blockquote>
-<p><strong>身份驗證-選擇金鑰身份驗證</strong><br><img src="https://photos.smugmug.com/photos/i-QsZdX6S/0/a12aefd3/O/i-QsZdX6S.jpg"><br><strong>建立金鑰配對，匯出public金鑰導入學生端使用</strong><br><img src="https://photos.smugmug.com/photos/i-fLNbXz8/0/8160dabd/O/i-fLNbXz8.jpg"><br><img src="https://photos.smugmug.com/photos/i-pH7NxzH/0/e654e316/O/i-pH7NxzH.jpg"><br>可於位置建立教室名稱，電腦新增電腦名稱與IP、MAC位址<br><img src="https://photos.smugmug.com/photos/i-h3TmWqq/0/ea7ad6c3/O/i-h3TmWqq.jpg">  </p>
-</blockquote>
-</li>
-<li><p>學生端</p>
-<blockquote>
-<p>可至檢視-進階，在服務選項選擇隱藏通知區域與自動啟動<br><strong>匯入piblic金鑰</strong><br>可將使用介面改為英文(學生有想亂搞還是沒用啦~~~)  </p>
-</blockquote>
-</li>
-</ul>
-<h3 id="教師端檢視畫面"><a href="#教師端檢視畫面" class="headerlink" title="教師端檢視畫面"></a>教師端檢視畫面</h3><p><img src="https://photos.smugmug.com/photos/i-X6S9cnn/0/f0e4324d/X2/i-X6S9cnn-X2.jpg"><br>組態設定完成後可於Veyon Master程式中看見類似上圖畫面，目前學生端只測試3台匯入key，所以只有3台有畫面，這3台是可以遠端操控的，比如<strong>關機</strong>  </p>
-<h3 id="命令列-veyon-cli-新增要管控電腦"><a href="#命令列-veyon-cli-新增要管控電腦" class="headerlink" title="命令列(veyon-cli)新增要管控電腦"></a>命令列(veyon-cli)新增要管控電腦</h3><ul>
-<li><p>新增位置<br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects add location &quot;PC-B&quot;</code>  </p>
-</li>
-<li><p>新增電腦-csv檔匯入(格式為IP,MAC,電腦名稱)，<strong>注意!，不用欄位名稱</strong><br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects import c:\maclist.csv location &quot;PC-B&quot; format &quot;%host%,%mac%,%name%&quot;</code>  </p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3></li>
-<li><p>還有很多功能，可以自行嘗試  </p>
-</li>
-<li><p><a href="https://github.com/veyon/veyon">Veyon GitHub</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>open source software</category>
-      </categories>
-      <tags>
-        <tag>Veyon</tag>
-        <tag>open source software</tag>
-        <tag>free</tag>
-        <tag>learning</tag>
-        <tag>teaching</tag>
-        <tag>開源軟體</tag>
-        <tag>教室管理</tag>
-        <tag>TTSH</tag>
       </tags>
   </entry>
   <entry>
