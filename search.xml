@@ -68,6 +68,23 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<a id="more"></a>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[PhotoVogue]No. 288</title>
     <url>/2022/01/24/20220124-photovogue/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
@@ -87,11 +104,28 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
-<a id="more"></a>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+    <title>[R]去除字串的多餘空白-從gdata到stringr</title>
+    <url>/2022/02/11/20220211-gdata-to-stringr/</url>
+    <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
+<p>如<code>&#39;abc&#39;</code>與<code>&#39;abc &#39;</code>是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於<strong>多了一個物種</strong><br>先前看到gdata有<code>trim</code>這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除<br>使用stringr的<code>str_trim</code>則不同，有both, left, right三個選擇</p>
+<p>gdata是一個有蠻多處理資料function的package，但其最後更新為2017年<br>stringr主要就是專門做字串處理，且為tidyverse之下的一員，針對字串處理的function豐富，也比較不用擔心沒人維護</p>
+<p>考量我也沒有在用gdata的其他功能，以及stringr有更多方便處理字串的function，就跳槽啦!</p>
+]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+        <tag>coding</tag>
+        <tag>stringr</tag>
+        <tag>資料處理</tag>
+        <tag>去除空白</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <url>/2022/02/28/20220221-photovogue/</url>
+    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
 ]]></content>
       <categories>
         <category>photography</category>
@@ -100,7 +134,8 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
+        <tag>canon</tag>
+        <tag>tamron 35mm f/1.8</tag>
       </tags>
   </entry>
   <entry>
@@ -124,41 +159,6 @@
         <tag>flickrapi</tag>
         <tag>web crawler</tag>
         <tag>網路爬蟲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 290/No. 291</title>
-    <url>/2022/02/28/20220221-photovogue/</url>
-    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>canon</tag>
-        <tag>tamron 35mm f/1.8</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[R]去除字串的多餘空白-從gdata到stringr</title>
-    <url>/2022/02/11/20220211-gdata-to-stringr/</url>
-    <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
-<p>如<code>&#39;abc&#39;</code>與<code>&#39;abc &#39;</code>是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於<strong>多了一個物種</strong><br>先前看到gdata有<code>trim</code>這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除<br>使用stringr的<code>str_trim</code>則不同，有both, left, right三個選擇</p>
-<p>gdata是一個有蠻多處理資料function的package，但其最後更新為2017年<br>stringr主要就是專門做字串處理，且為tidyverse之下的一員，針對字串處理的function豐富，也比較不用擔心沒人維護</p>
-<p>考量我也沒有在用gdata的其他功能，以及stringr有更多方便處理字串的function，就跳槽啦!</p>
-]]></content>
-      <categories>
-        <category>R</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-        <tag>coding</tag>
-        <tag>stringr</tag>
-        <tag>資料處理</tag>
-        <tag>去除空白</tag>
       </tags>
   </entry>
   <entry>
@@ -226,6 +226,21 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>Minolta V2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[PhotoVogue]T64</title>
     <url>/2022/06/07/20220607-photovogue/</url>
     <content><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>
@@ -239,21 +254,6 @@
         <tag>vogue</tag>
         <tag>herbarium</tag>
         <tag>still life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>Minolta V2</tag>
       </tags>
   </entry>
   <entry>
@@ -314,6 +314,24 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]T65</title>
+    <url>/2022/06/21/20220621-photovogue/</url>
+    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>still life</tag>
+        <tag>bird</tag>
+        <tag>duck</tag>
+        <tag>animal</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[嘉義大學回憶]如何才能靠卡進學校</title>
     <url>/2022/07/03/20220703-NCYUctmc/</url>
     <content><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p>
@@ -351,21 +369,29 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]T65</title>
-    <url>/2022/06/21/20220621-photovogue/</url>
-    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
+    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
+    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
+<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
+<a id="more"></a>  
+<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
+<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
+<p>目前完成滑鼠座標偵測<br>Todoist  </p>
+<ul>
+<li><input disabled="" type="checkbox"> 畫線畫點  </li>
+<li><input disabled="" type="checkbox"> 設定資料庫</li>
+</ul>
 ]]></content>
       <categories>
-        <category>photography</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>still life</tag>
-        <tag>bird</tag>
-        <tag>duck</tag>
-        <tag>animal</tag>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Java</tag>
+        <tag>JDK</tag>
+        <tag>Eclipse</tag>
+        <tag>WindowBuilder</tag>
       </tags>
   </entry>
   <entry>
@@ -420,55 +446,6 @@
         <tag>開源軟體</tag>
         <tag>教室管理</tag>
         <tag>TTSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
-    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
-<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
-<a id="more"></a>  
-<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
-<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
-<p>目前完成滑鼠座標偵測<br>Todoist  </p>
-<ul>
-<li><input disabled="" type="checkbox"> 畫線畫點  </li>
-<li><input disabled="" type="checkbox"> 設定資料庫</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Java</tag>
-        <tag>JDK</tag>
-        <tag>Eclipse</tag>
-        <tag>WindowBuilder</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
-    <url>/2022/07/18/20220718-Task-Manager/</url>
-    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
-<a id="more"></a>  
-<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
-<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
-      <categories>
-        <category>Win10</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Windows</tag>
-        <tag>Win10 pro</tag>
-        <tag>Windows專業版</tag>
-        <tag>工作管理員</tag>
-        <tag>Task Manager</tag>
-        <tag>taskmgr</tag>
-        <tag>bat</tag>
-        <tag>Batchfile</tag>
       </tags>
   </entry>
   <entry>
@@ -527,6 +504,29 @@
         <tag>spatial pattern</tag>
         <tag>tool</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
+    <url>/2022/07/18/20220718-Task-Manager/</url>
+    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
+<a id="more"></a>  
+<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
+<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
+      <categories>
+        <category>Win10</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Windows</tag>
+        <tag>Win10 pro</tag>
+        <tag>Windows專業版</tag>
+        <tag>工作管理員</tag>
+        <tag>Task Manager</tag>
+        <tag>taskmgr</tag>
+        <tag>bat</tag>
+        <tag>Batchfile</tag>
       </tags>
   </entry>
   <entry>
@@ -613,6 +613,7 @@
 <li>切換分支<br><code>git checkout &lt;branchname&gt;</code></li>
 <li>加入檔案<br><code>git add .</code></li>
 <li>commit檔案<br><code>git commit -m &lt;&quot;msg&quot;&gt;</code></li>
+<li>push git<br><code>git push -u origin &lt;branchname&gt;</code></li>
 </ol>
 ]]></content>
       <categories>
