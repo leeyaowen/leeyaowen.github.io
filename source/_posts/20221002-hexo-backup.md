@@ -12,3 +12,5 @@ tags: [hexo, next, code, git]
 `git add .`
 4. commit檔案
 `git commit -m <"msg">`
+5. push git
+`git push -u origin <branchname>`
