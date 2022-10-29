@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>準備踏入股票市場</title>
-    <url>/2021/02/10/20210210-stock/</url>
-    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
-]]></content>
-      <categories>
-        <category>stock</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>在NexT中增加canvas nest特效</title>
     <url>/2021/02/10/20210210-add-canvas-nest/</url>
     <content><![CDATA[<p>剛開始使用Hexo<br>想增加幾何線條的特效，滑鼠移動過去時會吸引線條<br>方法是在<code>themes/next/layout/_layout.swig</code>中的<code>&lt;body&gt;</code>區塊增加以下code</p>
@@ -25,6 +12,19 @@
         <tag>hexo</tag>
         <tag>next</tag>
         <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>準備踏入股票市場</title>
+    <url>/2021/02/10/20210210-stock/</url>
+    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
+]]></content>
+      <categories>
+        <category>stock</category>
+      </categories>
+      <tags>
+        <tag>stock</tag>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -68,6 +68,23 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<a id="more"></a>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[PhotoVogue]No. 288</title>
     <url>/2022/01/24/20220124-photovogue/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
@@ -107,23 +124,6 @@
         <tag>flickrapi</tag>
         <tag>web crawler</tag>
         <tag>網路爬蟲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
-<a id="more"></a>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
       </tags>
   </entry>
   <entry>
@@ -314,6 +314,24 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]T65</title>
+    <url>/2022/06/21/20220621-photovogue/</url>
+    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>still life</tag>
+        <tag>bird</tag>
+        <tag>duck</tag>
+        <tag>animal</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[嘉義大學回憶]如何才能靠卡進學校</title>
     <url>/2022/07/03/20220703-NCYUctmc/</url>
     <content><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p>
@@ -348,24 +366,6 @@
         <tag>嘉義大學車管會</tag>
         <tag>車輛管理委員會</tag>
         <tag>靠卡</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]T65</title>
-    <url>/2022/06/21/20220621-photovogue/</url>
-    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>still life</tag>
-        <tag>bird</tag>
-        <tag>duck</tag>
-        <tag>animal</tag>
       </tags>
   </entry>
   <entry>
@@ -472,6 +472,39 @@
       </tags>
   </entry>
   <entry>
+    <title>[photography]華山AI數據藝術展-EOS 30 Date / Kodak 500T 5219</title>
+    <url>/2022/08/18/20220818-Hello-Ouchhh-AI-exhibition/</url>
+    <content><![CDATA[<h2 id="Hello-Ouchhh：AI數據藝術展"><a href="#Hello-Ouchhh：AI數據藝術展" class="headerlink" title="Hello Ouchhh：AI數據藝術展"></a>Hello Ouchhh：AI數據藝術展</h2><ul>
+<li>tpye: exhibition</li>
+<li>location: Huashan Creative Park (Address: No.1, Bade Road Sec.1, Zhong Zhen District, Taipei 100)</li>
+<li>gear:<blockquote>
+<ol>
+<li>Canon EOS 30 Date</li>
+<li>TAMRON SP 35mm F/1.8 Di VC USD (F012)</li>
+<li>Kodak 500T 5219</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h2 id="Work"><a href="#Work" class="headerlink" title="Work"></a>Work</h2><p><img src="https://photos.smugmug.com/photos/i-rqZg62N/0/f1353829/X3/i-rqZg62N-X3.jpg">  </p>
+<a id="more"></a>  
+<p><img src="https://photos.smugmug.com/photos/i-pQRCVQ3/0/163c8ccb/X3/i-pQRCVQ3-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-TPNDTQZ/0/25e7c899/X3/i-TPNDTQZ-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-frmHVsm/0/27664cbf/X3/i-frmHVsm-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-GwPsTjh/0/2c782cd0/X3/i-GwPsTjh-X3.jpg">  </p>
+<blockquote>
+<p>photographer: <a href="https://www.instagram.com/yaowenlee/">yaowenlee</a><br>model: <a href="https://www.instagram.com/undernemuri/">undernemuri</a>  </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>exhibition</tag>
+        <tag>portrait</tag>
+        <tag>Taiwan</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[python]Plant Spatial Points Tool-build data for spatial point pattern analysis</title>
     <url>/2022/08/02/20220802-Plant-Spatial-Points-Tool/</url>
     <content><![CDATA[<h2 id="Plant-Spatial-Points-Tool"><a href="#Plant-Spatial-Points-Tool" class="headerlink" title="Plant Spatial Points Tool"></a>Plant Spatial Points Tool</h2><p><a href="https://zenodo.org/badge/latestdoi/161195182"><img src="https://zenodo.org/badge/161195182.svg" alt="DOI"></a>  </p>
@@ -530,39 +563,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[photography]華山AI數據藝術展-EOS 30 Date / Kodak 500T 5219</title>
-    <url>/2022/08/18/20220818-Hello-Ouchhh-AI-exhibition/</url>
-    <content><![CDATA[<h2 id="Hello-Ouchhh：AI數據藝術展"><a href="#Hello-Ouchhh：AI數據藝術展" class="headerlink" title="Hello Ouchhh：AI數據藝術展"></a>Hello Ouchhh：AI數據藝術展</h2><ul>
-<li>tpye: exhibition</li>
-<li>location: Huashan Creative Park (Address: No.1, Bade Road Sec.1, Zhong Zhen District, Taipei 100)</li>
-<li>gear:<blockquote>
-<ol>
-<li>Canon EOS 30 Date</li>
-<li>TAMRON SP 35mm F/1.8 Di VC USD (F012)</li>
-<li>Kodak 500T 5219</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<h2 id="Work"><a href="#Work" class="headerlink" title="Work"></a>Work</h2><p><img src="https://photos.smugmug.com/photos/i-rqZg62N/0/f1353829/X3/i-rqZg62N-X3.jpg">  </p>
-<a id="more"></a>  
-<p><img src="https://photos.smugmug.com/photos/i-pQRCVQ3/0/163c8ccb/X3/i-pQRCVQ3-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-TPNDTQZ/0/25e7c899/X3/i-TPNDTQZ-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-frmHVsm/0/27664cbf/X3/i-frmHVsm-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-GwPsTjh/0/2c782cd0/X3/i-GwPsTjh-X3.jpg">  </p>
-<blockquote>
-<p>photographer: <a href="https://www.instagram.com/yaowenlee/">yaowenlee</a><br>model: <a href="https://www.instagram.com/undernemuri/">undernemuri</a>  </p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>exhibition</tag>
-        <tag>portrait</tag>
-        <tag>Taiwan</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[勞工權益]日薪型計畫臨時工(勞動型)(研究助理)工資值得留意的問題</title>
     <url>/2022/08/20/20220820-Research-Assistant-notes/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
@@ -606,39 +606,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[python]解決台大標本館TAI之數位標本上的比例尺有誤問題</title>
-    <url>/2022/10/29/20221029-tai2-ntu-herbarium/</url>
-    <content><![CDATA[<h1 id="解決台大標本館TAI之數位標本上的比例尺有誤問題"><a href="#解決台大標本館TAI之數位標本上的比例尺有誤問題" class="headerlink" title="解決台大標本館TAI之數位標本上的比例尺有誤問題"></a>解決台大標本館TAI之數位標本上的比例尺有誤問題</h1><h2 id="現有網站的顯示"><a href="#現有網站的顯示" class="headerlink" title="現有網站的顯示"></a>現有網站的顯示</h2><p>有使用過<strong>台灣植物資訊整合查詢系統</strong>的人應該對下圖文字不陌生，根據文字解讀，TAI的數位標本比例尺應為5公分而非10公分，實際造訪網頁可以看到有些已變更為5公分。<br><img src="https://photos.smugmug.com/photos/i-Qd4k6bD/0/b9885b87/O/i-Qd4k6bD.jpg"></p>
-<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>那10公分的要怎麼變成5公分?</p>
-<a id="more"></a>
-<h2 id="思路、解決手法"><a href="#思路、解決手法" class="headerlink" title="思路、解決手法"></a>思路、解決手法</h2><h3 id="1-錯誤的比例尺需要取代"><a href="#1-錯誤的比例尺需要取代" class="headerlink" title="1. 錯誤的比例尺需要取代"></a>1. 錯誤的比例尺需要取代</h3><p>既然比例尺應為5公分而非10公分，那便應該將10公分的移除，更換為5公分。<br>這裡其實有2個做法，一為有最原始的檔案(未加任何比例尺的)，直接換5公分的上去，二為去除10公分的，再把5公分的擺上去，這裡走了第二條路。  </p>
-<h3 id="2-如何做"><a href="#2-如何做" class="headerlink" title="2. 如何做?"></a>2. 如何做?</h3><ol>
-<li>要先找到10公分比例尺的位置，使用opencv的<code>cv2.TM_CCOEFF_NORMED</code>可以幫忙這件事，得出的結果也可以作為閾值切分是否成功取代。  </li>
-<li>找到位置後要將10公分的比例尺塗掉，更換為5公分的，如下圖，紅色框為偵測到的10公分比例尺範圍，然後紅框左上為基準，向上取得藍框顏色平均，再用該顏色塗掉10公分比例尺，最後貼上5公分比例尺。<br><img src="https://photos.smugmug.com/photos/i-wVGGGnt/0/b87280cc/O/i-wVGGGnt.png"><br><img src="https://photos.smugmug.com/photos/i-mjjgLKR/0/b6e404ae/L/i-mjjgLKR-L.png"><h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3></li>
-<li>中文檔名，老問題了，用<code>numpy</code>協助解決吧!  </li>
-<li>辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。  </li>
-<li>要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"></li>
-<li>真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。  </li>
-<li>色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。  </li>
-<li>跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>opencv</tag>
-        <tag>herbarium</tag>
-        <tag>TAI</tag>
-        <tag>NTU</tag>
-        <tag>PIL</tag>
-        <tag>threading</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[hexo]使用git備份hexo bolg小筆記</title>
     <url>/2022/10/02/20221002-hexo-backup/</url>
     <content><![CDATA[<ol>
@@ -657,6 +624,47 @@
         <tag>next</tag>
         <tag>code</tag>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]解決台大標本館TAI之數位標本上的比例尺有誤問題</title>
+    <url>/2022/10/29/20221029-tai2-ntu-herbarium/</url>
+    <content><![CDATA[<h1 id="解決台大標本館TAI之數位標本上的比例尺有誤問題"><a href="#解決台大標本館TAI之數位標本上的比例尺有誤問題" class="headerlink" title="解決台大標本館TAI之數位標本上的比例尺有誤問題"></a>解決台大標本館TAI之數位標本上的比例尺有誤問題</h1><h2 id="現有網站的顯示"><a href="#現有網站的顯示" class="headerlink" title="現有網站的顯示"></a>現有網站的顯示</h2><p>有使用過<strong>台灣植物資訊整合查詢系統</strong>的人應該對下圖文字不陌生，根據文字解讀，TAI的數位標本比例尺應為5公分而非10公分，實際造訪網頁可以看到有些已變更為5公分。<br><img src="https://photos.smugmug.com/photos/i-Qd4k6bD/0/b9885b87/O/i-Qd4k6bD.jpg"></p>
+<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>那10公分的要怎麼變成5公分?</p>
+<a id="more"></a>
+<h2 id="思路、解決手法"><a href="#思路、解決手法" class="headerlink" title="思路、解決手法"></a>思路、解決手法</h2><h3 id="1-錯誤的比例尺需要取代"><a href="#1-錯誤的比例尺需要取代" class="headerlink" title="1. 錯誤的比例尺需要取代"></a>1. 錯誤的比例尺需要取代</h3><p>既然比例尺應為5公分而非10公分，那便應該將10公分的移除，更換為5公分。<br>這裡其實有2個做法，一為有最原始的檔案(未加任何比例尺的)，直接換5公分的上去，二為去除10公分的，再把5公分的擺上去，這裡走了第二條路。  </p>
+<h3 id="2-如何做"><a href="#2-如何做" class="headerlink" title="2. 如何做?"></a>2. 如何做?</h3><ol>
+<li><p>要先找到10公分比例尺的位置，使用opencv的<code>cv2.TM_CCOEFF_NORMED</code>可以幫忙這件事，得出的結果也可以作為閾值切分是否成功取代。  </p>
+</li>
+<li><p>找到位置後要將10公分的比例尺塗掉，更換為5公分的，如下圖，紅色框為偵測到的10公分比例尺範圍，然後紅框左上為基準，向上取得藍框顏色平均，再用該顏色塗掉10公分比例尺，最後貼上5公分比例尺。<br><img src="https://photos.smugmug.com/photos/i-wVGGGnt/0/b87280cc/O/i-wVGGGnt.png"><br><img src="https://photos.smugmug.com/photos/i-mjjgLKR/0/b6e404ae/L/i-mjjgLKR-L.png">  </p>
+<h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3></li>
+<li><p>中文檔名，老問題了，用<code>numpy</code>協助解決吧!  </p>
+</li>
+<li><p>辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。  </p>
+</li>
+<li><p>要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"></p>
+</li>
+<li><p>真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。  </p>
+</li>
+<li><p>色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。  </p>
+</li>
+<li><p>跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>herbarium</tag>
+        <tag>TAI</tag>
+        <tag>NTU</tag>
+        <tag>PIL</tag>
+        <tag>threading</tag>
       </tags>
   </entry>
 </search>
