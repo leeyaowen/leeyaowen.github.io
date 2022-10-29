@@ -45,25 +45,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
-<span id="more"></span>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
     <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
     <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
@@ -84,6 +65,25 @@
         <tag>cwb</tag>
         <tag>data visualization</tag>
         <tag>ggplot2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<span id="more"></span>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
       </tags>
   </entry>
   <entry>
@@ -127,22 +127,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 290/No. 291</title>
-    <url>/2022/02/28/20220221-photovogue/</url>
-    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>canon</tag>
-        <tag>tamron 35mm f/1.8</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[R]去除字串的多餘空白-從gdata到stringr</title>
     <url>/2022/02/11/20220211-gdata-to-stringr/</url>
     <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
@@ -162,6 +146,22 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <url>/2022/02/28/20220221-photovogue/</url>
+    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>canon</tag>
+        <tag>tamron 35mm f/1.8</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
     <url>/2022/03/19/20220319-img-resize/</url>
     <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
@@ -178,25 +178,6 @@
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>resize</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[photography]改善黃斑對焦老化變淡問題</title>
-    <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
-    <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
-<p>送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗</p>
-<p>網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等<br>最後我找到不用拆開我覺得最好的方式-貼黑色貼紙</p>
-<p>根據網路方法，在觀景窗黃斑位置貼上同大小的黑色貼紙可以明顯改善問題，結果會變得有點像裂像對焦一樣<br>有人是使用電火布，不過馬上就看到另一個人跟我有相同想法:殘膠會嚴重</p>
-<p>那…我手邊最棒的材料不就是保護相機鏡頭用的鐵人膠帶嗎?<br>就決定是你了!<br>我沒有仔細測量過黃斑大小與位置，就是挑盡量中央貼，結果如圖，他變得有點黃斑對焦與裂像對焦的融合，至少比原先容易對焦<br><img src="https://photos.smugmug.com/photos/i-Gs4qh3C/0/016a8e97/X5/i-Gs4qh3C-X5.jpg"></p>
-<p>Ref: <a href="http://rick_oleson.tripod.com/index-165.html">Brighten your Rangefinder</a></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>rangefinder</tag>
-        <tag>黃斑對焦</tag>
       </tags>
   </entry>
   <entry>
@@ -226,18 +207,22 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
+    <title>[photography]改善黃斑對焦老化變淡問題</title>
+    <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
+    <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
+<p>送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗</p>
+<p>網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等<br>最後我找到不用拆開我覺得最好的方式-貼黑色貼紙</p>
+<p>根據網路方法，在觀景窗黃斑位置貼上同大小的黑色貼紙可以明顯改善問題，結果會變得有點像裂像對焦一樣<br>有人是使用電火布，不過馬上就看到另一個人跟我有相同想法:殘膠會嚴重</p>
+<p>那…我手邊最棒的材料不就是保護相機鏡頭用的鐵人膠帶嗎?<br>就決定是你了!<br>我沒有仔細測量過黃斑大小與位置，就是挑盡量中央貼，結果如圖，他變得有點黃斑對焦與裂像對焦的融合，至少比原先容易對焦<br><img src="https://photos.smugmug.com/photos/i-Gs4qh3C/0/016a8e97/X5/i-Gs4qh3C-X5.jpg"></p>
+<p>Ref: <a href="http://rick_oleson.tripod.com/index-165.html">Brighten your Rangefinder</a></p>
 ]]></content>
       <categories>
         <category>photography</category>
       </categories>
       <tags>
         <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>Minolta V2</tag>
+        <tag>rangefinder</tag>
+        <tag>黃斑對焦</tag>
       </tags>
   </entry>
   <entry>
@@ -254,6 +239,21 @@
         <tag>vogue</tag>
         <tag>herbarium</tag>
         <tag>still life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>Minolta V2</tag>
       </tags>
   </entry>
   <entry>
@@ -606,13 +606,54 @@
       </tags>
   </entry>
   <entry>
-    <title>20221002-hexo-backup</title>
-    <url>/2022/10/29/20221002-hexo-backup/</url>
-    <content><![CDATA[]]></content>
+    <title>[hexo]使用git備份hexo bolg小筆記</title>
+    <url>/2022/10/02/20221002-hexo-backup/</url>
+    <content><![CDATA[<ol>
+<li>如未建立分支，先建立新分支<br><code>git branch &lt;branchname&gt;</code>   </li>
+<li>切換分支<br><code>git checkout &lt;branchname&gt;</code></li>
+<li>加入檔案<br><code>git add .</code></li>
+<li>commit檔案<br><code>git commit -m &lt;&quot;msg&quot;&gt;</code></li>
+<li>push git<br><code>git push -u origin &lt;branchname&gt;</code></li>
+</ol>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>code</tag>
+        <tag>git</tag>
+      </tags>
   </entry>
   <entry>
-    <title>20221029-tai2-ntu-herbarium</title>
+    <title>[python]解決台大標本館TAI之數位標本上的比例尺有誤問題</title>
     <url>/2022/10/29/20221029-tai2-ntu-herbarium/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="解決台大標本館TAI之數位標本上的比例尺有誤問題"><a href="#解決台大標本館TAI之數位標本上的比例尺有誤問題" class="headerlink" title="解決台大標本館TAI之數位標本上的比例尺有誤問題"></a>解決台大標本館TAI之數位標本上的比例尺有誤問題</h1><h2 id="現有網站的顯示"><a href="#現有網站的顯示" class="headerlink" title="現有網站的顯示"></a>現有網站的顯示</h2><p>有使用過<strong>台灣植物資訊整合查詢系統</strong>的人應該對下圖文字不陌生，根據文字解讀，TAI的數位標本比例尺應為5公分而非10公分，實際造訪網頁可以看到有些已變更為5公分。<br><img src="https://photos.smugmug.com/photos/i-Qd4k6bD/0/b9885b87/O/i-Qd4k6bD.jpg"></p>
+<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>那10公分的要怎麼變成5公分?</p>
+<span id="more"></span>
+<h2 id="思路、解決手法"><a href="#思路、解決手法" class="headerlink" title="思路、解決手法"></a>思路、解決手法</h2><h3 id="1-錯誤的比例尺需要取代"><a href="#1-錯誤的比例尺需要取代" class="headerlink" title="1. 錯誤的比例尺需要取代"></a>1. 錯誤的比例尺需要取代</h3><p>既然比例尺應為5公分而非10公分，那便應該將10公分的移除，更換為5公分。<br>這裡其實有2個做法，一為有最原始的檔案(未加任何比例尺的)，直接換5公分的上去，二為去除10公分的，再把5公分的擺上去，這裡走了第二條路。  </p>
+<h3 id="2-如何做"><a href="#2-如何做" class="headerlink" title="2. 如何做?"></a>2. 如何做?</h3><ol>
+<li><p>要先找到10公分比例尺的位置，使用opencv的<code>cv2.TM_CCOEFF_NORMED</code>可以幫忙這件事，得出的結果也可以作為閾值切分是否成功取代。  </p>
+</li>
+<li><p>找到位置後要將10公分的比例尺塗掉，更換為5公分的，如下圖，紅色框為偵測到的10公分比例尺範圍，然後紅框左上為基準，向上取得藍框顏色平均，再用該顏色塗掉10公分比例尺，最後貼上5公分比例尺。<br><img src="https://photos.smugmug.com/photos/i-wVGGGnt/0/b87280cc/O/i-wVGGGnt.png"><br><img src="https://photos.smugmug.com/photos/i-mjjgLKR/0/b6e404ae/L/i-mjjgLKR-L.png">  </p>
+<h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3><p>1. 中文檔名，老問題了，用<code>numpy</code>協助解決吧!<br>2. 辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。<br>3. 要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"><br>4. 真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。<br>5. 色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。<br>6. 跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>herbarium</tag>
+        <tag>TAI</tag>
+        <tag>NTU</tag>
+        <tag>PIL</tag>
+        <tag>threading</tag>
+      </tags>
   </entry>
 </search>
