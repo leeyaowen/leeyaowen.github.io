@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.2">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -280,7 +280,7 @@
 
       
         <p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
 <p>以下就是code的部分</p>
 <figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
@@ -415,7 +415,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">86</span>
+        <span class="site-state-item-count">81</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -473,12 +473,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">13k</span>
+    <span title="Symbols count total">12k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">11 mins.</span>
+    <span title="Reading time total">10 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
