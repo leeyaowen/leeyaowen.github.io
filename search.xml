@@ -207,6 +207,21 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>Minolta V2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[photography]改善黃斑對焦老化變淡問題</title>
     <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
     <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
@@ -223,21 +238,6 @@
         <tag>photography</tag>
         <tag>rangefinder</tag>
         <tag>黃斑對焦</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>Minolta V2</tag>
       </tags>
   </entry>
   <entry>
@@ -314,6 +314,24 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]T65</title>
+    <url>/2022/06/21/20220621-photovogue/</url>
+    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>still life</tag>
+        <tag>bird</tag>
+        <tag>duck</tag>
+        <tag>animal</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[嘉義大學回憶]如何才能靠卡進學校</title>
     <url>/2022/07/03/20220703-NCYUctmc/</url>
     <content><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p>
@@ -348,24 +366,6 @@
         <tag>嘉義大學車管會</tag>
         <tag>車輛管理委員會</tag>
         <tag>靠卡</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]T65</title>
-    <url>/2022/06/21/20220621-photovogue/</url>
-    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>still life</tag>
-        <tag>bird</tag>
-        <tag>duck</tag>
-        <tag>animal</tag>
       </tags>
   </entry>
   <entry>
@@ -637,19 +637,7 @@
 <li><p>要先找到10公分比例尺的位置，使用opencv的<code>cv2.TM_CCOEFF_NORMED</code>可以幫忙這件事，得出的結果也可以作為閾值切分是否成功取代。  </p>
 </li>
 <li><p>找到位置後要將10公分的比例尺塗掉，更換為5公分的，如下圖，紅色框為偵測到的10公分比例尺範圍，然後紅框左上為基準，向上取得藍框顏色平均，再用該顏色塗掉10公分比例尺，最後貼上5公分比例尺。<br><img src="https://photos.smugmug.com/photos/i-wVGGGnt/0/b87280cc/O/i-wVGGGnt.png"><br><img src="https://photos.smugmug.com/photos/i-mjjgLKR/0/b6e404ae/L/i-mjjgLKR-L.png">  </p>
-<h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3><p>{:start=”1”}  </p>
-</li>
-<li><p>中文檔名，老問題了，用<code>numpy</code>協助解決吧!  </p>
-</li>
-<li><p>辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。  </p>
-</li>
-<li><p>要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"></p>
-</li>
-<li><p>真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。  </p>
-</li>
-<li><p>色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。  </p>
-</li>
-<li><p>跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</p>
+<h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3><p>1. 中文檔名，老問題了，用<code>numpy</code>協助解決吧!<br>2. 辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。<br>3. 要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"><br>4. 真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。<br>5. 色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。<br>6. 跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</p>
 </li>
 </ol>
 ]]></content>
