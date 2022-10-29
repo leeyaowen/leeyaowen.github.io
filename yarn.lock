@@ -717,10 +717,10 @@
     "strip-indent" "^3.0.0"
     "striptags" "^3.1.1"
 
-"hexo@^5.0.0":
-  "integrity" "sha512-Q8JPpXYDemyIzRIjRx3555HALvnOqIeCj4NnW6T8aiZpi9hgZxTnpFDY2fBPdKIPNc5GvP4mL/705znxAM8kcA=="
-  "resolved" "https://registry.npmjs.org/hexo/-/hexo-5.3.0.tgz"
-  "version" "5.3.0"
+"hexo@^5.4.2":
+  "integrity" "sha512-Af6mxKwx9byalaffKgiQ8/bZfbXPo2SGEn2Q9hFh++15g15/IulvOhu8lQkJdyZNzmj3hOuSrJdqoUvIr3K/qw=="
+  "resolved" "https://registry.npmjs.org/hexo/-/hexo-5.4.2.tgz"
+  "version" "5.4.2"
   dependencies:
     "abbrev" "^1.1.1"
     "archy" "^1.0.0"
@@ -732,7 +732,7 @@
     "hexo-i18n" "^1.0.0"
     "hexo-log" "^2.0.0"
     "hexo-util" "^2.4.0"
-    "js-yaml" "^3.12.0"
+    "js-yaml" "^3.14.1"
     "micromatch" "^4.0.2"
     "moment" "^2.22.2"
     "moment-timezone" "^0.5.21"
@@ -847,7 +847,7 @@
   "resolved" "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz"
   "version" "2.0.0"
 
-"js-yaml@^3.12.0", "js-yaml@^3.13.1":
+"js-yaml@^3.13.1", "js-yaml@^3.14.1":
   "integrity" "sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g=="
   "resolved" "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz"
   "version" "3.14.1"
