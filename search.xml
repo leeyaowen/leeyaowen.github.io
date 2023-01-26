@@ -683,7 +683,7 @@
 <p>之後執行指令(依照自己需求)  </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save  #發佈到github用</span><br><span class="line">npm install hexo-generator-sitemap --save  #Sitemap for Google Search Console</span><br></pre></td></tr></table></figure>
 <h3 id="部屬"><a href="#部屬" class="headerlink" title="部屬"></a>部屬</h3><p>可以使用多重指令方便快速  </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo cl ;hexo g -d</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo cl ; hexo g -d</span><br></pre></td></tr></table></figure>
 <p>登入的部分github會自動跳視窗，蠻方便的。</p>
 ]]></content>
       <categories>
