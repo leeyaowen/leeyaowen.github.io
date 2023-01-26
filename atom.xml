@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>無人問津的森林系技能樹</title>
+  
+  <subtitle>喝咖啡，吃甜食，務必把握時間讓你胃食道逆流一下</subtitle>
+  <link href="https://leeyaowen.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://leeyaowen.github.io/"/>
+  <updated>2022-12-01T11:19:54.416Z</updated>
+  <id>https://leeyaowen.github.io/</id>
+  
+  <author>
+    <name>Yao Wen Lee</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[PhotoVogue]No. 293</title>
+    <link href="https://leeyaowen.github.io/2022/10/30/20221030-photovogue/"/>
+    <id>https://leeyaowen.github.io/2022/10/30/20221030-photovogue/</id>
+    <published>2022-10-30T13:42:03.000Z</published>
+    <updated>2022-12-01T11:19:54.416Z</updated>
+    
+    <content type="html"><![CDATA[<p>應該是兩週前投的，用的是lomo 400<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-bnBQ8ZM/0/3ada75de/X3/293-X3.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;應該是兩週前投的，用的是lomo 400&lt;br&gt;&lt;img src=&quot;https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-bnBQ8ZM/0/3ada75de/X3/293-X3.jpg&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/categories/photography/"/>
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/tags/photography/"/>
+    
+    <category term="photovogue" scheme="https://leeyaowen.github.io/tags/photovogue/"/>
+    
+    <category term="vogue" scheme="https://leeyaowen.github.io/tags/vogue/"/>
+    
+    <category term="portrait" scheme="https://leeyaowen.github.io/tags/portrait/"/>
+    
+    <category term="girl" scheme="https://leeyaowen.github.io/tags/girl/"/>
+    
+    <category term="lomography" scheme="https://leeyaowen.github.io/tags/lomography/"/>
+    
+    <category term="bronica" scheme="https://leeyaowen.github.io/tags/bronica/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[python]解決台大標本館TAI之數位標本上的比例尺有誤問題</title>
+    <link href="https://leeyaowen.github.io/2022/10/29/20221029-tai2-ntu-herbarium/"/>
+    <id>https://leeyaowen.github.io/2022/10/29/20221029-tai2-ntu-herbarium/</id>
+    <published>2022-10-29T13:31:12.000Z</published>
+    <updated>2022-10-30T13:47:12.034Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="解決台大標本館TAI之數位標本上的比例尺有誤問題"><a href="#解決台大標本館TAI之數位標本上的比例尺有誤問題" class="headerlink" title="解決台大標本館TAI之數位標本上的比例尺有誤問題"></a>解決台大標本館TAI之數位標本上的比例尺有誤問題</h1><h2 id="現有網站的顯示"><a href="#現有網站的顯示" class="headerlink" title="現有網站的顯示"></a>現有網站的顯示</h2><p>有使用過<strong>台灣植物資訊整合查詢系統</strong>的人應該對下圖文字不陌生，根據文字解讀，TAI的數位標本比例尺應為5公分而非10公分，實際造訪網頁可以看到有些已變更為5公分。<br><img src="https://photos.smugmug.com/photos/i-Qd4k6bD/0/b9885b87/O/i-Qd4k6bD.jpg"></p><h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>那10公分的要怎麼變成5公分?</p><span id="more"></span><h2 id="思路、解決手法"><a href="#思路、解決手法" class="headerlink" title="思路、解決手法"></a>思路、解決手法</h2><h3 id="1-錯誤的比例尺需要取代"><a href="#1-錯誤的比例尺需要取代" class="headerlink" title="1. 錯誤的比例尺需要取代"></a>1. 錯誤的比例尺需要取代</h3><p>既然比例尺應為5公分而非10公分，那便應該將10公分的移除，更換為5公分。<br>這裡其實有2個做法，一為有最原始的檔案(未加任何比例尺的)，直接換5公分的上去，二為去除10公分的，再把5公分的擺上去，這裡走了第二條路。  </p><h3 id="2-如何做"><a href="#2-如何做" class="headerlink" title="2. 如何做?"></a>2. 如何做?</h3><ol><li>要先找到10公分比例尺的位置，使用opencv的<code>cv2.TM_CCOEFF_NORMED</code>可以幫忙這件事，得出的結果也可以作為閾值切分是否成功取代。  </li><li>找到位置後要將10公分的比例尺塗掉，更換為5公分的，如下圖，紅色框為偵測到的10公分比例尺範圍，然後紅框左上為基準，向上取得藍框顏色平均，再用該顏色塗掉10公分比例尺，最後貼上5公分比例尺。<br><img src="https://photos.smugmug.com/photos/i-wVGGGnt/0/b87280cc/O/i-wVGGGnt.png"><br><img src="https://photos.smugmug.com/photos/i-mjjgLKR/0/b6e404ae/L/i-mjjgLKR-L.png"></li></ol><h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3><p>1. 中文檔名，老問題了，用<code>numpy</code>協助解決吧!<br>2. 辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。<br>3. 要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"><br>4. 真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。<br>5. 色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。<br>6. 跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;解決台大標本館TAI之數位標本上的比例尺有誤問題&quot;&gt;&lt;a href=&quot;#解決台大標本館TAI之數位標本上的比例尺有誤問題&quot; class=&quot;headerlink&quot; title=&quot;解決台大標本館TAI之數位標本上的比例尺有誤問題&quot;&gt;&lt;/a&gt;解決台大標本館TAI之數位標本上的比例尺有誤問題&lt;/h1&gt;&lt;h2 id=&quot;現有網站的顯示&quot;&gt;&lt;a href=&quot;#現有網站的顯示&quot; class=&quot;headerlink&quot; title=&quot;現有網站的顯示&quot;&gt;&lt;/a&gt;現有網站的顯示&lt;/h2&gt;&lt;p&gt;有使用過&lt;strong&gt;台灣植物資訊整合查詢系統&lt;/strong&gt;的人應該對下圖文字不陌生，根據文字解讀，TAI的數位標本比例尺應為5公分而非10公分，實際造訪網頁可以看到有些已變更為5公分。&lt;br&gt;&lt;img src=&quot;https://photos.smugmug.com/photos/i-Qd4k6bD/0/b9885b87/O/i-Qd4k6bD.jpg&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;問題&quot;&gt;&lt;a href=&quot;#問題&quot; class=&quot;headerlink&quot; title=&quot;問題&quot;&gt;&lt;/a&gt;問題&lt;/h2&gt;&lt;p&gt;那10公分的要怎麼變成5公分?&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="https://leeyaowen.github.io/categories/python/"/>
+    
+    
+    <category term="code" scheme="https://leeyaowen.github.io/tags/code/"/>
+    
+    <category term="coding" scheme="https://leeyaowen.github.io/tags/coding/"/>
+    
+    <category term="python" scheme="https://leeyaowen.github.io/tags/python/"/>
+    
+    <category term="opencv" scheme="https://leeyaowen.github.io/tags/opencv/"/>
+    
+    <category term="herbarium" scheme="https://leeyaowen.github.io/tags/herbarium/"/>
+    
+    <category term="TAI" scheme="https://leeyaowen.github.io/tags/TAI/"/>
+    
+    <category term="NTU" scheme="https://leeyaowen.github.io/tags/NTU/"/>
+    
+    <category term="PIL" scheme="https://leeyaowen.github.io/tags/PIL/"/>
+    
+    <category term="threading" scheme="https://leeyaowen.github.io/tags/threading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[hexo]使用git備份hexo bolg小筆記</title>
+    <link href="https://leeyaowen.github.io/2022/10/02/20221002-hexo-backup/"/>
+    <id>https://leeyaowen.github.io/2022/10/02/20221002-hexo-backup/</id>
+    <published>2022-10-02T03:02:43.000Z</published>
+    <updated>2022-10-29T15:09:27.888Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>如未建立分支，先建立新分支<br><code>git branch &lt;branchname&gt;</code>   </li><li>切換分支<br><code>git checkout &lt;branchname&gt;</code></li><li>加入檔案<br><code>git add .</code></li><li>commit檔案<br><code>git commit -m &lt;&quot;msg&quot;&gt;</code></li><li>push git<br><code>git push -u origin &lt;branchname&gt;</code></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;如未建立分支，先建立新分支&lt;br&gt;&lt;code&gt;git branch &amp;lt;branchname&amp;gt;&lt;/code&gt;   &lt;/li&gt;
+&lt;li&gt;切換分支&lt;br&gt;&lt;code&gt;git checkout &amp;lt;branchname&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="https://leeyaowen.github.io/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://leeyaowen.github.io/tags/hexo/"/>
+    
+    <category term="next" scheme="https://leeyaowen.github.io/tags/next/"/>
+    
+    <category term="code" scheme="https://leeyaowen.github.io/tags/code/"/>
+    
+    <category term="git" scheme="https://leeyaowen.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[勞工權益]日薪型計畫臨時工(勞動型)(研究助理)工資值得留意的問題</title>
+    <link href="https://leeyaowen.github.io/2022/08/20/20220820-Research-Assistant-notes/"/>
+    <id>https://leeyaowen.github.io/2022/08/20/20220820-Research-Assistant-notes/</id>
+    <published>2022-08-20T12:59:18.000Z</published>
+    <updated>2022-08-20T13:36:53.216Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul><li>應該是因為當初要參加研討會，職稱不知道該寫啥，自己應該算臨時工，但這樣寫好像很怪，還是寫了研究助理，後續也才慢慢意識到各種問題…</li></ul><h3 id="臨時工與專任助理"><a href="#臨時工與專任助理" class="headerlink" title="臨時工與專任助理?"></a>臨時工與專任助理?</h3><ul><li>其實想成一個領不固定薪資，一個領固定月薪就可以了  </li><li>所謂不固定，也就是一個月通常可能約21個工作天左右，但是你應該是領不到(不然就聘你當專任了)，至於能領幾天，請洽你的老闆</li></ul><span id="more"></span>  <h2 id="值得留意的問題"><a href="#值得留意的問題" class="headerlink" title="值得留意的問題"></a>值得留意的問題</h2><h3 id="所以你一個月到底能領幾天-該工作幾天"><a href="#所以你一個月到底能領幾天-該工作幾天" class="headerlink" title="所以你一個月到底能領幾天?該工作幾天?"></a>所以你一個月到底能領幾天?該工作幾天?</h3><ul><li>事先了解應該蠻重要的，若一個月約定填報10天，那你只要工作10天嗎?還是20天呢?請洽你老闆</li></ul><h3 id="多連假月份的薪資"><a href="#多連假月份的薪資" class="headerlink" title="多連假月份的薪資"></a>多連假月份的薪資</h3><ul><li>由於你不是領固定月薪，所以當月能填報的日數少，等於你的工資上限也變少  </li><li>二月，適逢春節連假，喜氣洋洋，不過你可能笑不出來，因為能填的天數超少</li></ul><h3 id="如果有兩個計劃都用臨時工的方式給工資"><a href="#如果有兩個計劃都用臨時工的方式給工資" class="headerlink" title="如果有兩個計劃都用臨時工的方式給工資"></a>如果有兩個計劃都用臨時工的方式給工資</h3><ul><li>如果說多了一份工作，請注意給工資的方式  </li><li>額外的部分如果說能以專案處理另外匯款是最好(像外包一樣)  </li><li>倘若你原先的工作承諾填10天，額外工作也用臨時工方式給10天，這不會有大問題，因為兩個加起來也不會超過1個月能填報的天數  </li><li><strong>但是</strong>，人生就是這個但是，如果兩個加起來會超過一個月能填報的天數，比如25天，請留意你會不會變成做一部分義工</li></ul><h3 id="薪資遞延至下個月份"><a href="#薪資遞延至下個月份" class="headerlink" title="薪資遞延至下個月份?"></a>薪資遞延至下個月份?</h3><ul><li>承上面的問題，如果遇連假或上個月薪資填報日數超過能填報總日數，是否能遞延至下個月份?問清楚才不會變義工  </li><li>有時候也要留意計畫結束的日期，不然過了可能不能支出人事費的，相關問題請洽你老闆或計畫主持人</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;應該是因為當初要參加研討會，職稱不知道該寫啥，自己應該算臨時工，但這樣寫好像很怪，還是寫了研究助理，後續也才慢慢意識到各種問題…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;臨時工與專任助理&quot;&gt;&lt;a href=&quot;#臨時工與專任助理&quot; class=&quot;headerlink&quot; title=&quot;臨時工與專任助理?&quot;&gt;&lt;/a&gt;臨時工與專任助理?&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;其實想成一個領不固定薪資，一個領固定月薪就可以了  &lt;/li&gt;
+&lt;li&gt;所謂不固定，也就是一個月通常可能約21個工作天左右，但是你應該是領不到(不然就聘你當專任了)，至於能領幾天，請洽你的老闆&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="勞工權益" scheme="https://leeyaowen.github.io/categories/%E5%8B%9E%E5%B7%A5%E6%AC%8A%E7%9B%8A/"/>
+    
+    
+    <category term="NCYU" scheme="https://leeyaowen.github.io/tags/NCYU/"/>
+    
+    <category term="勞工權益" scheme="https://leeyaowen.github.io/tags/%E5%8B%9E%E5%B7%A5%E6%AC%8A%E7%9B%8A/"/>
+    
+    <category term="碩士級臨時工" scheme="https://leeyaowen.github.io/tags/%E7%A2%A9%E5%A3%AB%E7%B4%9A%E8%87%A8%E6%99%82%E5%B7%A5/"/>
+    
+    <category term="碩士級研究助理" scheme="https://leeyaowen.github.io/tags/%E7%A2%A9%E5%A3%AB%E7%B4%9A%E7%A0%94%E7%A9%B6%E5%8A%A9%E7%90%86/"/>
+    
+    <category term="學士級研究助理" scheme="https://leeyaowen.github.io/tags/%E5%AD%B8%E5%A3%AB%E7%B4%9A%E7%A0%94%E7%A9%B6%E5%8A%A9%E7%90%86/"/>
+    
+    <category term="研究助理" scheme="https://leeyaowen.github.io/tags/%E7%A0%94%E7%A9%B6%E5%8A%A9%E7%90%86/"/>
+    
+    <category term="計畫助理" scheme="https://leeyaowen.github.io/tags/%E8%A8%88%E7%95%AB%E5%8A%A9%E7%90%86/"/>
+    
+    <category term="研究助理薪資" scheme="https://leeyaowen.github.io/tags/%E7%A0%94%E7%A9%B6%E5%8A%A9%E7%90%86%E8%96%AA%E8%B3%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[photography]華山AI數據藝術展-EOS 30 Date / Kodak 500T 5219</title>
+    <link href="https://leeyaowen.github.io/2022/08/18/20220818-Hello-Ouchhh-AI-exhibition/"/>
+    <id>https://leeyaowen.github.io/2022/08/18/20220818-Hello-Ouchhh-AI-exhibition/</id>
+    <published>2022-08-18T14:06:06.000Z</published>
+    <updated>2022-08-18T14:50:01.302Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Hello-Ouchhh：AI數據藝術展"><a href="#Hello-Ouchhh：AI數據藝術展" class="headerlink" title="Hello Ouchhh：AI數據藝術展"></a>Hello Ouchhh：AI數據藝術展</h2><ul><li>tpye: exhibition</li><li>location: Huashan Creative Park (Address: No.1, Bade Road Sec.1, Zhong Zhen District, Taipei 100)</li><li>gear:<blockquote><ol><li>Canon EOS 30 Date</li><li>TAMRON SP 35mm F&#x2F;1.8 Di VC USD (F012)</li><li>Kodak 500T 5219</li></ol></blockquote></li></ul><h2 id="Work"><a href="#Work" class="headerlink" title="Work"></a>Work</h2><p><img src="https://photos.smugmug.com/photos/i-rqZg62N/0/f1353829/X3/i-rqZg62N-X3.jpg">  </p><span id="more"></span>  <p><img src="https://photos.smugmug.com/photos/i-pQRCVQ3/0/163c8ccb/X3/i-pQRCVQ3-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-TPNDTQZ/0/25e7c899/X3/i-TPNDTQZ-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-frmHVsm/0/27664cbf/X3/i-frmHVsm-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-GwPsTjh/0/2c782cd0/X3/i-GwPsTjh-X3.jpg">  </p><blockquote><p>photographer: <a href="https://www.instagram.com/yaowenlee/">yaowenlee</a><br>model: <a href="https://www.instagram.com/undernemuri/">undernemuri</a>  </p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Hello-Ouchhh：AI數據藝術展&quot;&gt;&lt;a href=&quot;#Hello-Ouchhh：AI數據藝術展&quot; class=&quot;headerlink&quot; title=&quot;Hello Ouchhh：AI數據藝術展&quot;&gt;&lt;/a&gt;Hello Ouchhh：AI數據藝術展&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;tpye: exhibition&lt;/li&gt;
+&lt;li&gt;location: Huashan Creative Park (Address: No.1, Bade Road Sec.1, Zhong Zhen District, Taipei 100)&lt;/li&gt;
+&lt;li&gt;gear:&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Canon EOS 30 Date&lt;/li&gt;
+&lt;li&gt;TAMRON SP 35mm F&amp;#x2F;1.8 Di VC USD (F012)&lt;/li&gt;
+&lt;li&gt;Kodak 500T 5219&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Work&quot;&gt;&lt;a href=&quot;#Work&quot; class=&quot;headerlink&quot; title=&quot;Work&quot;&gt;&lt;/a&gt;Work&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://photos.smugmug.com/photos/i-rqZg62N/0/f1353829/X3/i-rqZg62N-X3.jpg&quot;&gt;  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/categories/photography/"/>
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/tags/photography/"/>
+    
+    <category term="film" scheme="https://leeyaowen.github.io/tags/film/"/>
+    
+    <category term="exhibition" scheme="https://leeyaowen.github.io/tags/exhibition/"/>
+    
+    <category term="portrait" scheme="https://leeyaowen.github.io/tags/portrait/"/>
+    
+    <category term="Taiwan" scheme="https://leeyaowen.github.io/tags/Taiwan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[python]Plant Spatial Points Tool-build data for spatial point pattern analysis</title>
+    <link href="https://leeyaowen.github.io/2022/08/02/20220802-Plant-Spatial-Points-Tool/"/>
+    <id>https://leeyaowen.github.io/2022/08/02/20220802-Plant-Spatial-Points-Tool/</id>
+    <published>2022-08-02T13:25:52.000Z</published>
+    <updated>2022-08-05T13:57:20.491Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Plant-Spatial-Points-Tool"><a href="#Plant-Spatial-Points-Tool" class="headerlink" title="Plant Spatial Points Tool"></a>Plant Spatial Points Tool</h2><p><a href="https://zenodo.org/badge/latestdoi/161195182"><img src="https://zenodo.org/badge/161195182.svg" alt="DOI"></a>  </p><ul><li>This is a software about annotation for plant spatial points, need PostgreSQL, build application in Python 3.7  </li><li>It can help build data for analysis about relationships in plant ecology  </li><li><a href="https://github.com/leeyaowen/Mapkeying_python/releases">Windows Releases</a></li></ul><span id="more"></span><h2 id="PostgreSQL-setting-with-pgAdmin"><a href="#PostgreSQL-setting-with-pgAdmin" class="headerlink" title="PostgreSQL setting(with pgAdmin)"></a>PostgreSQL setting(with pgAdmin)</h2><ol><li>set server default</li><li>set password -&gt; 2717484</li><li>create a database <strong>{your database name}</strong></li><li>set a relation <strong>{your relation name}</strong>(e.g., plotdata)</li><li>set column, including <strong>x1,y1,x2,y2,tag,sp,dbh,x3,y3</strong>, set dbh as numeric. Otherwise, text  </li><li>set tag as primary key(in Constraints setting)  </li><li>import data(csv format, and UTF-8 is encoding)</li></ol><h3 id="About-relation-column-names"><a href="#About-relation-column-names" class="headerlink" title="About relation column names"></a>About relation column names</h3><ul><li>x1,y1,x2,y2 -&gt; plot position  </li><li>tag -&gt; plant ID  </li><li>sp -&gt; species name  </li><li>dbh -&gt; diameter breast height  </li><li>x3,y3 -&gt; plants points position, record by this program</li></ul><h3 id="Commonly-used-sql-commands"><a href="#Commonly-used-sql-commands" class="headerlink" title="Commonly used sql commands"></a>Commonly used sql commands</h3><blockquote><p>in SQL Eidtor</p><blockquote><p><code>select * from plotdata</code> -&gt; select all data from plotdata<br><code>select * from plotdata where x3 is null</code> -&gt; select x3 data is null from plotdata  </p></blockquote></blockquote><h2 id="User-guide"><a href="#User-guide" class="headerlink" title="User guide"></a>User guide</h2><ol><li>enter the database and relation name, and lock  </li><li>choose area(meter)    </li><li>set main&#x2F;sub grids, e.g., (1,5)&#x2F;(2,5)&#x2F;(3,3)  </li><li>set quadrat</li><li>click ‘Go&#x2F;Refresh’ button   </li><li>enter target tag  </li><li>click on the map</li></ol><h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><img src="https://raw.githubusercontent.com/leeyaowen/Plant-Spatial-Points-Tool/master/screenshot/Plant%20Spatial%20Points%20Tool.JPG"></p><h3 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h3><p align="left">Yao-Wen Lee (2022) Plant Spatial Points Tool. URL: https://github.com/leeyaowen/Plant-Spatial-Points-Tool DOI: 10.5281/zenodo.6931327</p>  ]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Plant-Spatial-Points-Tool&quot;&gt;&lt;a href=&quot;#Plant-Spatial-Points-Tool&quot; class=&quot;headerlink&quot; title=&quot;Plant Spatial Points Tool&quot;&gt;&lt;/a&gt;Plant Spatial Points Tool&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://zenodo.org/badge/latestdoi/161195182&quot;&gt;&lt;img src=&quot;https://zenodo.org/badge/161195182.svg&quot; alt=&quot;DOI&quot;&gt;&lt;/a&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This is a software about annotation for plant spatial points, need PostgreSQL, build application in Python 3.7  &lt;/li&gt;
+&lt;li&gt;It can help build data for analysis about relationships in plant ecology  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/leeyaowen/Mapkeying_python/releases&quot;&gt;Windows Releases&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="https://leeyaowen.github.io/categories/python/"/>
+    
+    
+    <category term="code" scheme="https://leeyaowen.github.io/tags/code/"/>
+    
+    <category term="coding" scheme="https://leeyaowen.github.io/tags/coding/"/>
+    
+    <category term="python" scheme="https://leeyaowen.github.io/tags/python/"/>
+    
+    <category term="plant ecology" scheme="https://leeyaowen.github.io/tags/plant-ecology/"/>
+    
+    <category term="tree pattern" scheme="https://leeyaowen.github.io/tags/tree-pattern/"/>
+    
+    <category term="spatial point pattern" scheme="https://leeyaowen.github.io/tags/spatial-point-pattern/"/>
+    
+    <category term="spatial pattern" scheme="https://leeyaowen.github.io/tags/spatial-pattern/"/>
+    
+    <category term="tool" scheme="https://leeyaowen.github.io/tags/tool/"/>
+    
+    <category term="github" scheme="https://leeyaowen.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
+    <link href="https://leeyaowen.github.io/2022/07/18/20220718-Task-Manager/"/>
+    <id>https://leeyaowen.github.io/2022/07/18/20220718-Task-Manager/</id>
+    <published>2022-07-18T11:38:07.000Z</published>
+    <updated>2022-07-18T11:59:24.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼&#x2F;登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p><span id="more"></span>  <p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p><figure class="highlight plaintext"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set /p var=Turn on Taskmgr?[Y/N]: </span><br><span class="line">if %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在Windows 10專業版中工作管理員被禁用該怎麼辦?&lt;br&gt;其實Google給很多答案，包含編輯群組原則、改機碼&amp;#x2F;登錄編輯程式(regedit)等&lt;br&gt;這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google&lt;br&gt;那如果有bat檔下指令就快多了&lt;br&gt;這裡就寫了一個  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Win10" scheme="https://leeyaowen.github.io/categories/Win10/"/>
+    
+    
+    <category term="code" scheme="https://leeyaowen.github.io/tags/code/"/>
+    
+    <category term="coding" scheme="https://leeyaowen.github.io/tags/coding/"/>
+    
+    <category term="Windows" scheme="https://leeyaowen.github.io/tags/Windows/"/>
+    
+    <category term="Win10 pro" scheme="https://leeyaowen.github.io/tags/Win10-pro/"/>
+    
+    <category term="Windows專業版" scheme="https://leeyaowen.github.io/tags/Windows%E5%B0%88%E6%A5%AD%E7%89%88/"/>
+    
+    <category term="工作管理員" scheme="https://leeyaowen.github.io/tags/%E5%B7%A5%E4%BD%9C%E7%AE%A1%E7%90%86%E5%93%A1/"/>
+    
+    <category term="Task Manager" scheme="https://leeyaowen.github.io/tags/Task-Manager/"/>
+    
+    <category term="taskmgr" scheme="https://leeyaowen.github.io/tags/taskmgr/"/>
+    
+    <category term="bat" scheme="https://leeyaowen.github.io/tags/bat/"/>
+    
+    <category term="Batchfile" scheme="https://leeyaowen.github.io/tags/Batchfile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Veyon]教室管理開源軟體-廣播、遠端監控、遠端控制</title>
+    <link href="https://leeyaowen.github.io/2022/07/15/20220715-veyon/"/>
+    <id>https://leeyaowen.github.io/2022/07/15/20220715-veyon/</id>
+    <published>2022-07-15T11:05:33.000Z</published>
+    <updated>2022-07-15T11:14:14.928Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Veyon-Virtual-Eye-On-Networks"><a href="#Veyon-Virtual-Eye-On-Networks" class="headerlink" title="Veyon - Virtual Eye On Networks"></a><a href="https://veyon.io/en/">Veyon</a> - Virtual Eye On Networks</h2><p>Veyon是一款可供教師教學、管理教室的免費開源軟體<br>其功能主要包含廣播教學、監控畫面、遠距開關機、傳輸檔案等</p><h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><blockquote><p>先至其官網<a href="https://veyon.io/en/download/">下載</a>，注意版本<br><img src="https://photos.smugmug.com/photos/i-Z5RxJwq/0/ec8e15f9/X2/i-Z5RxJwq-X2.jpg"></p></blockquote><span id="more"></span> <p>執行安裝程序</p><blockquote><p><img src="https://photos.smugmug.com/photos/i-5FVXpWz/0/6b2060b4/O/i-5FVXpWz.jpg"><br><img src="https://photos.smugmug.com/photos/i-PDd3pFc/0/0e94dbd7/O/i-PDd3pFc.jpg"></p><ul><li><strong>↓如為學生端可不安裝Veyon Master</strong></li></ul><p><img src="https://photos.smugmug.com/photos/i-Hh2MNSK/0/c74fcc2a/O/i-Hh2MNSK.jpg"><br>最後完成安裝<br><img src="https://photos.smugmug.com/photos/i-gfbv5L7/0/2d05e12f/O/i-gfbv5L7.jpg"></p></blockquote><h3 id="組態設定"><a href="#組態設定" class="headerlink" title="組態設定"></a>組態設定</h3><ul><li><p>教師端</p><blockquote><p><strong>身份驗證-選擇金鑰身份驗證</strong><br><img src="https://photos.smugmug.com/photos/i-QsZdX6S/0/a12aefd3/O/i-QsZdX6S.jpg"><br><strong>建立金鑰配對，匯出public金鑰導入學生端使用</strong><br><img src="https://photos.smugmug.com/photos/i-fLNbXz8/0/8160dabd/O/i-fLNbXz8.jpg"><br><img src="https://photos.smugmug.com/photos/i-pH7NxzH/0/e654e316/O/i-pH7NxzH.jpg"><br>可於位置建立教室名稱，電腦新增電腦名稱與IP、MAC位址<br><img src="https://photos.smugmug.com/photos/i-h3TmWqq/0/ea7ad6c3/O/i-h3TmWqq.jpg">  </p></blockquote></li><li><p>學生端</p><blockquote><p>可至檢視-進階，在服務選項選擇隱藏通知區域與自動啟動<br><strong>匯入piblic金鑰</strong><br>可將使用介面改為英文(學生有想亂搞還是沒用啦~~~)</p></blockquote></li></ul><h3 id="教師端檢視畫面"><a href="#教師端檢視畫面" class="headerlink" title="教師端檢視畫面"></a>教師端檢視畫面</h3><p><img src="https://photos.smugmug.com/photos/i-X6S9cnn/0/f0e4324d/X2/i-X6S9cnn-X2.jpg"><br>組態設定完成後可於Veyon Master程式中看見類似上圖畫面，目前學生端只測試3台匯入key，所以只有3台有畫面，這3台是可以遠端操控的，比如<strong>關機</strong>  </p><h3 id="命令列-veyon-cli-新增要管控電腦"><a href="#命令列-veyon-cli-新增要管控電腦" class="headerlink" title="命令列(veyon-cli)新增要管控電腦"></a>命令列(veyon-cli)新增要管控電腦</h3><ul><li>新增位置<br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects add location &quot;PC-B&quot;</code>  </li><li>新增電腦-csv檔匯入(格式為IP,MAC,電腦名稱)，<strong>注意!，不用欄位名稱</strong><br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects import c:\maclist.csv location &quot;PC-B&quot; format &quot;%host%,%mac%,%name%&quot;</code></li></ul><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul><li>還有很多功能，可以自行嘗試  </li><li><a href="https://github.com/veyon/veyon">Veyon GitHub</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Veyon-Virtual-Eye-On-Networks&quot;&gt;&lt;a href=&quot;#Veyon-Virtual-Eye-On-Networks&quot; class=&quot;headerlink&quot; title=&quot;Veyon - Virtual Eye On Networks&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://veyon.io/en/&quot;&gt;Veyon&lt;/a&gt; - Virtual Eye On Networks&lt;/h2&gt;&lt;p&gt;Veyon是一款可供教師教學、管理教室的免費開源軟體&lt;br&gt;其功能主要包含廣播教學、監控畫面、遠距開關機、傳輸檔案等&lt;/p&gt;
+&lt;h3 id=&quot;安裝&quot;&gt;&lt;a href=&quot;#安裝&quot; class=&quot;headerlink&quot; title=&quot;安裝&quot;&gt;&lt;/a&gt;安裝&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;先至其官網&lt;a href=&quot;https://veyon.io/en/download/&quot;&gt;下載&lt;/a&gt;，注意版本&lt;br&gt;&lt;img src=&quot;https://photos.smugmug.com/photos/i-Z5RxJwq/0/ec8e15f9/X2/i-Z5RxJwq-X2.jpg&quot;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="open source software" scheme="https://leeyaowen.github.io/categories/open-source-software/"/>
+    
+    
+    <category term="Veyon" scheme="https://leeyaowen.github.io/tags/Veyon/"/>
+    
+    <category term="open source software" scheme="https://leeyaowen.github.io/tags/open-source-software/"/>
+    
+    <category term="free" scheme="https://leeyaowen.github.io/tags/free/"/>
+    
+    <category term="learning" scheme="https://leeyaowen.github.io/tags/learning/"/>
+    
+    <category term="teaching" scheme="https://leeyaowen.github.io/tags/teaching/"/>
+    
+    <category term="開源軟體" scheme="https://leeyaowen.github.io/tags/%E9%96%8B%E6%BA%90%E8%BB%9F%E9%AB%94/"/>
+    
+    <category term="教室管理" scheme="https://leeyaowen.github.io/tags/%E6%95%99%E5%AE%A4%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="TTSH" scheme="https://leeyaowen.github.io/tags/TTSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
+    <link href="https://leeyaowen.github.io/2022/07/07/20220707-Java-and-Eclipse/"/>
+    <id>https://leeyaowen.github.io/2022/07/07/20220707-Java-and-Eclipse/</id>
+    <published>2022-07-07T14:03:40.000Z</published>
+    <updated>2022-07-07T14:35:56.918Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p><p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p><span id="more"></span>  <p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p><p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p><p>目前完成滑鼠座標偵測<br>Todoist  </p><ul><li><input disabled="" type="checkbox"> 畫線畫點  </li><li><input disabled="" type="checkbox"> 設定資料庫</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg&quot;&gt;&lt;br&gt;初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  &lt;/p&gt;
+&lt;p&gt;將來應該先模擬之前的&lt;a href=&quot;https://github.com/leeyaowen/Mapkeying_python&quot;&gt;植株座標輸入程式&lt;/a&gt;，然後想將資料庫替換成SQLite  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://leeyaowen.github.io/categories/Java/"/>
+    
+    
+    <category term="code" scheme="https://leeyaowen.github.io/tags/code/"/>
+    
+    <category term="coding" scheme="https://leeyaowen.github.io/tags/coding/"/>
+    
+    <category term="Java" scheme="https://leeyaowen.github.io/tags/Java/"/>
+    
+    <category term="JDK" scheme="https://leeyaowen.github.io/tags/JDK/"/>
+    
+    <category term="Eclipse" scheme="https://leeyaowen.github.io/tags/Eclipse/"/>
+    
+    <category term="WindowBuilder" scheme="https://leeyaowen.github.io/tags/WindowBuilder/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[嘉義大學回憶]如何才能靠卡進學校</title>
+    <link href="https://leeyaowen.github.io/2022/07/03/20220703-NCYUctmc/"/>
+    <id>https://leeyaowen.github.io/2022/07/03/20220703-NCYUctmc/</id>
+    <published>2022-07-03T07:16:15.000Z</published>
+    <updated>2022-07-03T07:27:51.305Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p><ul><li>2017.9.18(開學第一天)</li></ul><p>直接進車輛管理會辦通行證，但接下來一週都被擋在外面靠卡失敗進不來  </p><span id="more"></span>  <ul><li>2017.9.25</li></ul><p>至車輛管理會反應靠卡問題，(應該是)工讀生表示那是廠商問題，會叫廠商盡快修理  </p><p>結果一樣進不來，不過接下來一週的柵欄都是直接打開的，不管你有沒有繳管理費都可以進(如果不管理你乾脆叫清潔費好了)  </p><ul><li>2017.10.08</li></ul><p>雙十連假第二天，不知為何柵欄又放下來了，但一樣靠卡失敗  </p><p>連假四天，被擋了三天，當然行政也放假去了問題無解  </p><ul><li>2017.10.12</li></ul><p>再次跟車輛管理會反應問題，結果說是電算中心跟廠商的問題，另外柵欄是駐警隊管，他們也不能開，聽起來他們就是個收資料的單位  </p><p>很好，我後來到了電算中心詢問，結果電算中心表示他們只負責發學生證，這個說法是車輛管理會丟給他們的，他們的職員甚至自己都無法靠卡進校園(似乎是9&#x2F;1之後繳費的都不行)  </p><p>接下來再次跟車輛管理會說明電算中心並無處理這個項目，車管會笑著說：「你要問對人啊」(意思是說電算中心搞不清楚自己的業務囉？)  </p><p>緊接著坐前面的工讀生跟我說：「給我你的學號，我再幫你開權限」(還沒跟我要收據看)  </p><p>WTF，這不代表所有問題都在你們這邊嗎，你們有那些資料但是根本沒輸入吧，原來只要個學號就能解決問題了，再次?是不是再次真的讓人懷疑阿  </p><p>剛剛下午去試了一下可以靠卡成功了，但相信應該還是有不少人被擋在外面  </p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;此文為備份Facebook網誌用&lt;/strong&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2017.9.18(開學第一天)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;直接進車輛管理會辦通行證，但接下來一週都被擋在外面靠卡失敗進不來  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="NCYU" scheme="https://leeyaowen.github.io/categories/NCYU/"/>
+    
+    
+    <category term="NCYU" scheme="https://leeyaowen.github.io/tags/NCYU/"/>
+    
+    <category term="嘉義大學" scheme="https://leeyaowen.github.io/tags/%E5%98%89%E7%BE%A9%E5%A4%A7%E5%AD%B8/"/>
+    
+    <category term="嘉義大學車管會" scheme="https://leeyaowen.github.io/tags/%E5%98%89%E7%BE%A9%E5%A4%A7%E5%AD%B8%E8%BB%8A%E7%AE%A1%E6%9C%83/"/>
+    
+    <category term="車輛管理委員會" scheme="https://leeyaowen.github.io/tags/%E8%BB%8A%E8%BC%9B%E7%AE%A1%E7%90%86%E5%A7%94%E5%93%A1%E6%9C%83/"/>
+    
+    <category term="靠卡" scheme="https://leeyaowen.github.io/tags/%E9%9D%A0%E5%8D%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[PhotoVogue]T65</title>
+    <link href="https://leeyaowen.github.io/2022/06/21/20220621-photovogue/"/>
+    <id>https://leeyaowen.github.io/2022/06/21/20220621-photovogue/</id>
+    <published>2022-06-21T01:33:24.000Z</published>
+    <updated>2022-06-21T01:37:55.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;昨天投稿上去photovogue的，更新一下&lt;br&gt;類別放still life&lt;br&gt;&lt;img src=&quot;https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.j</summary>
+      
+    
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/categories/photography/"/>
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/tags/photography/"/>
+    
+    <category term="photovogue" scheme="https://leeyaowen.github.io/tags/photovogue/"/>
+    
+    <category term="vogue" scheme="https://leeyaowen.github.io/tags/vogue/"/>
+    
+    <category term="still life" scheme="https://leeyaowen.github.io/tags/still-life/"/>
+    
+    <category term="bird" scheme="https://leeyaowen.github.io/tags/bird/"/>
+    
+    <category term="duck" scheme="https://leeyaowen.github.io/tags/duck/"/>
+    
+    <category term="animal" scheme="https://leeyaowen.github.io/tags/animal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[嘉義大學回憶]國文選課實錄</title>
+    <link href="https://leeyaowen.github.io/2022/06/11/20220611-NCYUlesson/"/>
+    <id>https://leeyaowen.github.io/2022/06/11/20220611-NCYUlesson/</id>
+    <published>2022-06-11T04:02:37.000Z</published>
+    <updated>2022-06-11T04:28:46.509Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>此文為備份Facebook網誌用，如實記錄當時發生事實</strong></p><h2 id="101學年度上學期"><a href="#101學年度上學期" class="headerlink" title="101學年度上學期"></a>101學年度上學期</h2><p>經過篩選選上了<strong>禪詩與人生(馬炳旺)</strong></p><span id="more"></span><ul><li>2013.2.20</li></ul><p>接到中文系公告如下:  </p><h3 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h3><p>一、 因本系原先所開設之課程「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」輸入錯誤為「『大學國文〈II〉：禪詩與人生』馬炳旺老師授課」；2013.01.03中文系已聯繫民雄教務組，請李燈銘先生更正。特此公告，謹此致歉，煩請 貴單位轉知同學，十分感謝。</p><p>二、 如已選上「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」之學生，無願意繼續上課；請於本學期網路加退選期間(2&#x2F;21~3&#x2F;1)上網退選；或改選其他開在所屬學院之國文課程。  </p><p>嘉大中文系辦公室 敬上</p><hr><p>由於在班會時間才接獲通知，雖覺有些疑點，但7.8.9堂又有生態學無法前往教務處詢問，便決定2&#x2F;21再前往教務處詢問。(當日晚上看教學平台及校務行政系統皆發現禪師與人生還在自己的頁面上)</p><ul><li>2013.2.21</li></ul><p>下午前往教務處詢問，教務處似乎不清楚有這回事，便協助打到民雄中文系詢問，問的結果是<strong>禪詩與人生直接換課為閱讀與寫作(不需退選或作其他任何動作)</strong></p><p>晚上告知系上同學卻接獲不同的答案，此訊息為<strong>更改的課為另一堂禪詩與人生(教師未定)(但此答案與上述公告不符)</strong></p><p>於是又立刻打了電話到中文系詢問，此次的答案為<strong>中文系自己也不清楚，說要再去問教務組，請我明天再連絡</strong></p><ul><li>2013.2.22</li></ul><p>中午吃飯前再度至教務處詢問，一樣協助打電話至中文系，此次答案為<strong>我們沒有禪詩與人生這堂課了，必須要退選並進行加簽才能有閱讀與寫作這堂課，但承諾我們加簽余育婷老師的課一定會成功</strong>  </p><p>下午再度聽到答案的分歧，系上同學再次詢問的答案為<strong>禪詩與人生本來就沒開，是系統出了問題，將把我們併到閱讀與寫作那班上課(100人？)</strong>  </p><p>最後我們的決定是”退選禪詩與人生再加簽”<br>(此時校務行政系統上同時存在公告上的二堂課)<br>下午上完課教務處也下班了，本日就此結束  </p><ul><li>2013.2.25</li></ul><p>3.4節拿著加簽單到余育婷老師的教室，由於老師提早到教室，我們便前去詢問加簽事宜，但此時老師告訴我們<strong>中文系說額滿了就不能加簽(我們沒有聽錯，講了我們的原因之後老師也去問了一次確認這個事實)</strong></p><p>此時有人發現了我們原先上禪詩與人生的隔壁教室，<strong>老師在裡面！</strong>向老師解釋過我們所遭遇的問題後他讓我們到教務處進行<strong>加簽回去的手續</strong></p><hr><h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><ol><li>原先的公告完全是假的  </li><li>我們發現疑點卻繞了一大圈還連原點都繞不回，就現在來說我們是沒有課的  </li><li>中文系自己內部根本不清楚這些課，每次問都得到不太一樣的答案，有時理直氣壯，有時回答吞吞吐吐  </li><li>教務處相當願意幫助我們，這次事件讓我對教務處留下不錯的印象</li></ol><h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ul><li>2013.2.25</li></ul><p>今天到系館二樓發現新的公告，所述內容依然錯誤…</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;此文為備份Facebook網誌用，如實記錄當時發生事實&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;101學年度上學期&quot;&gt;&lt;a href=&quot;#101學年度上學期&quot; class=&quot;headerlink&quot; title=&quot;101學年度上學期&quot;&gt;&lt;/a&gt;101學年度上學期&lt;/h2&gt;&lt;p&gt;經過篩選選上了&lt;strong&gt;禪詩與人生(馬炳旺)&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="NCYU" scheme="https://leeyaowen.github.io/categories/NCYU/"/>
+    
+    
+    <category term="NCYU" scheme="https://leeyaowen.github.io/tags/NCYU/"/>
+    
+    <category term="選課" scheme="https://leeyaowen.github.io/tags/%E9%81%B8%E8%AA%B2/"/>
+    
+    <category term="嘉義大學" scheme="https://leeyaowen.github.io/tags/%E5%98%89%E7%BE%A9%E5%A4%A7%E5%AD%B8/"/>
+    
+    <category term="嘉義大學選課" scheme="https://leeyaowen.github.io/tags/%E5%98%89%E7%BE%A9%E5%A4%A7%E5%AD%B8%E9%81%B8%E8%AA%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[PhotoVogue]T64</title>
+    <link href="https://leeyaowen.github.io/2022/06/07/20220607-photovogue/"/>
+    <id>https://leeyaowen.github.io/2022/06/07/20220607-photovogue/</id>
+    <published>2022-06-07T14:25:12.000Z</published>
+    <updated>2022-06-07T14:28:32.328Z</updated>
+    
+    <content type="html"><![CDATA[<p>其實這張是5月底上去的，忘了更新<br>這次是植物系列，類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;其實這張是5月底上去的，忘了更新&lt;br&gt;這次是植物系列，類別放still life&lt;br&gt;&lt;img src=&quot;https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-6mJt7Ph/0/7ac4abe4/O/T64</summary>
+      
+    
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/categories/photography/"/>
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/tags/photography/"/>
+    
+    <category term="photovogue" scheme="https://leeyaowen.github.io/tags/photovogue/"/>
+    
+    <category term="vogue" scheme="https://leeyaowen.github.io/tags/vogue/"/>
+    
+    <category term="herbarium" scheme="https://leeyaowen.github.io/tags/herbarium/"/>
+    
+    <category term="still life" scheme="https://leeyaowen.github.io/tags/still-life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[PhotoVogue]GS11</title>
+    <link href="https://leeyaowen.github.io/2022/04/18/20220418-photovogue/"/>
+    <id>https://leeyaowen.github.io/2022/04/18/20220418-photovogue/</id>
+    <published>2022-04-18T11:06:12.000Z</published>
+    <updated>2022-04-18T11:08:20.510Z</updated>
+    
+    <content type="html"><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;還是搞不懂大改版後的分類…&lt;br&gt;總算上去一張就是了&lt;br&gt;&lt;img src=&quot;https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/categories/photography/"/>
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/tags/photography/"/>
+    
+    <category term="photovogue" scheme="https://leeyaowen.github.io/tags/photovogue/"/>
+    
+    <category term="vogue" scheme="https://leeyaowen.github.io/tags/vogue/"/>
+    
+    <category term="Minolta V2" scheme="https://leeyaowen.github.io/tags/Minolta-V2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[photography]改善黃斑對焦老化變淡問題</title>
+    <link href="https://leeyaowen.github.io/2022/04/14/20220414-Brighten-Rangefinder/"/>
+    <id>https://leeyaowen.github.io/2022/04/14/20220414-Brighten-Rangefinder/</id>
+    <published>2022-04-14T14:44:04.000Z</published>
+    <updated>2022-04-14T14:51:19.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p><p>送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗</p><p>網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等<br>最後我找到不用拆開我覺得最好的方式-貼黑色貼紙</p><p>根據網路方法，在觀景窗黃斑位置貼上同大小的黑色貼紙可以明顯改善問題，結果會變得有點像裂像對焦一樣<br>有人是使用電火布，不過馬上就看到另一個人跟我有相同想法:殘膠會嚴重</p><p>那…我手邊最棒的材料不就是保護相機鏡頭用的鐵人膠帶嗎?<br>就決定是你了!<br>我沒有仔細測量過黃斑大小與位置，就是挑盡量中央貼，結果如圖，他變得有點黃斑對焦與裂像對焦的融合，至少比原先容易對焦<br><img src="https://photos.smugmug.com/photos/i-Gs4qh3C/0/016a8e97/X5/i-Gs4qh3C-X5.jpg"></p><p>Ref: <a href="http://rick_oleson.tripod.com/index-165.html">Brighten your Rangefinder</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點&lt;/p&gt;
+&lt;p&gt;送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗&lt;/p&gt;
+&lt;p&gt;網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等&lt;br&gt;最後我找到不用拆開我覺得</summary>
+      
+    
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/categories/photography/"/>
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/tags/photography/"/>
+    
+    <category term="rangefinder" scheme="https://leeyaowen.github.io/tags/rangefinder/"/>
+    
+    <category term="黃斑對焦" scheme="https://leeyaowen.github.io/tags/%E9%BB%83%E6%96%91%E5%B0%8D%E7%84%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[python]想要RAW檔?可以先拿.raw壓壓驚</title>
+    <link href="https://leeyaowen.github.io/2022/04/03/20220403-jpg2raw/"/>
+    <id>https://leeyaowen.github.io/2022/04/03/20220403-jpg2raw/</id>
+    <published>2022-04-03T00:20:39.000Z</published>
+    <updated>2022-04-03T00:56:19.552Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-S37M65H/0/ef628152/O/i-S37M65H.png"><br>我們廢話不多說，先上個<a href="https://github.com/leeyaowen/jpg2raw/releases">Windows載點</a><br>如首圖，只要將exe檔跟jpg檔放在同一目錄下就可以執行了</p><span id="more"></span><p>好像很多人喜歡跟攝影要原檔，那.raw可以嗎?<br>透過載下來的程式可以將jpg轉換為.raw副檔名(詳細code自己上我<a href="https://github.com/leeyaowen/jpg2raw/blob/main/jpg2raw.py">github</a>看吧)<br>按下執行後會出現以下視窗<br><img src="https://photos.smugmug.com/photos/i-F6VhFxn/0/b9bbe724/O/i-F6VhFxn.png"><br>如果上圖兩行字有跑完，那應該是完成轉換了<br>資料夾內會多出一個RawFile資料夾<br><img src="https://photos.smugmug.com/photos/i-CJWfRsT/0/c64feca8/O/i-CJWfRsT.png"><br><img src="https://photos.smugmug.com/photos/i-DcGdrrd/0/22692647/O/i-DcGdrrd.png"><br>我們可以嘗試用Win10內的圖片瀏覽器開啟，會發現不能開<br><img src="https://photos.smugmug.com/photos/i-HfmFw5v/0/43845256/O/i-HfmFw5v.png"><br>那換丟到Photoshop呢?<br><img src="https://photos.smugmug.com/photos/i-Hm6Rj2d/0/b5ffed91/O/i-Hm6Rj2d.png"><br><img src="https://photos.smugmug.com/photos/i-GZh9Msr/0/84ea6975/O/i-GZh9Msr.png"><br>看起來解的不成功，首圖都是彩色的才對</p><p>這樣是不是很有RAW的感覺?你沒辦法隨便解開</p><p>那這樣要怎麼還原?我們可以用以下方式</p><figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">h, w = <span class="number">3130</span>, <span class="number">2075</span> <span class="comment"># 關鍵的高與寬，不知道就沒法做囉~~~</span></span><br><span class="line">img = np.fromfile(<span class="string">&#x27;./1110315EOS30dateVIBE400-22-raw.raw&#x27;</span>, dtype=<span class="string">&#x27;uint8&#x27;</span>)</span><br><span class="line">img2jpg = np.reshape(img, (h, w, <span class="number">3</span>))</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img2jpg)[<span class="number">1</span>].tofile(<span class="string">&#x27;./raw2jpg.jpg&#x27;</span>)</span><br></pre></td></tr></table></figure><p>經過轉回jpg過程，可以獲得下圖<br><img src="https://photos.smugmug.com/photos/i-CWzmDMw/0/dafc4518/X4/i-CWzmDMw-X4.jpg"></p><p>但是如果拿原始jpg去仔細比較RGB數值會有些微差異，因為存jpg就是要走一次壓縮流程</p><p>以後有人要原圖，可以給給看這種檔案?</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://photos.smugmug.com/photos/i-S37M65H/0/ef628152/O/i-S37M65H.png&quot;&gt;&lt;br&gt;我們廢話不多說，先上個&lt;a href=&quot;https://github.com/leeyaowen/jpg2raw/releases&quot;&gt;Windows載點&lt;/a&gt;&lt;br&gt;如首圖，只要將exe檔跟jpg檔放在同一目錄下就可以執行了&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="https://leeyaowen.github.io/categories/python/"/>
+    
+    
+    <category term="code" scheme="https://leeyaowen.github.io/tags/code/"/>
+    
+    <category term="coding" scheme="https://leeyaowen.github.io/tags/coding/"/>
+    
+    <category term="python" scheme="https://leeyaowen.github.io/tags/python/"/>
+    
+    <category term="opencv" scheme="https://leeyaowen.github.io/tags/opencv/"/>
+    
+    <category term="numpy" scheme="https://leeyaowen.github.io/tags/numpy/"/>
+    
+    <category term="raw" scheme="https://leeyaowen.github.io/tags/raw/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
+    <link href="https://leeyaowen.github.io/2022/03/19/20220319-img-resize/"/>
+    <id>https://leeyaowen.github.io/2022/03/19/20220319-img-resize/</id>
+    <published>2022-03-19T09:41:16.000Z</published>
+    <updated>2022-03-19T09:57:48.659Z</updated>
+    
+    <content type="html"><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p><span id="more"></span><p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p><figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">img_resize</span>(<span class="params">img_name</span>):</span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問&lt;br&gt;這邊以寬640，高480為例&lt;br&gt;若圖片直接scale到這個大小多有變形問題&lt;br&gt;尤其直幅圖片影響非常大&lt;br&gt;這裡提供想法解決這個問題&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="https://leeyaowen.github.io/categories/python/"/>
+    
+    
+    <category term="code" scheme="https://leeyaowen.github.io/tags/code/"/>
+    
+    <category term="coding" scheme="https://leeyaowen.github.io/tags/coding/"/>
+    
+    <category term="python" scheme="https://leeyaowen.github.io/tags/python/"/>
+    
+    <category term="opencv" scheme="https://leeyaowen.github.io/tags/opencv/"/>
+    
+    <category term="numpy" scheme="https://leeyaowen.github.io/tags/numpy/"/>
+    
+    <category term="resize" scheme="https://leeyaowen.github.io/tags/resize/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <link href="https://leeyaowen.github.io/2022/02/28/20220221-photovogue/"/>
+    <id>https://leeyaowen.github.io/2022/02/28/20220221-photovogue/</id>
+    <published>2022-02-28T01:55:23.000Z</published>
+    <updated>2022-02-28T01:58:23.109Z</updated>
+    
+    <content type="html"><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2022.02.21，久違的兩張都上&lt;br&gt;&lt;img src=&quot;https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg&quot;&gt;&lt;br&gt;&lt;img src=&quot;</summary>
+      
+    
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/categories/photography/"/>
+    
+    
+    <category term="photography" scheme="https://leeyaowen.github.io/tags/photography/"/>
+    
+    <category term="photovogue" scheme="https://leeyaowen.github.io/tags/photovogue/"/>
+    
+    <category term="vogue" scheme="https://leeyaowen.github.io/tags/vogue/"/>
+    
+    <category term="canon" scheme="https://leeyaowen.github.io/tags/canon/"/>
+    
+    <category term="tamron 35mm f/1.8" scheme="https://leeyaowen.github.io/tags/tamron-35mm-f-1-8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[R]去除字串的多餘空白-從gdata到stringr</title>
+    <link href="https://leeyaowen.github.io/2022/02/11/20220211-gdata-to-stringr/"/>
+    <id>https://leeyaowen.github.io/2022/02/11/20220211-gdata-to-stringr/</id>
+    <published>2022-02-11T13:35:12.000Z</published>
+    <updated>2022-02-11T14:09:35.470Z</updated>
+    
+    <content type="html"><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p><p>如<code>&#39;abc&#39;</code>與<code>&#39;abc &#39;</code>是完全不同的字串，若用distinct檢查，那結果會是2個，我們可以用生物的學名來做想像，如果多了一個空格，資料等於<strong>多了一個物種</strong><br>先前看到gdata有<code>trim</code>這個function就直接拿來對整個dataframe使用，但其是不認方向的，前後都會去除<br>使用stringr的<code>str_trim</code>則不同，有both, left, right三個選擇</p><p>gdata是一個有蠻多處理資料function的package，但其最後更新為2017年<br>stringr主要就是專門做字串處理，且為tidyverse之下的一員，針對字串處理的function豐富，也比較不用擔心沒人維護</p><p>考量我也沒有在用gdata的其他功能，以及stringr有更多方便處理字串的function，就跳槽啦!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，&lt;strong&gt;多餘的空白&lt;/strong&gt;是會造成資料處理上的麻煩之一&lt;/p&gt;
+&lt;p&gt;如&lt;code&gt;&amp;#39;abc&amp;#39;&lt;/code&gt;與&lt;code&gt;&amp;#39;abc &amp;#39;&lt;/code&gt;是完全不同的字串，若</summary>
+      
+    
+    
+    
+    <category term="R" scheme="https://leeyaowen.github.io/categories/R/"/>
+    
+    
+    <category term="R" scheme="https://leeyaowen.github.io/tags/R/"/>
+    
+    <category term="coding" scheme="https://leeyaowen.github.io/tags/coding/"/>
+    
+    <category term="stringr" scheme="https://leeyaowen.github.io/tags/stringr/"/>
+    
+    <category term="資料處理" scheme="https://leeyaowen.github.io/tags/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86/"/>
+    
+    <category term="去除空白" scheme="https://leeyaowen.github.io/tags/%E5%8E%BB%E9%99%A4%E7%A9%BA%E7%99%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[python]利用flickrapi爬取Flickr的圖片</title>
+    <link href="https://leeyaowen.github.io/2022/02/03/20220203-flickr-crawler/"/>
+    <id>https://leeyaowen.github.io/2022/02/03/20220203-flickr-crawler/</id>
+    <published>2022-02-03T09:04:58.000Z</published>
+    <updated>2022-02-03T09:28:35.833Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p><span id="more"></span><p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p><p>以下就是code的部分</p><figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure><p>使用自行注意著作權問題喔~</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png&quot;&gt;&lt;br&gt;Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值&lt;br&gt;flickrapi可以幫助我們快速收集圖片資料，探索Flickr&lt;br&gt;這邊使用的python環境為3.7&lt;br&gt;使用&lt;code&gt;pip install flickrapi&lt;/code&gt;是安裝flickrapi的好的開始&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="https://leeyaowen.github.io/categories/python/"/>
+    
+    
+    <category term="code" scheme="https://leeyaowen.github.io/tags/code/"/>
+    
+    <category term="coding" scheme="https://leeyaowen.github.io/tags/coding/"/>
+    
+    <category term="python" scheme="https://leeyaowen.github.io/tags/python/"/>
+    
+    <category term="flickrapi" scheme="https://leeyaowen.github.io/tags/flickrapi/"/>
+    
+    <category term="web crawler" scheme="https://leeyaowen.github.io/tags/web-crawler/"/>
+    
+    <category term="網路爬蟲" scheme="https://leeyaowen.github.io/tags/%E7%B6%B2%E8%B7%AF%E7%88%AC%E8%9F%B2/"/>
+    
+  </entry>
+  
+</feed>

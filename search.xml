@@ -15,6 +15,19 @@
       </tags>
   </entry>
   <entry>
+    <title>準備踏入股票市場</title>
+    <url>/2021/02/10/20210210-stock/</url>
+    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
+]]></content>
+      <categories>
+        <category>stock</category>
+      </categories>
+      <tags>
+        <tag>stock</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
     <url>/2021/02/11/20210211-S2A-75-sample/</url>
     <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
@@ -32,39 +45,26 @@
       </tags>
   </entry>
   <entry>
-    <title>準備踏入股票市場</title>
-    <url>/2021/02/10/20210210-stock/</url>
-    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
-]]></content>
-      <categories>
-        <category>stock</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]利用flickrapi爬取Flickr的圖片</title>
-    <url>/2022/02/03/20220203-flickr-crawler/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
+    <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
+    <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
+    <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
 <span id="more"></span>
-<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
-<p>以下就是code的部分</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    print(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<p>選擇月報表後可以看到以下資料，點擊下載csv檔可以獲得該月資料<br><img src="https://photos.smugmug.com/photos/i-wZJPz2X/0/66c8270f/XL/i-wZJPz2X-XL.png"><br>這邊以收集2021年資料為例，將其整理至一資料夾，如下圖<br><img src="https://photos.smugmug.com/photos/i-LzkqMhQ/0/0f3f4c60/O/i-LzkqMhQ.png"></p>
+<p>之後以R繪製雨量資料</p>
+<figure class="highlight r"><figcaption><span>R</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">####load packages####</span></span><br><span class="line">library<span class="punctuation">(</span>dplyr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>magrittr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggplot2<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>stringr<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####bind data####</span></span><br><span class="line">filenames<span class="operator">&lt;-</span>list.files<span class="punctuation">(</span><span class="string">&quot;./Binlang&quot;</span><span class="punctuation">,</span>pattern <span class="operator">=</span> <span class="string">&quot;.csv&quot;</span><span class="punctuation">)</span></span><br><span class="line">precpdf<span class="operator">&lt;-</span>read.csv<span class="punctuation">(</span>paste0<span class="punctuation">(</span><span class="string">&quot;./Binlang/&quot;</span><span class="punctuation">,</span>filenames<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">,</span>skip <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span>colClasses <span class="operator">=</span> <span class="string">&quot;character&quot;</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  mutate<span class="punctuation">(</span>month<span class="operator">=</span>str_sub<span class="punctuation">(</span>filenames<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">6</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="keyword">for</span> <span class="punctuation">(</span>i <span class="keyword">in</span> <span class="number">2</span><span class="operator">:</span><span class="built_in">length</span><span class="punctuation">(</span>filenames<span class="punctuation">)</span><span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">  dttemp<span class="operator">&lt;-</span>read.csv<span class="punctuation">(</span>paste0<span class="punctuation">(</span><span class="string">&quot;./Binlang/&quot;</span><span class="punctuation">,</span>filenames<span class="punctuation">[</span>i<span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">,</span>skip <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span>colClasses <span class="operator">=</span> <span class="string">&quot;character&quot;</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">    mutate<span class="punctuation">(</span>month<span class="operator">=</span>str_sub<span class="punctuation">(</span>filenames<span class="punctuation">[</span>i<span class="punctuation">]</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">6</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">  precpdf<span class="operator">&lt;-</span>bind_rows<span class="punctuation">(</span>precpdf<span class="punctuation">,</span>dttemp<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line">precpdf<span class="operator">$</span>Precp<span class="operator">&lt;-</span><span class="built_in">as.numeric</span><span class="punctuation">(</span>precpdf<span class="operator">$</span>Precp<span class="punctuation">)</span></span><br><span class="line">precpdf<span class="operator">&lt;-</span>precpdf <span class="operator">%&gt;%</span></span><br><span class="line">  group_by<span class="punctuation">(</span>month<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  summarise<span class="punctuation">(</span>precp<span class="operator">=</span><span class="built_in">sum</span><span class="punctuation">(</span>Precp<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  ungroup<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####plot####</span></span><br><span class="line">p<span class="operator">&lt;-</span>ggplot<span class="punctuation">(</span>data <span class="operator">=</span> precpdf<span class="punctuation">,</span>aes<span class="punctuation">(</span>x<span class="operator">=</span>month<span class="punctuation">,</span>y<span class="operator">=</span>precp<span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span>stat <span class="operator">=</span> <span class="string">&quot;identity&quot;</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">&quot;Binlang&quot;</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_text<span class="punctuation">(</span>aes<span class="punctuation">(</span>y<span class="operator">=</span>precp<span class="punctuation">,</span>label<span class="operator">=</span>precp<span class="punctuation">)</span><span class="punctuation">,</span>vjust<span class="operator">=</span><span class="operator">-</span><span class="number">0.5</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_classic<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>hjust <span class="operator">=</span> <span class="number">0.5</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  scale_y_continuous<span class="punctuation">(</span>limits <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span><span class="number">850</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">p</span><br><span class="line">ggsave<span class="punctuation">(</span>filename <span class="operator">=</span> <span class="string">&quot;Binlang_2021_precp.png&quot;</span><span class="punctuation">,</span>width <span class="operator">=</span> <span class="number">15</span><span class="punctuation">,</span>height <span class="operator">=</span> <span class="number">10</span><span class="punctuation">,</span>units <span class="operator">=</span> <span class="string">&quot;cm&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 
-<p>使用自行注意著作權問題喔~</p>
+<p><img src="https://photos.smugmug.com/photos/i-6KH9vX8/0/fe20c42a/XL/i-6KH9vX8-XL.png"></p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>R</category>
       </categories>
       <tags>
         <tag>code</tag>
-        <tag>python</tag>
+        <tag>R</tag>
         <tag>coding</tag>
-        <tag>flickrapi</tag>
-        <tag>web crawler</tag>
-        <tag>網路爬蟲</tag>
+        <tag>cwb</tag>
+        <tag>data visualization</tag>
+        <tag>ggplot2</tag>
       </tags>
   </entry>
   <entry>
@@ -87,6 +87,46 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<span id="more"></span>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]利用flickrapi爬取Flickr的圖片</title>
+    <url>/2022/02/03/20220203-flickr-crawler/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
+<span id="more"></span>
+<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
+<p>以下就是code的部分</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>使用自行注意著作權問題喔~</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>flickrapi</tag>
+        <tag>web crawler</tag>
+        <tag>網路爬蟲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[R]去除字串的多餘空白-從gdata到stringr</title>
     <url>/2022/02/11/20220211-gdata-to-stringr/</url>
     <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
@@ -98,34 +138,46 @@
         <category>R</category>
       </categories>
       <tags>
-        <tag>coding</tag>
         <tag>R</tag>
+        <tag>coding</tag>
         <tag>stringr</tag>
         <tag>資料處理</tag>
         <tag>去除空白</tag>
       </tags>
   </entry>
   <entry>
-    <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
-    <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
-    <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
-<span id="more"></span>
-<p>選擇月報表後可以看到以下資料，點擊下載csv檔可以獲得該月資料<br><img src="https://photos.smugmug.com/photos/i-wZJPz2X/0/66c8270f/XL/i-wZJPz2X-XL.png"><br>這邊以收集2021年資料為例，將其整理至一資料夾，如下圖<br><img src="https://photos.smugmug.com/photos/i-LzkqMhQ/0/0f3f4c60/O/i-LzkqMhQ.png"></p>
-<p>之後以R繪製雨量資料</p>
-<figure class="highlight r"><figcaption><span>R</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">####load packages####</span></span><br><span class="line">library(dplyr)</span><br><span class="line">library(magrittr)</span><br><span class="line">library(ggplot2)</span><br><span class="line">library(stringr)</span><br><span class="line"></span><br><span class="line"><span class="comment">####bind data####</span></span><br><span class="line">filenames&lt;-list.files(<span class="string">&quot;./Binlang&quot;</span>,pattern = <span class="string">&quot;.csv&quot;</span>)</span><br><span class="line">precpdf&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[<span class="number">1</span>]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">  mutate(month=str_sub(filenames[<span class="number">1</span>],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">2</span>:<span class="built_in">length</span>(filenames)) &#123;</span><br><span class="line">  dttemp&lt;-read.csv(paste0(<span class="string">&quot;./Binlang/&quot;</span>,filenames[i]),skip = <span class="number">1</span>,colClasses = <span class="string">&quot;character&quot;</span>) %&gt;%</span><br><span class="line">    mutate(month=str_sub(filenames[i],-<span class="number">6</span>,-<span class="number">5</span>))</span><br><span class="line">  precpdf&lt;-bind_rows(precpdf,dttemp)</span><br><span class="line">&#125;</span><br><span class="line">precpdf$Precp&lt;-<span class="built_in">as.numeric</span>(precpdf$Precp)</span><br><span class="line">precpdf&lt;-precpdf %&gt;%</span><br><span class="line">  group_by(month) %&gt;%</span><br><span class="line">  summarise(precp=<span class="built_in">sum</span>(Precp,na.rm = <span class="built_in">T</span>)) %&gt;%</span><br><span class="line">  ungroup()</span><br><span class="line"></span><br><span class="line"><span class="comment">####plot####</span></span><br><span class="line">p&lt;-ggplot(data = precpdf,aes(x=month,y=precp))+</span><br><span class="line">  geom_bar(stat = <span class="string">&quot;identity&quot;</span>)+</span><br><span class="line">  labs(title = <span class="string">&quot;Binlang&quot;</span>)+</span><br><span class="line">  geom_text(aes(y=precp,label=precp),vjust=-<span class="number">0.5</span>)+</span><br><span class="line">  theme_classic()+</span><br><span class="line">  theme(plot.title = element_text(hjust = <span class="number">0.5</span>))+</span><br><span class="line">  scale_y_continuous(limits = <span class="built_in">c</span>(<span class="number">0</span>,<span class="number">850</span>))</span><br><span class="line">p</span><br><span class="line">ggsave(filename = <span class="string">&quot;Binlang_2021_precp.png&quot;</span>,width = <span class="number">15</span>,height = <span class="number">10</span>,units = <span class="string">&quot;cm&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://photos.smugmug.com/photos/i-6KH9vX8/0/fe20c42a/XL/i-6KH9vX8-XL.png"></p>
+    <title>[PhotoVogue]No. 290/No. 291</title>
+    <url>/2022/02/28/20220221-photovogue/</url>
+    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
 ]]></content>
       <categories>
-        <category>R</category>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>canon</tag>
+        <tag>tamron 35mm f/1.8</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
+    <url>/2022/03/19/20220319-img-resize/</url>
+    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
+<span id="more"></span>
+<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">img_resize</span>(<span class="params">img_name</span>):</span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
       </categories>
       <tags>
         <tag>code</tag>
         <tag>coding</tag>
-        <tag>R</tag>
-        <tag>cwb</tag>
-        <tag>data visualization</tag>
-        <tag>ggplot2</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>numpy</tag>
+        <tag>resize</tag>
       </tags>
   </entry>
   <entry>
@@ -147,99 +199,11 @@
       </categories>
       <tags>
         <tag>code</tag>
-        <tag>python</tag>
         <tag>coding</tag>
+        <tag>python</tag>
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>raw</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 290/No. 291</title>
-    <url>/2022/02/28/20220221-photovogue/</url>
-    <content><![CDATA[<p>2022.02.21，久違的兩張都上<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-Xf584nV/0/0cfddd88/X3/290-X3.jpg"><br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-vhkZCQ4/0/d37aea6e/X3/291-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>canon</tag>
-        <tag>tamron 35mm f/1.8</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>Minolta V2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[嘉義大學回憶]國文選課實錄</title>
-    <url>/2022/06/11/20220611-NCYUlesson/</url>
-    <content><![CDATA[<p><strong>此文為備份Facebook網誌用，如實記錄當時發生事實</strong></p>
-<h2 id="101學年度上學期"><a href="#101學年度上學期" class="headerlink" title="101學年度上學期"></a>101學年度上學期</h2><p>經過篩選選上了<strong>禪詩與人生(馬炳旺)</strong></p>
-<span id="more"></span>
-
-<ul>
-<li><p>2013.2.20 </p>
-<p>接到中文系公告如下:  </p>
-</li>
-</ul>
-<h3 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h3><p>一、 因本系原先所開設之課程「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」輸入錯誤為「『大學國文〈II〉：禪詩與人生』馬炳旺老師授課」；2013.01.03中文系已聯繫民雄教務組，請李燈銘先生更正。特此公告，謹此致歉，煩請 貴單位轉知同學，十分感謝。</p>
-<p>二、 如已選上「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」之學生，無願意繼續上課；請於本學期網路加退選期間(2/21~3/1)上網退選；或改選其他開在所屬學院之國文課程。  </p>
-<p>嘉大中文系辦公室 敬上</p>
-<hr>
-<p>由於在班會時間才接獲通知，雖覺有些疑點，但7.8.9堂又有生態學無法前往教務處詢問，便決定2/21再前往教務處詢問。(當日晚上看教學平台及校務行政系統皆發現禪師與人生還在自己的頁面上)</p>
-<ul>
-<li>2013.2.21  </li>
-</ul>
-<p>下午前往教務處詢問，教務處似乎不清楚有這回事，便協助打到民雄中文系詢問，問的結果是<strong>禪詩與人生直接換課為閱讀與寫作(不需退選或作其他任何動作)</strong></p>
-<p>晚上告知系上同學卻接獲不同的答案，此訊息為<strong>更改的課為另一堂禪詩與人生(教師未定)(但此答案與上述公告不符)</strong></p>
-<p>於是又立刻打了電話到中文系詢問，此次的答案為<strong>中文系自己也不清楚，說要再去問教務組，請我明天再連絡</strong></p>
-<ul>
-<li>2013.2.22  </li>
-</ul>
-<p>中午吃飯前再度至教務處詢問，一樣協助打電話至中文系，此次答案為<strong>我們沒有禪詩與人生這堂課了，必須要退選並進行加簽才能有閱讀與寫作這堂課，但承諾我們加簽余育婷老師的課一定會成功</strong>  </p>
-<p>下午再度聽到答案的分歧，系上同學再次詢問的答案為<strong>禪詩與人生本來就沒開，是系統出了問題，將把我們併到閱讀與寫作那班上課(100人？)</strong>  </p>
-<p>最後我們的決定是”退選禪詩與人生再加簽”<br>(此時校務行政系統上同時存在公告上的二堂課)<br>下午上完課教務處也下班了，本日就此結束  </p>
-<ul>
-<li>2013.2.25</li>
-</ul>
-<p>3.4節拿著加簽單到余育婷老師的教室，由於老師提早到教室，我們便前去詢問加簽事宜，但此時老師告訴我們<strong>中文系說額滿了就不能加簽(我們沒有聽錯，講了我們的原因之後老師也去問了一次確認這個事實)</strong></p>
-<p>此時有人發現了我們原先上禪詩與人生的隔壁教室，<strong>老師在裡面！</strong>向老師解釋過我們所遭遇的問題後他讓我們到教務處進行<strong>加簽回去的手續</strong></p>
-<hr>
-<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><ol>
-<li>原先的公告完全是假的  </li>
-<li>我們發現疑點卻繞了一大圈還連原點都繞不回，就現在來說我們是沒有課的  </li>
-<li>中文系自己內部根本不清楚這些課，每次問都得到不太一樣的答案，有時理直氣壯，有時回答吞吞吐吐  </li>
-<li>教務處相當願意幫助我們，這次事件讓我對教務處留下不錯的印象  </li>
-</ol>
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ul>
-<li><p>2013.2.25</p>
-<p>今天到系館二樓發現新的公告，所述內容依然錯誤…</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>NCYU</category>
-      </categories>
-      <tags>
-        <tag>NCYU</tag>
-        <tag>選課</tag>
-        <tag>嘉義大學</tag>
-        <tag>嘉義大學選課</tag>
       </tags>
   </entry>
   <entry>
@@ -262,11 +226,9 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
-<span id="more"></span>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
 ]]></content>
       <categories>
         <category>photography</category>
@@ -275,269 +237,7 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Veyon]教室管理開源軟體-廣播、遠端監控、遠端控制</title>
-    <url>/2022/07/15/20220715-veyon/</url>
-    <content><![CDATA[<h2 id="Veyon-Virtual-Eye-On-Networks"><a href="#Veyon-Virtual-Eye-On-Networks" class="headerlink" title="Veyon - Virtual Eye On Networks"></a><a href="https://veyon.io/en/">Veyon</a> - Virtual Eye On Networks</h2><p>Veyon是一款可供教師教學、管理教室的免費開源軟體<br>其功能主要包含廣播教學、監控畫面、遠距開關機、傳輸檔案等</p>
-<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><blockquote>
-<p>先至其官網<a href="https://veyon.io/en/download/">下載</a>，注意版本<br><img src="https://photos.smugmug.com/photos/i-Z5RxJwq/0/ec8e15f9/X2/i-Z5RxJwq-X2.jpg"></p>
-</blockquote>
-<span id="more"></span> 
-<p>執行安裝程序</p>
-<blockquote>
-<p><img src="https://photos.smugmug.com/photos/i-5FVXpWz/0/6b2060b4/O/i-5FVXpWz.jpg"><br><img src="https://photos.smugmug.com/photos/i-PDd3pFc/0/0e94dbd7/O/i-PDd3pFc.jpg"></p>
-<ul>
-<li><strong>↓如為學生端可不安裝Veyon Master</strong>  </li>
-</ul>
-<p><img src="https://photos.smugmug.com/photos/i-Hh2MNSK/0/c74fcc2a/O/i-Hh2MNSK.jpg"><br>最後完成安裝<br><img src="https://photos.smugmug.com/photos/i-gfbv5L7/0/2d05e12f/O/i-gfbv5L7.jpg"></p>
-</blockquote>
-<h3 id="組態設定"><a href="#組態設定" class="headerlink" title="組態設定"></a>組態設定</h3><ul>
-<li><p>教師端</p>
-<blockquote>
-<p><strong>身份驗證-選擇金鑰身份驗證</strong><br><img src="https://photos.smugmug.com/photos/i-QsZdX6S/0/a12aefd3/O/i-QsZdX6S.jpg"><br><strong>建立金鑰配對，匯出public金鑰導入學生端使用</strong><br><img src="https://photos.smugmug.com/photos/i-fLNbXz8/0/8160dabd/O/i-fLNbXz8.jpg"><br><img src="https://photos.smugmug.com/photos/i-pH7NxzH/0/e654e316/O/i-pH7NxzH.jpg"><br>可於位置建立教室名稱，電腦新增電腦名稱與IP、MAC位址<br><img src="https://photos.smugmug.com/photos/i-h3TmWqq/0/ea7ad6c3/O/i-h3TmWqq.jpg">  </p>
-</blockquote>
-</li>
-<li><p>學生端</p>
-<blockquote>
-<p>可至檢視-進階，在服務選項選擇隱藏通知區域與自動啟動<br><strong>匯入piblic金鑰</strong><br>可將使用介面改為英文(學生有想亂搞還是沒用啦~~~)  </p>
-</blockquote>
-</li>
-</ul>
-<h3 id="教師端檢視畫面"><a href="#教師端檢視畫面" class="headerlink" title="教師端檢視畫面"></a>教師端檢視畫面</h3><p><img src="https://photos.smugmug.com/photos/i-X6S9cnn/0/f0e4324d/X2/i-X6S9cnn-X2.jpg"><br>組態設定完成後可於Veyon Master程式中看見類似上圖畫面，目前學生端只測試3台匯入key，所以只有3台有畫面，這3台是可以遠端操控的，比如<strong>關機</strong>  </p>
-<h3 id="命令列-veyon-cli-新增要管控電腦"><a href="#命令列-veyon-cli-新增要管控電腦" class="headerlink" title="命令列(veyon-cli)新增要管控電腦"></a>命令列(veyon-cli)新增要管控電腦</h3><ul>
-<li><p>新增位置<br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects add location &quot;PC-B&quot;</code>  </p>
-</li>
-<li><p>新增電腦-csv檔匯入(格式為IP,MAC,電腦名稱)，<strong>注意!，不用欄位名稱</strong><br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects import c:\maclist.csv location &quot;PC-B&quot; format &quot;%host%,%mac%,%name%&quot;</code>  </p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3></li>
-<li><p>還有很多功能，可以自行嘗試  </p>
-</li>
-<li><p><a href="https://github.com/veyon/veyon">Veyon GitHub</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>open source software</category>
-      </categories>
-      <tags>
-        <tag>Veyon</tag>
-        <tag>open source software</tag>
-        <tag>free</tag>
-        <tag>learning</tag>
-        <tag>teaching</tag>
-        <tag>開源軟體</tag>
-        <tag>教室管理</tag>
-        <tag>TTSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]在必須縮圖至特定長寬條件下維持圖片長寬比並保留最多圖片資訊的方法</title>
-    <url>/2022/03/19/20220319-img-resize/</url>
-    <content><![CDATA[<p>在圖片要給AI模型時常常需要不同的圖片大小，縮圖即是其中一門學問<br>這邊以寬640，高480為例<br>若圖片直接scale到這個大小多有變形問題<br>尤其直幅圖片影響非常大<br>這裡提供想法解決這個問題</p>
-<span id="more"></span>
-<p>如原始圖片為直幅<br><img src="https://photos.smugmug.com/photos/i-gcXwKGT/0/e869363e/X5/i-gcXwKGT-X5.jpg"><br>經python轉換後維持比例加灰邊至640x480大小<br><img src="https://photos.smugmug.com/photos/i-LLXFGxS/0/3d02a738/O/i-LLXFGxS.jpg"><br>那以下為轉換的code</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tf_w = <span class="number">640</span></span><br><span class="line">tf_h = <span class="number">480</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img_resize</span>(<span class="params">img_name</span>):</span></span><br><span class="line">    img = cv2.imdecode(np.fromfile(img_name, dtype=np.uint8), -<span class="number">1</span>)</span><br><span class="line">    w = img.shape[<span class="number">1</span>]</span><br><span class="line">    h = img.shape[<span class="number">0</span>]</span><br><span class="line">    ratio = h / w</span><br><span class="line">    target_ratio = tf_h / tf_w</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">max</span>(img.shape[:<span class="number">2</span>]) &gt; tf_w:</span><br><span class="line">        interp = cv2.INTER_AREA</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        interp = cv2.INTER_LINEAR</span><br><span class="line"></span><br><span class="line">    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> img.shape[:<span class="number">2</span>] == (tf_w, tf_h):</span><br><span class="line">        img_rgb_border = img</span><br><span class="line">    <span class="keyword">elif</span> ratio == target_ratio:</span><br><span class="line">        img_rgb_border = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">    <span class="keyword">elif</span> (w &gt; h) &amp; (ratio &gt; target_ratio):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> w &gt; h:</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w * ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> (w &lt;= h) &amp; (ratio &gt; target_ratio) &amp; (ratio &lt;= <span class="number">1</span>):</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>, right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">int</span>(tf_h * ratio) &lt; tf_w:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (<span class="built_in">int</span>(tf_h * ratio), tf_h), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=<span class="number">0</span>, left=<span class="number">0</span>,</span><br><span class="line">                                            right=tf_w - img_rgb.shape[<span class="number">1</span>],</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img_rgb = cv2.rotate(img_rgb, cv2.ROTATE_90_CLOCKWISE)</span><br><span class="line">        img_rgb = cv2.resize(img_rgb, (tf_w, <span class="built_in">int</span>(tf_w / ratio)), interpolation=interp)</span><br><span class="line">        img_rgb_border = cv2.copyMakeBorder(img_rgb, top=<span class="number">0</span>, bottom=tf_h - img_rgb.shape[<span class="number">0</span>], left=<span class="number">0</span>, right=<span class="number">0</span>,</span><br><span class="line">                                            borderType=cv2.BORDER_CONSTANT,</span><br><span class="line">                                            value=[<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>])</span><br><span class="line"></span><br><span class="line">    os.makedirs(<span class="string">&#x27;./border&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>,</span><br><span class="line">                 cv2.cvtColor(img_rgb_border,</span><br><span class="line">                              cv2.COLOR_RGB2BGR))[<span class="number">1</span>].tofile(<span class="string">&#x27;./border/%s-border.jpg&#x27;</span> % os.path.basename(img_name)[:-<span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filepath = <span class="built_in">input</span>(<span class="string">&#x27;filepath=?\n&#x27;</span>)</span><br><span class="line">    img_resize(filepath)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>python</tag>
-        <tag>coding</tag>
-        <tag>opencv</tag>
-        <tag>numpy</tag>
-        <tag>resize</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[嘉義大學回憶]如何才能靠卡進學校</title>
-    <url>/2022/07/03/20220703-NCYUctmc/</url>
-    <content><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p>
-<ul>
-<li><p>2017.9.18(開學第一天) </p>
-<p>直接進車輛管理會辦通行證，但接下來一週都被擋在外面靠卡失敗進不來  </p>
-<span id="more"></span>  </li>
-<li><p>2017.9.25  </p>
-<p>至車輛管理會反應靠卡問題，(應該是)工讀生表示那是廠商問題，會叫廠商盡快修理  </p>
-<p>結果一樣進不來，不過接下來一週的柵欄都是直接打開的，不管你有沒有繳管理費都可以進(如果不管理你乾脆叫清潔費好了)  </p>
-</li>
-<li><p>2017.10.08  </p>
-<p>雙十連假第二天，不知為何柵欄又放下來了，但一樣靠卡失敗  </p>
-<p>連假四天，被擋了三天，當然行政也放假去了問題無解  </p>
-</li>
-<li><p>2017.10.12  </p>
-<p>再次跟車輛管理會反應問題，結果說是電算中心跟廠商的問題，另外柵欄是駐警隊管，他們也不能開，聽起來他們就是個收資料的單位  </p>
-<p>很好，我後來到了電算中心詢問，結果電算中心表示他們只負責發學生證，這個說法是車輛管理會丟給他們的，他們的職員甚至自己都無法靠卡進校園(似乎是9/1之後繳費的都不行)  </p>
-<p>接下來再次跟車輛管理會說明電算中心並無處理這個項目，車管會笑著說：「你要問對人啊」(意思是說電算中心搞不清楚自己的業務囉？)  </p>
-<p>緊接著坐前面的工讀生跟我說：「給我你的學號，我再幫你開權限」(還沒跟我要收據看)  </p>
-<p>WTF，這不代表所有問題都在你們這邊嗎，你們有那些資料但是根本沒輸入吧，原來只要個學號就能解決問題了，再次?是不是再次真的讓人懷疑阿  </p>
-<p>剛剛下午去試了一下可以靠卡成功了，但相信應該還是有不少人被擋在外面  </p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>NCYU</category>
-      </categories>
-      <tags>
-        <tag>NCYU</tag>
-        <tag>嘉義大學</tag>
-        <tag>嘉義大學車管會</tag>
-        <tag>車輛管理委員會</tag>
-        <tag>靠卡</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]T65</title>
-    <url>/2022/06/21/20220621-photovogue/</url>
-    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>bird</tag>
-        <tag>still life</tag>
-        <tag>duck</tag>
-        <tag>animal</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[photography]華山AI數據藝術展-EOS 30 Date / Kodak 500T 5219</title>
-    <url>/2022/08/18/20220818-Hello-Ouchhh-AI-exhibition/</url>
-    <content><![CDATA[<h2 id="Hello-Ouchhh：AI數據藝術展"><a href="#Hello-Ouchhh：AI數據藝術展" class="headerlink" title="Hello Ouchhh：AI數據藝術展"></a>Hello Ouchhh：AI數據藝術展</h2><ul>
-<li>tpye: exhibition</li>
-<li>location: Huashan Creative Park (Address: No.1, Bade Road Sec.1, Zhong Zhen District, Taipei 100)</li>
-<li>gear:<blockquote>
-<ol>
-<li>Canon EOS 30 Date</li>
-<li>TAMRON SP 35mm F/1.8 Di VC USD (F012)</li>
-<li>Kodak 500T 5219</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<h2 id="Work"><a href="#Work" class="headerlink" title="Work"></a>Work</h2><p><img src="https://photos.smugmug.com/photos/i-rqZg62N/0/f1353829/X3/i-rqZg62N-X3.jpg">  </p>
-<span id="more"></span>  
-<p><img src="https://photos.smugmug.com/photos/i-pQRCVQ3/0/163c8ccb/X3/i-pQRCVQ3-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-TPNDTQZ/0/25e7c899/X3/i-TPNDTQZ-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-frmHVsm/0/27664cbf/X3/i-frmHVsm-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-GwPsTjh/0/2c782cd0/X3/i-GwPsTjh-X3.jpg">  </p>
-<blockquote>
-<p>photographer: <a href="https://www.instagram.com/yaowenlee/">yaowenlee</a><br>model: <a href="https://www.instagram.com/undernemuri/">undernemuri</a>  </p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>exhibition</tag>
-        <tag>portrait</tag>
-        <tag>Taiwan</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[勞工權益]日薪型計畫臨時工(勞動型)(研究助理)工資值得留意的問題</title>
-    <url>/2022/08/20/20220820-Research-Assistant-notes/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li>應該是因為當初要參加研討會，職稱不知道該寫啥，自己應該算臨時工，但這樣寫好像很怪，還是寫了研究助理，後續也才慢慢意識到各種問題…  </li>
-</ul>
-<h3 id="臨時工與專任助理"><a href="#臨時工與專任助理" class="headerlink" title="臨時工與專任助理?"></a>臨時工與專任助理?</h3><ul>
-<li>其實想成一個領不固定薪資，一個領固定月薪就可以了  </li>
-<li>所謂不固定，也就是一個月通常可能約21個工作天左右，但是你應該是領不到(不然就聘你當專任了)，至於能領幾天，請洽你的老闆  </li>
-</ul>
-<span id="more"></span>  
-<h2 id="值得留意的問題"><a href="#值得留意的問題" class="headerlink" title="值得留意的問題"></a>值得留意的問題</h2><h3 id="所以你一個月到底能領幾天-該工作幾天"><a href="#所以你一個月到底能領幾天-該工作幾天" class="headerlink" title="所以你一個月到底能領幾天?該工作幾天?"></a>所以你一個月到底能領幾天?該工作幾天?</h3><ul>
-<li>事先了解應該蠻重要的，若一個月約定填報10天，那你只要工作10天嗎?還是20天呢?請洽你老闆  </li>
-</ul>
-<h3 id="多連假月份的薪資"><a href="#多連假月份的薪資" class="headerlink" title="多連假月份的薪資"></a>多連假月份的薪資</h3><ul>
-<li>由於你不是領固定月薪，所以當月能填報的日數少，等於你的工資上限也變少  </li>
-<li>二月，適逢春節連假，喜氣洋洋，不過你可能笑不出來，因為能填的天數超少  </li>
-</ul>
-<h3 id="如果有兩個計劃都用臨時工的方式給工資"><a href="#如果有兩個計劃都用臨時工的方式給工資" class="headerlink" title="如果有兩個計劃都用臨時工的方式給工資"></a>如果有兩個計劃都用臨時工的方式給工資</h3><ul>
-<li>如果說多了一份工作，請注意給工資的方式  </li>
-<li>額外的部分如果說能以專案處理另外匯款是最好(像外包一樣)  </li>
-<li>倘若你原先的工作承諾填10天，額外工作也用臨時工方式給10天，這不會有大問題，因為兩個加起來也不會超過1個月能填報的天數  </li>
-<li><strong>但是</strong>，人生就是這個但是，如果兩個加起來會超過一個月能填報的天數，比如25天，請留意你會不會變成做一部分義工  </li>
-</ul>
-<h3 id="薪資遞延至下個月份"><a href="#薪資遞延至下個月份" class="headerlink" title="薪資遞延至下個月份?"></a>薪資遞延至下個月份?</h3><ul>
-<li>承上面的問題，如果遇連假或上個月薪資填報日數超過能填報總日數，是否能遞延至下個月份?問清楚才不會變義工  </li>
-<li>有時候也要留意計畫結束的日期，不然過了可能不能支出人事費的，相關問題請洽你老闆或計畫主持人  </li>
-</ul>
-]]></content>
-      <categories>
-        <category>勞工權益</category>
-      </categories>
-      <tags>
-        <tag>NCYU</tag>
-        <tag>勞工權益</tag>
-        <tag>碩士級臨時工</tag>
-        <tag>碩士級研究助理</tag>
-        <tag>學士級研究助理</tag>
-        <tag>研究助理</tag>
-        <tag>計畫助理</tag>
-        <tag>研究助理薪資</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]Plant Spatial Points Tool-build data for spatial point pattern analysis</title>
-    <url>/2022/08/02/20220802-Plant-Spatial-Points-Tool/</url>
-    <content><![CDATA[<h2 id="Plant-Spatial-Points-Tool"><a href="#Plant-Spatial-Points-Tool" class="headerlink" title="Plant Spatial Points Tool"></a>Plant Spatial Points Tool</h2><p><a href="https://zenodo.org/badge/latestdoi/161195182"><img src="https://zenodo.org/badge/161195182.svg" alt="DOI"></a>  </p>
-<ul>
-<li>This is a software about annotation for plant spatial points, need PostgreSQL, build application in Python 3.7  </li>
-<li>It can help build data for analysis about relationships in plant ecology  </li>
-<li><a href="https://github.com/leeyaowen/Mapkeying_python/releases">Windows Releases</a>  </li>
-</ul>
-<span id="more"></span>
-<h2 id="PostgreSQL-setting-with-pgAdmin"><a href="#PostgreSQL-setting-with-pgAdmin" class="headerlink" title="PostgreSQL setting(with pgAdmin)"></a>PostgreSQL setting(with pgAdmin)</h2><ol>
-<li>set server default</li>
-<li>set password -&gt; 2717484</li>
-<li>create a database <strong>{your database name}</strong></li>
-<li>set a relation <strong>{your relation name}</strong>(e.g., plotdata)</li>
-<li>set column, including <strong>x1,y1,x2,y2,tag,sp,dbh,x3,y3</strong>, set dbh as numeric. Otherwise, text  </li>
-<li>set tag as primary key(in Constraints setting)  </li>
-<li>import data(csv format, and UTF-8 is encoding)  </li>
-</ol>
-<h3 id="About-relation-column-names"><a href="#About-relation-column-names" class="headerlink" title="About relation column names"></a>About relation column names</h3><ul>
-<li>x1,y1,x2,y2 -&gt; plot position  </li>
-<li>tag -&gt; plant ID  </li>
-<li>sp -&gt; species name  </li>
-<li>dbh -&gt; diameter breast height  </li>
-<li>x3,y3 -&gt; plants points position, record by this program  </li>
-</ul>
-<h3 id="Commonly-used-sql-commands"><a href="#Commonly-used-sql-commands" class="headerlink" title="Commonly used sql commands"></a>Commonly used sql commands</h3><blockquote>
-<p>in SQL Eidtor</p>
-<blockquote>
-<p><code>select * from plotdata</code> -&gt; select all data from plotdata<br><code>select * from plotdata where x3 is null</code> -&gt; select x3 data is null from plotdata  </p>
-</blockquote>
-</blockquote>
-<h2 id="User-guide"><a href="#User-guide" class="headerlink" title="User guide"></a>User guide</h2><ol>
-<li>enter the database and relation name, and lock  </li>
-<li>choose area(meter)    </li>
-<li>set main/sub grids, e.g., (1,5)/(2,5)/(3,3)  </li>
-<li>set quadrat</li>
-<li>click ‘Go/Refresh’ button   </li>
-<li>enter target tag  </li>
-<li>click on the map</li>
-</ol>
-<h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><img src="https://raw.githubusercontent.com/leeyaowen/Plant-Spatial-Points-Tool/master/screenshot/Plant%20Spatial%20Points%20Tool.JPG"></p>
-<h3 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h3><p align="left">Yao-Wen Lee (2022) Plant Spatial Points Tool. URL: https://github.com/leeyaowen/Plant-Spatial-Points-Tool DOI: 10.5281/zenodo.6931327</p>  ]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>python</tag>
-        <tag>coding</tag>
-        <tag>plant ecology</tag>
-        <tag>tree pattern</tag>
-        <tag>spatial point pattern</tag>
-        <tag>spatial pattern</tag>
-        <tag>tool</tag>
-        <tag>github</tag>
+        <tag>Minolta V2</tag>
       </tags>
   </entry>
   <entry>
@@ -552,14 +252,14 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-        <tag>still life</tag>
         <tag>herbarium</tag>
+        <tag>still life</tag>
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 293</title>
-    <url>/2022/10/30/20221030-photovogue/</url>
-    <content><![CDATA[<p>應該是兩週前投的，用的是lomo 400<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-bnBQ8ZM/0/3ada75de/X3/293-X3.jpg"></p>
+    <title>[PhotoVogue]T65</title>
+    <url>/2022/06/21/20220621-photovogue/</url>
+    <content><![CDATA[<p>昨天投稿上去photovogue的，更新一下<br>類別放still life<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueTwitter/i-pzfSxg8/0/5d435eea/O/T65.jpg"></p>
 ]]></content>
       <categories>
         <category>photography</category>
@@ -568,10 +268,65 @@
         <tag>photography</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-        <tag>portrait</tag>
-        <tag>girl</tag>
-        <tag>lomography</tag>
-        <tag>bronica</tag>
+        <tag>still life</tag>
+        <tag>bird</tag>
+        <tag>duck</tag>
+        <tag>animal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[嘉義大學回憶]國文選課實錄</title>
+    <url>/2022/06/11/20220611-NCYUlesson/</url>
+    <content><![CDATA[<p><strong>此文為備份Facebook網誌用，如實記錄當時發生事實</strong></p>
+<h2 id="101學年度上學期"><a href="#101學年度上學期" class="headerlink" title="101學年度上學期"></a>101學年度上學期</h2><p>經過篩選選上了<strong>禪詩與人生(馬炳旺)</strong></p>
+<span id="more"></span>
+
+<ul>
+<li>2013.2.20</li>
+</ul>
+<p>接到中文系公告如下:  </p>
+<h3 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h3><p>一、 因本系原先所開設之課程「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」輸入錯誤為「『大學國文〈II〉：禪詩與人生』馬炳旺老師授課」；2013.01.03中文系已聯繫民雄教務組，請李燈銘先生更正。特此公告，謹此致歉，煩請 貴單位轉知同學，十分感謝。</p>
+<p>二、 如已選上「『大學國文〈II〉：閱讀與寫作』余育婷老師授課」之學生，無願意繼續上課；請於本學期網路加退選期間(2&#x2F;21~3&#x2F;1)上網退選；或改選其他開在所屬學院之國文課程。  </p>
+<p>嘉大中文系辦公室 敬上</p>
+<hr>
+<p>由於在班會時間才接獲通知，雖覺有些疑點，但7.8.9堂又有生態學無法前往教務處詢問，便決定2&#x2F;21再前往教務處詢問。(當日晚上看教學平台及校務行政系統皆發現禪師與人生還在自己的頁面上)</p>
+<ul>
+<li>2013.2.21</li>
+</ul>
+<p>下午前往教務處詢問，教務處似乎不清楚有這回事，便協助打到民雄中文系詢問，問的結果是<strong>禪詩與人生直接換課為閱讀與寫作(不需退選或作其他任何動作)</strong></p>
+<p>晚上告知系上同學卻接獲不同的答案，此訊息為<strong>更改的課為另一堂禪詩與人生(教師未定)(但此答案與上述公告不符)</strong></p>
+<p>於是又立刻打了電話到中文系詢問，此次的答案為<strong>中文系自己也不清楚，說要再去問教務組，請我明天再連絡</strong></p>
+<ul>
+<li>2013.2.22</li>
+</ul>
+<p>中午吃飯前再度至教務處詢問，一樣協助打電話至中文系，此次答案為<strong>我們沒有禪詩與人生這堂課了，必須要退選並進行加簽才能有閱讀與寫作這堂課，但承諾我們加簽余育婷老師的課一定會成功</strong>  </p>
+<p>下午再度聽到答案的分歧，系上同學再次詢問的答案為<strong>禪詩與人生本來就沒開，是系統出了問題，將把我們併到閱讀與寫作那班上課(100人？)</strong>  </p>
+<p>最後我們的決定是”退選禪詩與人生再加簽”<br>(此時校務行政系統上同時存在公告上的二堂課)<br>下午上完課教務處也下班了，本日就此結束  </p>
+<ul>
+<li>2013.2.25</li>
+</ul>
+<p>3.4節拿著加簽單到余育婷老師的教室，由於老師提早到教室，我們便前去詢問加簽事宜，但此時老師告訴我們<strong>中文系說額滿了就不能加簽(我們沒有聽錯，講了我們的原因之後老師也去問了一次確認這個事實)</strong></p>
+<p>此時有人發現了我們原先上禪詩與人生的隔壁教室，<strong>老師在裡面！</strong>向老師解釋過我們所遭遇的問題後他讓我們到教務處進行<strong>加簽回去的手續</strong></p>
+<hr>
+<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><ol>
+<li>原先的公告完全是假的  </li>
+<li>我們發現疑點卻繞了一大圈還連原點都繞不回，就現在來說我們是沒有課的  </li>
+<li>中文系自己內部根本不清楚這些課，每次問都得到不太一樣的答案，有時理直氣壯，有時回答吞吞吐吐  </li>
+<li>教務處相當願意幫助我們，這次事件讓我對教務處留下不錯的印象</li>
+</ol>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><ul>
+<li>2013.2.25</li>
+</ul>
+<p>今天到系館二樓發現新的公告，所述內容依然錯誤…</p>
+]]></content>
+      <categories>
+        <category>NCYU</category>
+      </categories>
+      <tags>
+        <tag>NCYU</tag>
+        <tag>選課</tag>
+        <tag>嘉義大學</tag>
+        <tag>嘉義大學選課</tag>
       </tags>
   </entry>
   <entry>
@@ -601,6 +356,255 @@
       </tags>
   </entry>
   <entry>
+    <title>[嘉義大學回憶]如何才能靠卡進學校</title>
+    <url>/2022/07/03/20220703-NCYUctmc/</url>
+    <content><![CDATA[<p><strong>此文為備份Facebook網誌用</strong>  </p>
+<ul>
+<li>2017.9.18(開學第一天)</li>
+</ul>
+<p>直接進車輛管理會辦通行證，但接下來一週都被擋在外面靠卡失敗進不來  </p>
+<span id="more"></span>  
+<ul>
+<li>2017.9.25</li>
+</ul>
+<p>至車輛管理會反應靠卡問題，(應該是)工讀生表示那是廠商問題，會叫廠商盡快修理  </p>
+<p>結果一樣進不來，不過接下來一週的柵欄都是直接打開的，不管你有沒有繳管理費都可以進(如果不管理你乾脆叫清潔費好了)  </p>
+<ul>
+<li>2017.10.08</li>
+</ul>
+<p>雙十連假第二天，不知為何柵欄又放下來了，但一樣靠卡失敗  </p>
+<p>連假四天，被擋了三天，當然行政也放假去了問題無解  </p>
+<ul>
+<li>2017.10.12</li>
+</ul>
+<p>再次跟車輛管理會反應問題，結果說是電算中心跟廠商的問題，另外柵欄是駐警隊管，他們也不能開，聽起來他們就是個收資料的單位  </p>
+<p>很好，我後來到了電算中心詢問，結果電算中心表示他們只負責發學生證，這個說法是車輛管理會丟給他們的，他們的職員甚至自己都無法靠卡進校園(似乎是9&#x2F;1之後繳費的都不行)  </p>
+<p>接下來再次跟車輛管理會說明電算中心並無處理這個項目，車管會笑著說：「你要問對人啊」(意思是說電算中心搞不清楚自己的業務囉？)  </p>
+<p>緊接著坐前面的工讀生跟我說：「給我你的學號，我再幫你開權限」(還沒跟我要收據看)  </p>
+<p>WTF，這不代表所有問題都在你們這邊嗎，你們有那些資料但是根本沒輸入吧，原來只要個學號就能解決問題了，再次?是不是再次真的讓人懷疑阿  </p>
+<p>剛剛下午去試了一下可以靠卡成功了，但相信應該還是有不少人被擋在外面  </p>
+]]></content>
+      <categories>
+        <category>NCYU</category>
+      </categories>
+      <tags>
+        <tag>NCYU</tag>
+        <tag>嘉義大學</tag>
+        <tag>嘉義大學車管會</tag>
+        <tag>車輛管理委員會</tag>
+        <tag>靠卡</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Veyon]教室管理開源軟體-廣播、遠端監控、遠端控制</title>
+    <url>/2022/07/15/20220715-veyon/</url>
+    <content><![CDATA[<h2 id="Veyon-Virtual-Eye-On-Networks"><a href="#Veyon-Virtual-Eye-On-Networks" class="headerlink" title="Veyon - Virtual Eye On Networks"></a><a href="https://veyon.io/en/">Veyon</a> - Virtual Eye On Networks</h2><p>Veyon是一款可供教師教學、管理教室的免費開源軟體<br>其功能主要包含廣播教學、監控畫面、遠距開關機、傳輸檔案等</p>
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><blockquote>
+<p>先至其官網<a href="https://veyon.io/en/download/">下載</a>，注意版本<br><img src="https://photos.smugmug.com/photos/i-Z5RxJwq/0/ec8e15f9/X2/i-Z5RxJwq-X2.jpg"></p>
+</blockquote>
+<span id="more"></span> 
+<p>執行安裝程序</p>
+<blockquote>
+<p><img src="https://photos.smugmug.com/photos/i-5FVXpWz/0/6b2060b4/O/i-5FVXpWz.jpg"><br><img src="https://photos.smugmug.com/photos/i-PDd3pFc/0/0e94dbd7/O/i-PDd3pFc.jpg"></p>
+<ul>
+<li><strong>↓如為學生端可不安裝Veyon Master</strong></li>
+</ul>
+<p><img src="https://photos.smugmug.com/photos/i-Hh2MNSK/0/c74fcc2a/O/i-Hh2MNSK.jpg"><br>最後完成安裝<br><img src="https://photos.smugmug.com/photos/i-gfbv5L7/0/2d05e12f/O/i-gfbv5L7.jpg"></p>
+</blockquote>
+<h3 id="組態設定"><a href="#組態設定" class="headerlink" title="組態設定"></a>組態設定</h3><ul>
+<li><p>教師端</p>
+<blockquote>
+<p><strong>身份驗證-選擇金鑰身份驗證</strong><br><img src="https://photos.smugmug.com/photos/i-QsZdX6S/0/a12aefd3/O/i-QsZdX6S.jpg"><br><strong>建立金鑰配對，匯出public金鑰導入學生端使用</strong><br><img src="https://photos.smugmug.com/photos/i-fLNbXz8/0/8160dabd/O/i-fLNbXz8.jpg"><br><img src="https://photos.smugmug.com/photos/i-pH7NxzH/0/e654e316/O/i-pH7NxzH.jpg"><br>可於位置建立教室名稱，電腦新增電腦名稱與IP、MAC位址<br><img src="https://photos.smugmug.com/photos/i-h3TmWqq/0/ea7ad6c3/O/i-h3TmWqq.jpg">  </p>
+</blockquote>
+</li>
+<li><p>學生端</p>
+<blockquote>
+<p>可至檢視-進階，在服務選項選擇隱藏通知區域與自動啟動<br><strong>匯入piblic金鑰</strong><br>可將使用介面改為英文(學生有想亂搞還是沒用啦~~~)</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="教師端檢視畫面"><a href="#教師端檢視畫面" class="headerlink" title="教師端檢視畫面"></a>教師端檢視畫面</h3><p><img src="https://photos.smugmug.com/photos/i-X6S9cnn/0/f0e4324d/X2/i-X6S9cnn-X2.jpg"><br>組態設定完成後可於Veyon Master程式中看見類似上圖畫面，目前學生端只測試3台匯入key，所以只有3台有畫面，這3台是可以遠端操控的，比如<strong>關機</strong>  </p>
+<h3 id="命令列-veyon-cli-新增要管控電腦"><a href="#命令列-veyon-cli-新增要管控電腦" class="headerlink" title="命令列(veyon-cli)新增要管控電腦"></a>命令列(veyon-cli)新增要管控電腦</h3><ul>
+<li>新增位置<br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects add location &quot;PC-B&quot;</code>  </li>
+<li>新增電腦-csv檔匯入(格式為IP,MAC,電腦名稱)，<strong>注意!，不用欄位名稱</strong><br><code>&quot;c:\Program Files\Veyon\veyon-cli&quot; networkobjects import c:\maclist.csv location &quot;PC-B&quot; format &quot;%host%,%mac%,%name%&quot;</code></li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>還有很多功能，可以自行嘗試  </li>
+<li><a href="https://github.com/veyon/veyon">Veyon GitHub</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>open source software</category>
+      </categories>
+      <tags>
+        <tag>Veyon</tag>
+        <tag>open source software</tag>
+        <tag>free</tag>
+        <tag>learning</tag>
+        <tag>teaching</tag>
+        <tag>開源軟體</tag>
+        <tag>教室管理</tag>
+        <tag>TTSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
+    <url>/2022/07/18/20220718-Task-Manager/</url>
+    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼&#x2F;登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
+<span id="more"></span>  
+<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
+<figure class="highlight plaintext"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set /p var=Turn on Taskmgr?[Y/N]: </span><br><span class="line">if %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
+      <categories>
+        <category>Win10</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Windows</tag>
+        <tag>Win10 pro</tag>
+        <tag>Windows專業版</tag>
+        <tag>工作管理員</tag>
+        <tag>Task Manager</tag>
+        <tag>taskmgr</tag>
+        <tag>bat</tag>
+        <tag>Batchfile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]Plant Spatial Points Tool-build data for spatial point pattern analysis</title>
+    <url>/2022/08/02/20220802-Plant-Spatial-Points-Tool/</url>
+    <content><![CDATA[<h2 id="Plant-Spatial-Points-Tool"><a href="#Plant-Spatial-Points-Tool" class="headerlink" title="Plant Spatial Points Tool"></a>Plant Spatial Points Tool</h2><p><a href="https://zenodo.org/badge/latestdoi/161195182"><img src="https://zenodo.org/badge/161195182.svg" alt="DOI"></a>  </p>
+<ul>
+<li>This is a software about annotation for plant spatial points, need PostgreSQL, build application in Python 3.7  </li>
+<li>It can help build data for analysis about relationships in plant ecology  </li>
+<li><a href="https://github.com/leeyaowen/Mapkeying_python/releases">Windows Releases</a></li>
+</ul>
+<span id="more"></span>
+<h2 id="PostgreSQL-setting-with-pgAdmin"><a href="#PostgreSQL-setting-with-pgAdmin" class="headerlink" title="PostgreSQL setting(with pgAdmin)"></a>PostgreSQL setting(with pgAdmin)</h2><ol>
+<li>set server default</li>
+<li>set password -&gt; 2717484</li>
+<li>create a database <strong>{your database name}</strong></li>
+<li>set a relation <strong>{your relation name}</strong>(e.g., plotdata)</li>
+<li>set column, including <strong>x1,y1,x2,y2,tag,sp,dbh,x3,y3</strong>, set dbh as numeric. Otherwise, text  </li>
+<li>set tag as primary key(in Constraints setting)  </li>
+<li>import data(csv format, and UTF-8 is encoding)</li>
+</ol>
+<h3 id="About-relation-column-names"><a href="#About-relation-column-names" class="headerlink" title="About relation column names"></a>About relation column names</h3><ul>
+<li>x1,y1,x2,y2 -&gt; plot position  </li>
+<li>tag -&gt; plant ID  </li>
+<li>sp -&gt; species name  </li>
+<li>dbh -&gt; diameter breast height  </li>
+<li>x3,y3 -&gt; plants points position, record by this program</li>
+</ul>
+<h3 id="Commonly-used-sql-commands"><a href="#Commonly-used-sql-commands" class="headerlink" title="Commonly used sql commands"></a>Commonly used sql commands</h3><blockquote>
+<p>in SQL Eidtor</p>
+<blockquote>
+<p><code>select * from plotdata</code> -&gt; select all data from plotdata<br><code>select * from plotdata where x3 is null</code> -&gt; select x3 data is null from plotdata  </p>
+</blockquote>
+</blockquote>
+<h2 id="User-guide"><a href="#User-guide" class="headerlink" title="User guide"></a>User guide</h2><ol>
+<li>enter the database and relation name, and lock  </li>
+<li>choose area(meter)    </li>
+<li>set main&#x2F;sub grids, e.g., (1,5)&#x2F;(2,5)&#x2F;(3,3)  </li>
+<li>set quadrat</li>
+<li>click ‘Go&#x2F;Refresh’ button   </li>
+<li>enter target tag  </li>
+<li>click on the map</li>
+</ol>
+<h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><img src="https://raw.githubusercontent.com/leeyaowen/Plant-Spatial-Points-Tool/master/screenshot/Plant%20Spatial%20Points%20Tool.JPG"></p>
+<h3 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h3><p align="left">Yao-Wen Lee (2022) Plant Spatial Points Tool. URL: https://github.com/leeyaowen/Plant-Spatial-Points-Tool DOI: 10.5281/zenodo.6931327</p>  ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>plant ecology</tag>
+        <tag>tree pattern</tag>
+        <tag>spatial point pattern</tag>
+        <tag>spatial pattern</tag>
+        <tag>tool</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[photography]華山AI數據藝術展-EOS 30 Date / Kodak 500T 5219</title>
+    <url>/2022/08/18/20220818-Hello-Ouchhh-AI-exhibition/</url>
+    <content><![CDATA[<h2 id="Hello-Ouchhh：AI數據藝術展"><a href="#Hello-Ouchhh：AI數據藝術展" class="headerlink" title="Hello Ouchhh：AI數據藝術展"></a>Hello Ouchhh：AI數據藝術展</h2><ul>
+<li>tpye: exhibition</li>
+<li>location: Huashan Creative Park (Address: No.1, Bade Road Sec.1, Zhong Zhen District, Taipei 100)</li>
+<li>gear:<blockquote>
+<ol>
+<li>Canon EOS 30 Date</li>
+<li>TAMRON SP 35mm F&#x2F;1.8 Di VC USD (F012)</li>
+<li>Kodak 500T 5219</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h2 id="Work"><a href="#Work" class="headerlink" title="Work"></a>Work</h2><p><img src="https://photos.smugmug.com/photos/i-rqZg62N/0/f1353829/X3/i-rqZg62N-X3.jpg">  </p>
+<span id="more"></span>  
+<p><img src="https://photos.smugmug.com/photos/i-pQRCVQ3/0/163c8ccb/X3/i-pQRCVQ3-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-TPNDTQZ/0/25e7c899/X3/i-TPNDTQZ-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-frmHVsm/0/27664cbf/X3/i-frmHVsm-X3.jpg"><br><img src="https://photos.smugmug.com/photos/i-GwPsTjh/0/2c782cd0/X3/i-GwPsTjh-X3.jpg">  </p>
+<blockquote>
+<p>photographer: <a href="https://www.instagram.com/yaowenlee/">yaowenlee</a><br>model: <a href="https://www.instagram.com/undernemuri/">undernemuri</a>  </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>exhibition</tag>
+        <tag>portrait</tag>
+        <tag>Taiwan</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[勞工權益]日薪型計畫臨時工(勞動型)(研究助理)工資值得留意的問題</title>
+    <url>/2022/08/20/20220820-Research-Assistant-notes/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+<li>應該是因為當初要參加研討會，職稱不知道該寫啥，自己應該算臨時工，但這樣寫好像很怪，還是寫了研究助理，後續也才慢慢意識到各種問題…</li>
+</ul>
+<h3 id="臨時工與專任助理"><a href="#臨時工與專任助理" class="headerlink" title="臨時工與專任助理?"></a>臨時工與專任助理?</h3><ul>
+<li>其實想成一個領不固定薪資，一個領固定月薪就可以了  </li>
+<li>所謂不固定，也就是一個月通常可能約21個工作天左右，但是你應該是領不到(不然就聘你當專任了)，至於能領幾天，請洽你的老闆</li>
+</ul>
+<span id="more"></span>  
+<h2 id="值得留意的問題"><a href="#值得留意的問題" class="headerlink" title="值得留意的問題"></a>值得留意的問題</h2><h3 id="所以你一個月到底能領幾天-該工作幾天"><a href="#所以你一個月到底能領幾天-該工作幾天" class="headerlink" title="所以你一個月到底能領幾天?該工作幾天?"></a>所以你一個月到底能領幾天?該工作幾天?</h3><ul>
+<li>事先了解應該蠻重要的，若一個月約定填報10天，那你只要工作10天嗎?還是20天呢?請洽你老闆</li>
+</ul>
+<h3 id="多連假月份的薪資"><a href="#多連假月份的薪資" class="headerlink" title="多連假月份的薪資"></a>多連假月份的薪資</h3><ul>
+<li>由於你不是領固定月薪，所以當月能填報的日數少，等於你的工資上限也變少  </li>
+<li>二月，適逢春節連假，喜氣洋洋，不過你可能笑不出來，因為能填的天數超少</li>
+</ul>
+<h3 id="如果有兩個計劃都用臨時工的方式給工資"><a href="#如果有兩個計劃都用臨時工的方式給工資" class="headerlink" title="如果有兩個計劃都用臨時工的方式給工資"></a>如果有兩個計劃都用臨時工的方式給工資</h3><ul>
+<li>如果說多了一份工作，請注意給工資的方式  </li>
+<li>額外的部分如果說能以專案處理另外匯款是最好(像外包一樣)  </li>
+<li>倘若你原先的工作承諾填10天，額外工作也用臨時工方式給10天，這不會有大問題，因為兩個加起來也不會超過1個月能填報的天數  </li>
+<li><strong>但是</strong>，人生就是這個但是，如果兩個加起來會超過一個月能填報的天數，比如25天，請留意你會不會變成做一部分義工</li>
+</ul>
+<h3 id="薪資遞延至下個月份"><a href="#薪資遞延至下個月份" class="headerlink" title="薪資遞延至下個月份?"></a>薪資遞延至下個月份?</h3><ul>
+<li>承上面的問題，如果遇連假或上個月薪資填報日數超過能填報總日數，是否能遞延至下個月份?問清楚才不會變義工  </li>
+<li>有時候也要留意計畫結束的日期，不然過了可能不能支出人事費的，相關問題請洽你老闆或計畫主持人</li>
+</ul>
+]]></content>
+      <categories>
+        <category>勞工權益</category>
+      </categories>
+      <tags>
+        <tag>NCYU</tag>
+        <tag>勞工權益</tag>
+        <tag>碩士級臨時工</tag>
+        <tag>碩士級研究助理</tag>
+        <tag>學士級研究助理</tag>
+        <tag>研究助理</tag>
+        <tag>計畫助理</tag>
+        <tag>研究助理薪資</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[hexo]使用git備份hexo bolg小筆記</title>
     <url>/2022/10/02/20221002-hexo-backup/</url>
     <content><![CDATA[<ol>
@@ -622,29 +626,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
-    <url>/2022/07/18/20220718-Task-Manager/</url>
-    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼/登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
-<span id="more"></span>  
-<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
-<figure class="highlight plain"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &#x2F;p var&#x3D;Turn on Taskmgr?[Y&#x2F;N]: </span><br><span class="line">if %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%&#x3D;&#x3D; Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System &#x2F;v DisableTaskMgr &#x2F;t REG_DWORD &#x2F;d 1 &#x2F;f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
-      <categories>
-        <category>Win10</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Windows</tag>
-        <tag>Win10 pro</tag>
-        <tag>Windows專業版</tag>
-        <tag>工作管理員</tag>
-        <tag>Task Manager</tag>
-        <tag>taskmgr</tag>
-        <tag>bat</tag>
-        <tag>Batchfile</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[python]解決台大標本館TAI之數位標本上的比例尺有誤問題</title>
     <url>/2022/10/29/20221029-tai2-ntu-herbarium/</url>
     <content><![CDATA[<h1 id="解決台大標本館TAI之數位標本上的比例尺有誤問題"><a href="#解決台大標本館TAI之數位標本上的比例尺有誤問題" class="headerlink" title="解決台大標本館TAI之數位標本上的比例尺有誤問題"></a>解決台大標本館TAI之數位標本上的比例尺有誤問題</h1><h2 id="現有網站的顯示"><a href="#現有網站的顯示" class="headerlink" title="現有網站的顯示"></a>現有網站的顯示</h2><p>有使用過<strong>台灣植物資訊整合查詢系統</strong>的人應該對下圖文字不陌生，根據文字解讀，TAI的數位標本比例尺應為5公分而非10公分，實際造訪網頁可以看到有些已變更為5公分。<br><img src="https://photos.smugmug.com/photos/i-Qd4k6bD/0/b9885b87/O/i-Qd4k6bD.jpg"></p>
@@ -652,26 +633,42 @@
 <span id="more"></span>
 <h2 id="思路、解決手法"><a href="#思路、解決手法" class="headerlink" title="思路、解決手法"></a>思路、解決手法</h2><h3 id="1-錯誤的比例尺需要取代"><a href="#1-錯誤的比例尺需要取代" class="headerlink" title="1. 錯誤的比例尺需要取代"></a>1. 錯誤的比例尺需要取代</h3><p>既然比例尺應為5公分而非10公分，那便應該將10公分的移除，更換為5公分。<br>這裡其實有2個做法，一為有最原始的檔案(未加任何比例尺的)，直接換5公分的上去，二為去除10公分的，再把5公分的擺上去，這裡走了第二條路。  </p>
 <h3 id="2-如何做"><a href="#2-如何做" class="headerlink" title="2. 如何做?"></a>2. 如何做?</h3><ol>
-<li><p>要先找到10公分比例尺的位置，使用opencv的<code>cv2.TM_CCOEFF_NORMED</code>可以幫忙這件事，得出的結果也可以作為閾值切分是否成功取代。  </p>
-</li>
-<li><p>找到位置後要將10公分的比例尺塗掉，更換為5公分的，如下圖，紅色框為偵測到的10公分比例尺範圍，然後紅框左上為基準，向上取得藍框顏色平均，再用該顏色塗掉10公分比例尺，最後貼上5公分比例尺。<br><img src="https://photos.smugmug.com/photos/i-wVGGGnt/0/b87280cc/O/i-wVGGGnt.png"><br><img src="https://photos.smugmug.com/photos/i-mjjgLKR/0/b6e404ae/L/i-mjjgLKR-L.png">  </p>
-<h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3><p>1. 中文檔名，老問題了，用<code>numpy</code>協助解決吧!<br>2. 辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。<br>3. 要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"><br>4. 真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。<br>5. 色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。<br>6. 跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</p>
-</li>
+<li>要先找到10公分比例尺的位置，使用opencv的<code>cv2.TM_CCOEFF_NORMED</code>可以幫忙這件事，得出的結果也可以作為閾值切分是否成功取代。  </li>
+<li>找到位置後要將10公分的比例尺塗掉，更換為5公分的，如下圖，紅色框為偵測到的10公分比例尺範圍，然後紅框左上為基準，向上取得藍框顏色平均，再用該顏色塗掉10公分比例尺，最後貼上5公分比例尺。<br><img src="https://photos.smugmug.com/photos/i-wVGGGnt/0/b87280cc/O/i-wVGGGnt.png"><br><img src="https://photos.smugmug.com/photos/i-mjjgLKR/0/b6e404ae/L/i-mjjgLKR-L.png"></li>
 </ol>
+<h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3><p>1. 中文檔名，老問題了，用<code>numpy</code>協助解決吧!<br>2. 辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。<br>3. 要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"><br>4. 真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。<br>5. 色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。<br>6. 跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</p>
 ]]></content>
       <categories>
         <category>python</category>
       </categories>
       <tags>
         <tag>code</tag>
-        <tag>python</tag>
         <tag>coding</tag>
+        <tag>python</tag>
         <tag>opencv</tag>
         <tag>herbarium</tag>
         <tag>TAI</tag>
         <tag>NTU</tag>
         <tag>PIL</tag>
         <tag>threading</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 293</title>
+    <url>/2022/10/30/20221030-photovogue/</url>
+    <content><![CDATA[<p>應該是兩週前投的，用的是lomo 400<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-bnBQ8ZM/0/3ada75de/X3/293-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>portrait</tag>
+        <tag>girl</tag>
+        <tag>lomography</tag>
+        <tag>bronica</tag>
       </tags>
   </entry>
 </search>
