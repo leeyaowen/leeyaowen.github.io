@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
-    <url>/2021/02/11/20210211-S2A-75-sample/</url>
-    <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
-<span id="more"></span>
-<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-qn9CTM2/0/9e0d2fe4/X3/i-qn9CTM2-X3.jpg"><br>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-kFhhHmG/0/da3345b5/X3/i-kFhhHmG-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-jjjCvxj/0/5450fa45/X3/i-jjjCvxj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-R5gZhJj/0/bfa9213d/X3/i-R5gZhJj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-7cQfqLf/0/a7eb03b4/X3/i-7cQfqLf-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-hWvHvHs/0/e4faf719/X3/i-hWvHvHs-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-LNVJ8T9/0/44b4f220/X3/i-LNVJ8T9-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-hv2VfRC/0/aea0fb80/X3/i-hv2VfRC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-WrjdcbC/0/df9fcaae/X3/i-WrjdcbC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-sS8BtnD/0/ec5c9cf2/X3/i-sS8BtnD-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-V8sXTBg/0/d6d97473/X3/i-V8sXTBg-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>nikkor 75mm</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>在NexT中增加canvas nest特效</title>
     <url>/2021/02/10/20210210-add-canvas-nest/</url>
     <content><![CDATA[<p>剛開始使用Hexo<br>想增加幾何線條的特效，滑鼠移動過去時會吸引線條<br>方法是在<code>themes/next/layout/_layout.swig</code>中的<code>&lt;body&gt;</code>區塊增加以下code</p>
@@ -45,6 +28,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
+    <url>/2021/02/11/20210211-S2A-75-sample/</url>
+    <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
+<span id="more"></span>
+<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-qn9CTM2/0/9e0d2fe4/X3/i-qn9CTM2-X3.jpg"><br>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-kFhhHmG/0/da3345b5/X3/i-kFhhHmG-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-jjjCvxj/0/5450fa45/X3/i-jjjCvxj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-R5gZhJj/0/bfa9213d/X3/i-R5gZhJj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-7cQfqLf/0/a7eb03b4/X3/i-7cQfqLf-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-hWvHvHs/0/e4faf719/X3/i-hWvHvHs-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-LNVJ8T9/0/44b4f220/X3/i-LNVJ8T9-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-hv2VfRC/0/aea0fb80/X3/i-hv2VfRC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-WrjdcbC/0/df9fcaae/X3/i-WrjdcbC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-sS8BtnD/0/ec5c9cf2/X3/i-sS8BtnD-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-V8sXTBg/0/d6d97473/X3/i-V8sXTBg-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>nikkor 75mm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[PhotoVogue]No. 288</title>
     <url>/2022/01/24/20220124-photovogue/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
@@ -61,6 +61,23 @@
         <tag>bronica s2a</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<span id="more"></span>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
       </tags>
   </entry>
   <entry>
@@ -84,23 +101,6 @@
         <tag>cwb</tag>
         <tag>data visualization</tag>
         <tag>ggplot2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
-<span id="more"></span>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
       </tags>
   </entry>
   <entry>
@@ -181,25 +181,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[photography]改善黃斑對焦老化變淡問題</title>
-    <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
-    <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
-<p>送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗</p>
-<p>網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等<br>最後我找到不用拆開我覺得最好的方式-貼黑色貼紙</p>
-<p>根據網路方法，在觀景窗黃斑位置貼上同大小的黑色貼紙可以明顯改善問題，結果會變得有點像裂像對焦一樣<br>有人是使用電火布，不過馬上就看到另一個人跟我有相同想法:殘膠會嚴重</p>
-<p>那…我手邊最棒的材料不就是保護相機鏡頭用的鐵人膠帶嗎?<br>就決定是你了!<br>我沒有仔細測量過黃斑大小與位置，就是挑盡量中央貼，結果如圖，他變得有點黃斑對焦與裂像對焦的融合，至少比原先容易對焦<br><img src="https://photos.smugmug.com/photos/i-Gs4qh3C/0/016a8e97/X5/i-Gs4qh3C-X5.jpg"></p>
-<p>Ref: <a href="http://rick_oleson.tripod.com/index-165.html">Brighten your Rangefinder</a></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>rangefinder</tag>
-        <tag>黃斑對焦</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[python]想要RAW檔?可以先拿.raw壓壓驚</title>
     <url>/2022/04/03/20220403-jpg2raw/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-S37M65H/0/ef628152/O/i-S37M65H.png"><br>我們廢話不多說，先上個<a href="https://github.com/leeyaowen/jpg2raw/releases">Windows載點</a><br>如首圖，只要將exe檔跟jpg檔放在同一目錄下就可以執行了</p>
@@ -223,6 +204,25 @@
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>raw</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[photography]改善黃斑對焦老化變淡問題</title>
+    <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
+    <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
+<p>送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗</p>
+<p>網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等<br>最後我找到不用拆開我覺得最好的方式-貼黑色貼紙</p>
+<p>根據網路方法，在觀景窗黃斑位置貼上同大小的黑色貼紙可以明顯改善問題，結果會變得有點像裂像對焦一樣<br>有人是使用電火布，不過馬上就看到另一個人跟我有相同想法:殘膠會嚴重</p>
+<p>那…我手邊最棒的材料不就是保護相機鏡頭用的鐵人膠帶嗎?<br>就決定是你了!<br>我沒有仔細測量過黃斑大小與位置，就是挑盡量中央貼，結果如圖，他變得有點黃斑對焦與裂像對焦的融合，至少比原先容易對焦<br><img src="https://photos.smugmug.com/photos/i-Gs4qh3C/0/016a8e97/X5/i-Gs4qh3C-X5.jpg"></p>
+<p>Ref: <a href="http://rick_oleson.tripod.com/index-165.html">Brighten your Rangefinder</a></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>rangefinder</tag>
+        <tag>黃斑對焦</tag>
       </tags>
   </entry>
   <entry>
@@ -370,6 +370,32 @@
       </tags>
   </entry>
   <entry>
+    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
+    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
+<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
+<span id="more"></span>  
+<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
+<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
+<p>目前完成滑鼠座標偵測<br>Todoist  </p>
+<ul>
+<li><input disabled="" type="checkbox"> 畫線畫點  </li>
+<li><input disabled="" type="checkbox"> 設定資料庫</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Java</tag>
+        <tag>JDK</tag>
+        <tag>Eclipse</tag>
+        <tag>WindowBuilder</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Veyon]教室管理開源軟體-廣播、遠端監控、遠端控制</title>
     <url>/2022/07/15/20220715-veyon/</url>
     <content><![CDATA[<h2 id="Veyon-Virtual-Eye-On-Networks"><a href="#Veyon-Virtual-Eye-On-Networks" class="headerlink" title="Veyon - Virtual Eye On Networks"></a><a href="https://veyon.io/en/">Veyon</a> - Virtual Eye On Networks</h2><p>Veyon是一款可供教師教學、管理教室的免費開源軟體<br>其功能主要包含廣播教學、監控畫面、遠距開關機、傳輸檔案等</p>
@@ -419,32 +445,6 @@
         <tag>開源軟體</tag>
         <tag>教室管理</tag>
         <tag>TTSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Java]JDK 17安裝與Eclipse+WindowBuilder初探</title>
-    <url>/2022/07/07/20220707-Java-and-Eclipse/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-bMJs34N/0/9806bca6/X2/i-bMJs34N-X2.jpg"><br>初學Java，主要看看是不是之後輸出的執行檔(.exe)會比python快  </p>
-<p>將來應該先模擬之前的<a href="https://github.com/leeyaowen/Mapkeying_python">植株座標輸入程式</a>，然後想將資料庫替換成SQLite  </p>
-<span id="more"></span>  
-<p>安裝上主要就依照網路教學，主要是環境變數需要設置<br><a href="https://www.oracle.com/java/technologies/downloads/#java17">JDK 17 下載</a>  </p>
-<p>接下來IDE選擇Eclipse，並到Marketplace下載WindowBuilder，如下圖<br><img src="https://photos.smugmug.com/photos/i-m7Nv8hN/0/1cf3ca4c/O/i-m7Nv8hN.jpg"></p>
-<p>目前完成滑鼠座標偵測<br>Todoist  </p>
-<ul>
-<li><input disabled="" type="checkbox"> 畫線畫點  </li>
-<li><input disabled="" type="checkbox"> 設定資料庫</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Java</tag>
-        <tag>JDK</tag>
-        <tag>Eclipse</tag>
-        <tag>WindowBuilder</tag>
       </tags>
   </entry>
   <entry>
@@ -669,6 +669,33 @@
         <tag>girl</tag>
         <tag>lomography</tag>
         <tag>bronica</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Hexo]將Hexo blog搬家到新的電腦環境</title>
+    <url>/2023/01/26/20230126-Transfer-Hexo-to-New-Device/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為新組裝了一台桌機，Hexo Blog這邊也打算搬家，因此查了不少資料，主要參考<a href="https://sinyilin.github.io/hexo/20200308/3746848229/">換台電腦重新建置寫hexo blog 環境</a>這篇的方法，中間也有遇到一些npm方面的問題另外查找資料。</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="檢查環境"><a href="#檢查環境" class="headerlink" title="檢查環境"></a>檢查環境</h3><p>包含git, node.js, hexo確認是否安裝  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git --version</span><br><span class="line">node -v</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h3 id="初始化-Hexo"><a href="#初始化-Hexo" class="headerlink" title="初始化 Hexo"></a>初始化 Hexo</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init &lt;blog folder&gt;</span><br><span class="line">cd &lt;blog folder&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="備份檔案至新環境"><a href="#備份檔案至新環境" class="headerlink" title="備份檔案至新環境"></a>備份檔案至新環境</h3><p>依照參考資料，將除了node_modules跟public外的檔案都複製過去<br><img src="https://photos.smugmug.com/photos/i-WxWjzKW/0/72aae663/O/i-WxWjzKW.jpg">  </p>
+<p>之後執行指令(依照自己需求)  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save  #發佈到github用</span><br><span class="line">npm install hexo-generator-sitemap --save  #Sitemap for Google Search Console</span><br></pre></td></tr></table></figure>
+<h3 id="部屬"><a href="#部屬" class="headerlink" title="部屬"></a>部屬</h3><p>可以使用多重指令方便快速  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo cl ;hexo g -d</span><br></pre></td></tr></table></figure>
+<p>登入的部分github會自動跳視窗，蠻方便的。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>code</tag>
+        <tag>git</tag>
+        <tag>backup</tag>
+        <tag>npm</tag>
+        <tag>terminal</tag>
       </tags>
   </entry>
 </search>

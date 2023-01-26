@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://leeyaowen.github.io/2023/01/26/20230126-Transfer-Hexo-to-New-Device/</loc>
+    
+    <lastmod>2023-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://leeyaowen.github.io/2022/10/30/20221030-photovogue/</loc>
     
     <lastmod>2022-12-01</lastmod>
@@ -281,34 +290,6 @@
 
   
   <url>
-    <loc>https://leeyaowen.github.io/tags/photography/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/film/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/bronica-s2a/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/nikkor-75mm/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://leeyaowen.github.io/tags/hexo/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -344,6 +325,34 @@
   </url>
   
   <url>
+    <loc>https://leeyaowen.github.io/tags/photography/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/film/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/bronica-s2a/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/nikkor-75mm/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://leeyaowen.github.io/tags/photovogue/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -352,6 +361,13 @@
   
   <url>
     <loc>https://leeyaowen.github.io/tags/vogue/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/pixel-4a-5g/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -387,13 +403,6 @@
   
   <url>
     <loc>https://leeyaowen.github.io/tags/ggplot2/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/pixel-4a-5g/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -484,6 +493,13 @@
   </url>
   
   <url>
+    <loc>https://leeyaowen.github.io/tags/raw/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://leeyaowen.github.io/tags/rangefinder/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -492,13 +508,6 @@
   
   <url>
     <loc>https://leeyaowen.github.io/tags/%E9%BB%83%E6%96%91%E5%B0%8D%E7%84%A6/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/raw/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -596,6 +605,34 @@
   </url>
   
   <url>
+    <loc>https://leeyaowen.github.io/tags/Java/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/JDK/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/Eclipse/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/WindowBuilder/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://leeyaowen.github.io/tags/Veyon/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -646,34 +683,6 @@
   
   <url>
     <loc>https://leeyaowen.github.io/tags/TTSH/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/Java/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/JDK/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/Eclipse/</loc>
-    <lastmod>2023-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://leeyaowen.github.io/tags/WindowBuilder/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -903,14 +912,28 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://leeyaowen.github.io/categories/photography/</loc>
+    <loc>https://leeyaowen.github.io/tags/backup/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/npm/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/tags/terminal/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
   
   <url>
     <loc>https://leeyaowen.github.io/categories/hexo/</loc>
@@ -921,6 +944,13 @@
   
   <url>
     <loc>https://leeyaowen.github.io/categories/stock/</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://leeyaowen.github.io/categories/photography/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -948,14 +978,14 @@
   </url>
   
   <url>
-    <loc>https://leeyaowen.github.io/categories/open-source-software/</loc>
+    <loc>https://leeyaowen.github.io/categories/Java/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://leeyaowen.github.io/categories/Java/</loc>
+    <loc>https://leeyaowen.github.io/categories/open-source-software/</loc>
     <lastmod>2023-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
