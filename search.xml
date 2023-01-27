@@ -28,59 +28,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
-    <url>/2021/02/11/20210211-S2A-75-sample/</url>
-    <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
-<span id="more"></span>
-<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-qn9CTM2/0/9e0d2fe4/X3/i-qn9CTM2-X3.jpg"><br>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-kFhhHmG/0/da3345b5/X3/i-kFhhHmG-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-jjjCvxj/0/5450fa45/X3/i-jjjCvxj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-R5gZhJj/0/bfa9213d/X3/i-R5gZhJj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-7cQfqLf/0/a7eb03b4/X3/i-7cQfqLf-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-hWvHvHs/0/e4faf719/X3/i-hWvHvHs-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-LNVJ8T9/0/44b4f220/X3/i-LNVJ8T9-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-hv2VfRC/0/aea0fb80/X3/i-hv2VfRC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-WrjdcbC/0/df9fcaae/X3/i-WrjdcbC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-sS8BtnD/0/ec5c9cf2/X3/i-sS8BtnD-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-V8sXTBg/0/d6d97473/X3/i-V8sXTBg-X3.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>nikkor 75mm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
-<span id="more"></span>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 289</title>
-    <url>/2022/02/02/20220202-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
-<span id="more"></span>
-<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>pixel 4a 5g</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
     <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
     <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
@@ -101,6 +48,59 @@
         <tag>cwb</tag>
         <tag>data visualization</tag>
         <tag>ggplot2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<span id="more"></span>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Bronica S2A + Nikkor-p 75mm F/2.8實拍</title>
+    <url>/2021/02/11/20210211-S2A-75-sample/</url>
+    <content><![CDATA[<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-94S6rJK/0/fcf6aa14/X3/i-94S6rJK-X3.jpg"></p>
+<span id="more"></span>
+<p>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-qn9CTM2/0/9e0d2fe4/X3/i-qn9CTM2-X3.jpg"><br>Fuji 400H<br><img src="https://photos.smugmug.com/photos/i-kFhhHmG/0/da3345b5/X3/i-kFhhHmG-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-jjjCvxj/0/5450fa45/X3/i-jjjCvxj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-R5gZhJj/0/bfa9213d/X3/i-R5gZhJj-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-7cQfqLf/0/a7eb03b4/X3/i-7cQfqLf-X3.jpg"><br>Fuji 160NS<br><img src="https://photos.smugmug.com/photos/i-hWvHvHs/0/e4faf719/X3/i-hWvHvHs-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-LNVJ8T9/0/44b4f220/X3/i-LNVJ8T9-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-hv2VfRC/0/aea0fb80/X3/i-hv2VfRC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-WrjdcbC/0/df9fcaae/X3/i-WrjdcbC-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-sS8BtnD/0/ec5c9cf2/X3/i-sS8BtnD-X3.jpg"><br>Kodak Portra 400<br><img src="https://photos.smugmug.com/photos/i-V8sXTBg/0/d6d97473/X3/i-V8sXTBg-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>nikkor 75mm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]No. 289</title>
+    <url>/2022/02/02/20220202-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-K623rkg/0/cdaf3790/X3/289-X3.jpg"></p>
+<span id="more"></span>
+<p>週一被Vogue認證了第289張<br>這張最特殊的點在於用來拍照的app是我開發的</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>pixel 4a 5g</tag>
       </tags>
   </entry>
   <entry>
@@ -696,6 +696,28 @@
         <tag>backup</tag>
         <tag>npm</tag>
         <tag>terminal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[中研院覓食]ep.1-劉家牛肉麵</title>
+    <url>/2023/01/27/20230127-eat-sinica-001/</url>
+    <content><![CDATA[<ul>
+<li>本系列僅代表個人消費經驗，紀錄文章完成前不久的店家部分情形，好不好吃請自己去體會。</li>
+</ul>
+<hr>
+<h2 id="劉家牛肉麵"><a href="#劉家牛肉麵" class="headerlink" title="劉家牛肉麵"></a>劉家牛肉麵</h2><p>地址: 台北市南港區舊莊街一段193號</p>
+<h3 id="本次消費"><a href="#本次消費" class="headerlink" title="本次消費"></a>本次消費</h3><p>醡醬麵(小) $65<br><img src="https://photos.smugmug.com/photos/i-qdpsbXN/0/15a68acf/X3/i-qdpsbXN-X3.jpg"></p>
+<h3 id="菜單"><a href="#菜單" class="headerlink" title="菜單"></a>菜單</h3><span id="more"></span>
+<p><img src="https://photos.smugmug.com/photos/i-4nDjMqw/0/ff94cc6a/X3/i-4nDjMqw-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>覓食</category>
+      </categories>
+      <tags>
+        <tag>覓食</tag>
+        <tag>中研院</tag>
+        <tag>食記</tag>
+        <tag>food</tag>
       </tags>
   </entry>
 </search>
