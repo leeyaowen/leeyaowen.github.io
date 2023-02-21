@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>準備踏入股票市場</title>
+    <url>/2021/02/10/20210210-stock/</url>
+    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
+]]></content>
+      <categories>
+        <category>stock</category>
+      </categories>
+      <tags>
+        <tag>stock</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在NexT中增加canvas nest特效</title>
     <url>/2021/02/10/20210210-add-canvas-nest/</url>
     <content><![CDATA[<p>剛開始使用Hexo<br>想增加幾何線條的特效，滑鼠移動過去時會吸引線條<br>方法是在<code>themes/next/layout/_layout.swig</code>中的<code>&lt;body&gt;</code>區塊增加以下code</p>
@@ -12,19 +25,6 @@
         <tag>hexo</tag>
         <tag>next</tag>
         <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>準備踏入股票市場</title>
-    <url>/2021/02/10/20210210-stock/</url>
-    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
-]]></content>
-      <categories>
-        <category>stock</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -448,29 +448,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
-    <url>/2022/07/18/20220718-Task-Manager/</url>
-    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼&#x2F;登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
-<span id="more"></span>  
-<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
-<figure class="highlight plaintext"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set /p var=Turn on Taskmgr?[Y/N]: </span><br><span class="line">if %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
-      <categories>
-        <category>Win10</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Windows</tag>
-        <tag>Win10 pro</tag>
-        <tag>Windows專業版</tag>
-        <tag>工作管理員</tag>
-        <tag>Task Manager</tag>
-        <tag>taskmgr</tag>
-        <tag>bat</tag>
-        <tag>Batchfile</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[python]Plant Spatial Points Tool-build data for spatial point pattern analysis</title>
     <url>/2022/08/02/20220802-Plant-Spatial-Points-Tool/</url>
     <content><![CDATA[<h2 id="Plant-Spatial-Points-Tool"><a href="#Plant-Spatial-Points-Tool" class="headerlink" title="Plant Spatial Points Tool"></a>Plant Spatial Points Tool</h2><p><a href="https://zenodo.org/badge/latestdoi/161195182"><img src="https://zenodo.org/badge/161195182.svg" alt="DOI"></a>  </p>
@@ -526,6 +503,29 @@
         <tag>spatial pattern</tag>
         <tag>tool</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
+    <url>/2022/07/18/20220718-Task-Manager/</url>
+    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼&#x2F;登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
+<span id="more"></span>  
+<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
+<figure class="highlight plaintext"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set /p var=Turn on Taskmgr?[Y/N]: </span><br><span class="line">if %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
+      <categories>
+        <category>Win10</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Windows</tag>
+        <tag>Win10 pro</tag>
+        <tag>Windows專業版</tag>
+        <tag>工作管理員</tag>
+        <tag>Task Manager</tag>
+        <tag>taskmgr</tag>
+        <tag>bat</tag>
+        <tag>Batchfile</tag>
       </tags>
   </entry>
   <entry>
@@ -626,6 +626,24 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 293</title>
+    <url>/2022/10/30/20221030-photovogue/</url>
+    <content><![CDATA[<p>應該是兩週前投的，用的是lomo 400<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-bnBQ8ZM/0/3ada75de/X3/293-X3.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>portrait</tag>
+        <tag>girl</tag>
+        <tag>lomography</tag>
+        <tag>bronica</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[python]解決台大標本館TAI之數位標本上的比例尺有誤問題</title>
     <url>/2022/10/29/20221029-tai2-ntu-herbarium/</url>
     <content><![CDATA[<h1 id="解決台大標本館TAI之數位標本上的比例尺有誤問題"><a href="#解決台大標本館TAI之數位標本上的比例尺有誤問題" class="headerlink" title="解決台大標本館TAI之數位標本上的比例尺有誤問題"></a>解決台大標本館TAI之數位標本上的比例尺有誤問題</h1><h2 id="現有網站的顯示"><a href="#現有網站的顯示" class="headerlink" title="現有網站的顯示"></a>現有網站的顯示</h2><p>有使用過<strong>台灣植物資訊整合查詢系統</strong>的人應該對下圖文字不陌生，根據文字解讀，TAI的數位標本比例尺應為5公分而非10公分，實際造訪網頁可以看到有些已變更為5公分。<br><img src="https://photos.smugmug.com/photos/i-Qd4k6bD/0/b9885b87/O/i-Qd4k6bD.jpg"></p>
@@ -654,21 +672,25 @@
       </tags>
   </entry>
   <entry>
-    <title>[PhotoVogue]No. 293</title>
-    <url>/2022/10/30/20221030-photovogue/</url>
-    <content><![CDATA[<p>應該是兩週前投的，用的是lomo 400<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-bnBQ8ZM/0/3ada75de/X3/293-X3.jpg"></p>
+    <title>[中研院覓食]ep.1-劉家牛肉麵</title>
+    <url>/2023/01/27/20230127-eat-sinica-001/</url>
+    <content><![CDATA[<ul>
+<li>本系列僅代表個人消費經驗，紀錄文章完成前不久的店家部分情形，好不好吃請自己去體會。</li>
+</ul>
+<hr>
+<h2 id="劉家牛肉麵"><a href="#劉家牛肉麵" class="headerlink" title="劉家牛肉麵"></a>劉家牛肉麵</h2><p>地址: 台北市南港區舊莊街一段193號</p>
+<h3 id="本次消費"><a href="#本次消費" class="headerlink" title="本次消費"></a>本次消費</h3><p>醡醬麵(小) $65<br><img src="https://photos.smugmug.com/photos/i-qdpsbXN/0/15a68acf/X3/i-qdpsbXN-X3.jpg"></p>
+<h3 id="菜單"><a href="#菜單" class="headerlink" title="菜單"></a>菜單</h3><span id="more"></span>
+<p><img src="https://photos.smugmug.com/photos/i-4nDjMqw/0/ff94cc6a/X3/i-4nDjMqw-X3.jpg"></p>
 ]]></content>
       <categories>
-        <category>photography</category>
+        <category>覓食</category>
       </categories>
       <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>portrait</tag>
-        <tag>girl</tag>
-        <tag>lomography</tag>
-        <tag>bronica</tag>
+        <tag>覓食</tag>
+        <tag>中研院</tag>
+        <tag>食記</tag>
+        <tag>food</tag>
       </tags>
   </entry>
   <entry>
@@ -699,25 +721,48 @@
       </tags>
   </entry>
   <entry>
-    <title>[中研院覓食]ep.1-劉家牛肉麵</title>
-    <url>/2023/01/27/20230127-eat-sinica-001/</url>
-    <content><![CDATA[<ul>
-<li>本系列僅代表個人消費經驗，紀錄文章完成前不久的店家部分情形，好不好吃請自己去體會。</li>
+    <title>[勞工權益]新竹縣東泰高級中學成功教育員工如何進行勞工申訴</title>
+    <url>/2023/02/21/20230221-ttsh-hcc-edu/</url>
+    <content><![CDATA[<p>在此先十分感激新竹縣政府勞工處的勞檢員幫忙，目前申訴案件已達成我的訴求。<br>以下就時間線敘述相關事件經過。</p>
+<ul>
+<li>2022.06.08<br>接聘，就一張聘書，A4大小，前有職稱與約聘期限(民國111&#x2F;7&#x2F;1至112&#x2F;7&#x2F;31)，後有約定事項，其中包含<strong>職員工離職應於聘約屆滿前三十日提出辭職書，經學校同意後，始得離職。擅自離職者，應賠償違約金新台幣八萬元整，否則學校得拒發離職或服務證明文件</strong>。<br>另外，其他未盡事項，依本校有關規定辦理(不過這時也不知道有關規定在哪??)。<br>且另外有一份切結書，內容包含延長工作時間，給補休，不給加班費，補休未於期限內休畢，視為<strong>自動放棄</strong>。特休部分逾期未休視為自動放棄，不領取任何<strong>不休假獎金</strong>。  <span id="more"></span>  </li>
+<li>2022.07.01<br>開工</li>
+<li>2022.08.16&#x2F;17<br>新進教師研習，此時可以看到「有關規定」了，包含一條全校教職員工每月自薪俸中扣取300元共同雇用一位先生於非上班時間在校值日。<br>→所以我的每月薪資為: 薪資-勞保-健保-300&#x3D;實領  </li>
+<li>2022.11<br>這個月前半部時間點記得不是太詳細，主要是有離職規劃，於是查了一些資料，也致電勞工處。回頭與人事反應聘書違約金有違法疑慮，甚至還未提出辭呈，人事已批評我「自私、沒有職業道德、不顧學生受教權、你們這世代年輕人都這樣」(我本身是行政沒有課務，另外我1993年生，這地圖砲似乎不小)，且會於服務證明上註記我未履行違約金八萬。<br><img src="https://photos.smugmug.com/photos/i-4njCzf3/0/2e7decdd/L/i-4njCzf3-L.jpg"><br>而根據勞基法15-1條基本上就是違法。</li>
+<li>2022.11.09<br>辭呈正式提出(2023.01.19離職)，也與我的主任商量好會做到學期結束，辦公室的老師也都沒有異議。  </li>
+<li>2023.01.12<br>由於於現行法規下半年有三天特休，便詢問特休轉工資事項，人事即要我下週直接休三天(我1&#x2F;19離職…)，於是有下圖對話。<br><img src="https://photos.smugmug.com/photos/i-zTtwHMw/0/cd61a247/X3/i-zTtwHMw-X3.png">  </li>
+<li>2023.01.19<br>離職領服務證明，上面備註<strong>違約</strong>，並於空白處又寫上<strong>聘約存續期間離職，未完成履約</strong>。  </li>
+<li>2023.01.30<br>人事通知特休要另外上簽才會撥款，<strong>特此告知</strong>。</li>
+<li>2023.01.31  <blockquote>
+<p>上午先刷存摺，薪資並無特休轉工資的部分，便前往勞工處填寫申訴書。<br>向勞工處敘明事件經過與提供相關證據後，勞工處便協助填寫申訴書，包含以下三項:  </p>
+<ol>
+<li>服務證明包含不利勞工求職事項。</li>
+<li>特休未折算工資。</li>
+<li>每月扣薪資雇用其他員工，請求返還違法扣薪。</li>
+</ol>
+<p>當日勞工處即收文  </p>
+</blockquote>
+</li>
+<li>2023.02.06<br>收到勞工處email，表示申訴東泰高中涉違反勞基法相關規定乙案，已依法受理，近日內會安排至該校實施勞動檢查。  </li>
+<li>2023.02.08<br>收到特休折算的工資。  </li>
+<li>2023.02.16<br>收到違法扣除的執勤費，同日也收到勞工處email，表示已到校做勞動檢查，服務證明學校重新製作後再寄出。  </li>
+<li>2023.02.17<br>收到正常的服務證明。</li>
 </ul>
-<hr>
-<h2 id="劉家牛肉麵"><a href="#劉家牛肉麵" class="headerlink" title="劉家牛肉麵"></a>劉家牛肉麵</h2><p>地址: 台北市南港區舊莊街一段193號</p>
-<h3 id="本次消費"><a href="#本次消費" class="headerlink" title="本次消費"></a>本次消費</h3><p>醡醬麵(小) $65<br><img src="https://photos.smugmug.com/photos/i-qdpsbXN/0/15a68acf/X3/i-qdpsbXN-X3.jpg"></p>
-<h3 id="菜單"><a href="#菜單" class="headerlink" title="菜單"></a>菜單</h3><span id="more"></span>
-<p><img src="https://photos.smugmug.com/photos/i-4nDjMqw/0/ff94cc6a/X3/i-4nDjMqw-X3.jpg"></p>
 ]]></content>
       <categories>
-        <category>覓食</category>
+        <category>勞工權益</category>
       </categories>
       <tags>
-        <tag>覓食</tag>
-        <tag>中研院</tag>
-        <tag>食記</tag>
-        <tag>food</tag>
+        <tag>TTSH</tag>
+        <tag>勞工權益</tag>
+        <tag>新竹縣東泰高級中學</tag>
+        <tag>東泰高中</tag>
+        <tag>勞基法</tag>
+        <tag>人事</tag>
+        <tag>新竹縣政府勞工處</tag>
+        <tag>勞工申訴</tag>
+        <tag>勞動檢查</tag>
+        <tag>離職</tag>
       </tags>
   </entry>
 </search>
