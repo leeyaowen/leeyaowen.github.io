@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>準備踏入股票市場</title>
-    <url>/2021/02/10/20210210-stock/</url>
-    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
-]]></content>
-      <categories>
-        <category>stock</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>在NexT中增加canvas nest特效</title>
     <url>/2021/02/10/20210210-add-canvas-nest/</url>
     <content><![CDATA[<p>剛開始使用Hexo<br>想增加幾何線條的特效，滑鼠移動過去時會吸引線條<br>方法是在<code>themes/next/layout/_layout.swig</code>中的<code>&lt;body&gt;</code>區塊增加以下code</p>
@@ -25,6 +12,19 @@
         <tag>hexo</tag>
         <tag>next</tag>
         <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>準備踏入股票市場</title>
+    <url>/2021/02/10/20210210-stock/</url>
+    <content><![CDATA[<p>上週申請了一個新的銀行戶頭，也申請了證券戶頭<br>經過10個工作天後總算申請通過了<br>使用的是玉山富果帳戶<br>原因是我覺得資料呈現的蠻不錯的<br>接下來就等年後再看看什麼時候要正式入場啦<br><img src="https://photos.smugmug.com/photos/i-78Rh8qh/0/14ca9d27/XL/i-78Rh8qh-XL.png"></p>
+]]></content>
+      <categories>
+        <category>stock</category>
+      </categories>
+      <tags>
+        <tag>stock</tag>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -48,25 +48,6 @@
         <tag>cwb</tag>
         <tag>data visualization</tag>
         <tag>ggplot2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]No. 288</title>
-    <url>/2022/01/24/20220124-photovogue/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
-<span id="more"></span>
-<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
-<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>film</tag>
-        <tag>bronica s2a</tag>
       </tags>
   </entry>
   <entry>
@@ -181,6 +162,44 @@
       </tags>
   </entry>
   <entry>
+    <title>[PhotoVogue]No. 288</title>
+    <url>/2022/01/24/20220124-photovogue/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
+<span id="more"></span>
+<p>今天被Vogue認證了第288張<br>是用Bronica S2A + Fuji 160NS</p>
+<p>現行的制度是這樣↓<br>每週一羅馬時間上午8點到晚上8點可投稿2張(免費)，受認證即上浮水印並加入你的作品集，反之就刪除照片<br>有興趣可以投投看</p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>film</tag>
+        <tag>bronica s2a</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[photography]改善黃斑對焦老化變淡問題</title>
+    <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
+    <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
+<p>送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗</p>
+<p>網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等<br>最後我找到不用拆開我覺得最好的方式-貼黑色貼紙</p>
+<p>根據網路方法，在觀景窗黃斑位置貼上同大小的黑色貼紙可以明顯改善問題，結果會變得有點像裂像對焦一樣<br>有人是使用電火布，不過馬上就看到另一個人跟我有相同想法:殘膠會嚴重</p>
+<p>那…我手邊最棒的材料不就是保護相機鏡頭用的鐵人膠帶嗎?<br>就決定是你了!<br>我沒有仔細測量過黃斑大小與位置，就是挑盡量中央貼，結果如圖，他變得有點黃斑對焦與裂像對焦的融合，至少比原先容易對焦<br><img src="https://photos.smugmug.com/photos/i-Gs4qh3C/0/016a8e97/X5/i-Gs4qh3C-X5.jpg"></p>
+<p>Ref: <a href="http://rick_oleson.tripod.com/index-165.html">Brighten your Rangefinder</a></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>rangefinder</tag>
+        <tag>黃斑對焦</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[python]想要RAW檔?可以先拿.raw壓壓驚</title>
     <url>/2022/04/03/20220403-jpg2raw/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-S37M65H/0/ef628152/O/i-S37M65H.png"><br>我們廢話不多說，先上個<a href="https://github.com/leeyaowen/jpg2raw/releases">Windows載點</a><br>如首圖，只要將exe檔跟jpg檔放在同一目錄下就可以執行了</p>
@@ -204,25 +223,6 @@
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>raw</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[photography]改善黃斑對焦老化變淡問題</title>
-    <url>/2022/04/14/20220414-Brighten-Rangefinder/</url>
-    <content><![CDATA[<p>好不容易收了一台全機械RF，黃斑卻不是很理想，當然想要他更實用一點</p>
-<p>送修或拆開自己修都是方法，但要想想我才花多少錢收，值得再花費用修?自己拆的話我又沒經驗</p>
-<p>網路上有各種方法，換半反射玻璃、貼玻璃紙、在觀景窗塗顏色等<br>最後我找到不用拆開我覺得最好的方式-貼黑色貼紙</p>
-<p>根據網路方法，在觀景窗黃斑位置貼上同大小的黑色貼紙可以明顯改善問題，結果會變得有點像裂像對焦一樣<br>有人是使用電火布，不過馬上就看到另一個人跟我有相同想法:殘膠會嚴重</p>
-<p>那…我手邊最棒的材料不就是保護相機鏡頭用的鐵人膠帶嗎?<br>就決定是你了!<br>我沒有仔細測量過黃斑大小與位置，就是挑盡量中央貼，結果如圖，他變得有點黃斑對焦與裂像對焦的融合，至少比原先容易對焦<br><img src="https://photos.smugmug.com/photos/i-Gs4qh3C/0/016a8e97/X5/i-Gs4qh3C-X5.jpg"></p>
-<p>Ref: <a href="http://rick_oleson.tripod.com/index-165.html">Brighten your Rangefinder</a></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>rangefinder</tag>
-        <tag>黃斑對焦</tag>
       </tags>
   </entry>
   <entry>
@@ -448,6 +448,29 @@
       </tags>
   </entry>
   <entry>
+    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
+    <url>/2022/07/18/20220718-Task-Manager/</url>
+    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼&#x2F;登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
+<span id="more"></span>  
+<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
+<figure class="highlight plaintext"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set /p var=Turn on Taskmgr?[Y/N]: </span><br><span class="line">if %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
+      <categories>
+        <category>Win10</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>Windows</tag>
+        <tag>Win10 pro</tag>
+        <tag>Windows專業版</tag>
+        <tag>工作管理員</tag>
+        <tag>Task Manager</tag>
+        <tag>taskmgr</tag>
+        <tag>bat</tag>
+        <tag>Batchfile</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[python]Plant Spatial Points Tool-build data for spatial point pattern analysis</title>
     <url>/2022/08/02/20220802-Plant-Spatial-Points-Tool/</url>
     <content><![CDATA[<h2 id="Plant-Spatial-Points-Tool"><a href="#Plant-Spatial-Points-Tool" class="headerlink" title="Plant Spatial Points Tool"></a>Plant Spatial Points Tool</h2><p><a href="https://zenodo.org/badge/latestdoi/161195182"><img src="https://zenodo.org/badge/161195182.svg" alt="DOI"></a>  </p>
@@ -506,29 +529,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[Win10 pro]在Windows 10專業版中快速啟用/禁用工作管理員(Task Manager)</title>
-    <url>/2022/07/18/20220718-Task-Manager/</url>
-    <content><![CDATA[<p>在Windows 10專業版中工作管理員被禁用該怎麼辦?<br>其實Google給很多答案，包含編輯群組原則、改機碼&#x2F;登錄編輯程式(regedit)等<br>這些方法的麻煩點就是要在各個視窗游移，點來點去，忘了就要再Google<br>那如果有bat檔下指令就快多了<br>這裡就寫了一個  </p>
-<span id="more"></span>  
-<p>有需要可以直接到<a href="https://github.com/leeyaowen/Task-Manager-switch">這裡</a>下載<br>記得以系統管理員身分執行<br>按Y可以啟用，按N(或其他按鍵)可以禁用<br>code如下  </p>
-<figure class="highlight plaintext"><figcaption><span>Batchfile</span></figcaption><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set /p var=Turn on Taskmgr?[Y/N]: </span><br><span class="line">if %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f</span><br><span class="line"></span><br><span class="line">rem disable Task Manager</span><br><span class="line">if not %var%== Y reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>  ]]></content>
-      <categories>
-        <category>Win10</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>Windows</tag>
-        <tag>Win10 pro</tag>
-        <tag>Windows專業版</tag>
-        <tag>工作管理員</tag>
-        <tag>Task Manager</tag>
-        <tag>taskmgr</tag>
-        <tag>bat</tag>
-        <tag>Batchfile</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[photography]華山AI數據藝術展-EOS 30 Date / Kodak 500T 5219</title>
     <url>/2022/08/18/20220818-Hello-Ouchhh-AI-exhibition/</url>
     <content><![CDATA[<h2 id="Hello-Ouchhh：AI數據藝術展"><a href="#Hello-Ouchhh：AI數據藝術展" class="headerlink" title="Hello Ouchhh：AI數據藝術展"></a>Hello Ouchhh：AI數據藝術展</h2><ul>
@@ -559,6 +559,55 @@
         <tag>exhibition</tag>
         <tag>portrait</tag>
         <tag>Taiwan</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[hexo]使用git備份hexo bolg小筆記</title>
+    <url>/2022/10/02/20221002-hexo-backup/</url>
+    <content><![CDATA[<ol>
+<li>如未建立分支，先建立新分支<br><code>git branch &lt;branchname&gt;</code>   </li>
+<li>切換分支<br><code>git checkout &lt;branchname&gt;</code></li>
+<li>加入檔案<br><code>git add .</code></li>
+<li>commit檔案<br><code>git commit -m &lt;&quot;msg&quot;&gt;</code></li>
+<li>push git<br><code>git push -u origin &lt;branchname&gt;</code></li>
+</ol>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>code</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]解決台大標本館TAI之數位標本上的比例尺有誤問題</title>
+    <url>/2022/10/29/20221029-tai2-ntu-herbarium/</url>
+    <content><![CDATA[<h1 id="解決台大標本館TAI之數位標本上的比例尺有誤問題"><a href="#解決台大標本館TAI之數位標本上的比例尺有誤問題" class="headerlink" title="解決台大標本館TAI之數位標本上的比例尺有誤問題"></a>解決台大標本館TAI之數位標本上的比例尺有誤問題</h1><h2 id="現有網站的顯示"><a href="#現有網站的顯示" class="headerlink" title="現有網站的顯示"></a>現有網站的顯示</h2><p>有使用過<strong>台灣植物資訊整合查詢系統</strong>的人應該對下圖文字不陌生，根據文字解讀，TAI的數位標本比例尺應為5公分而非10公分，實際造訪網頁可以看到有些已變更為5公分。<br><img src="https://photos.smugmug.com/photos/i-Qd4k6bD/0/b9885b87/O/i-Qd4k6bD.jpg"></p>
+<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>那10公分的要怎麼變成5公分?</p>
+<span id="more"></span>
+<h2 id="思路、解決手法"><a href="#思路、解決手法" class="headerlink" title="思路、解決手法"></a>思路、解決手法</h2><h3 id="1-錯誤的比例尺需要取代"><a href="#1-錯誤的比例尺需要取代" class="headerlink" title="1. 錯誤的比例尺需要取代"></a>1. 錯誤的比例尺需要取代</h3><p>既然比例尺應為5公分而非10公分，那便應該將10公分的移除，更換為5公分。<br>這裡其實有2個做法，一為有最原始的檔案(未加任何比例尺的)，直接換5公分的上去，二為去除10公分的，再把5公分的擺上去，這裡走了第二條路。  </p>
+<h3 id="2-如何做"><a href="#2-如何做" class="headerlink" title="2. 如何做?"></a>2. 如何做?</h3><ol>
+<li>要先找到10公分比例尺的位置，使用opencv的<code>cv2.TM_CCOEFF_NORMED</code>可以幫忙這件事，得出的結果也可以作為閾值切分是否成功取代。  </li>
+<li>找到位置後要將10公分的比例尺塗掉，更換為5公分的，如下圖，紅色框為偵測到的10公分比例尺範圍，然後紅框左上為基準，向上取得藍框顏色平均，再用該顏色塗掉10公分比例尺，最後貼上5公分比例尺。<br><img src="https://photos.smugmug.com/photos/i-wVGGGnt/0/b87280cc/O/i-wVGGGnt.png"><br><img src="https://photos.smugmug.com/photos/i-mjjgLKR/0/b6e404ae/L/i-mjjgLKR-L.png"></li>
+</ol>
+<h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3><p>1. 中文檔名，老問題了，用<code>numpy</code>協助解決吧!<br>2. 辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。<br>3. 要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"><br>4. 真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。<br>5. 色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。<br>6. 跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>opencv</tag>
+        <tag>herbarium</tag>
+        <tag>TAI</tag>
+        <tag>NTU</tag>
+        <tag>PIL</tag>
+        <tag>threading</tag>
       </tags>
   </entry>
   <entry>
@@ -605,27 +654,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[hexo]使用git備份hexo bolg小筆記</title>
-    <url>/2022/10/02/20221002-hexo-backup/</url>
-    <content><![CDATA[<ol>
-<li>如未建立分支，先建立新分支<br><code>git branch &lt;branchname&gt;</code>   </li>
-<li>切換分支<br><code>git checkout &lt;branchname&gt;</code></li>
-<li>加入檔案<br><code>git add .</code></li>
-<li>commit檔案<br><code>git commit -m &lt;&quot;msg&quot;&gt;</code></li>
-<li>push git<br><code>git push -u origin &lt;branchname&gt;</code></li>
-</ol>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-        <tag>code</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[PhotoVogue]No. 293</title>
     <url>/2022/10/30/20221030-photovogue/</url>
     <content><![CDATA[<p>應該是兩週前投的，用的是lomo 400<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-bnBQ8ZM/0/3ada75de/X3/293-X3.jpg"></p>
@@ -641,34 +669,6 @@
         <tag>girl</tag>
         <tag>lomography</tag>
         <tag>bronica</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]解決台大標本館TAI之數位標本上的比例尺有誤問題</title>
-    <url>/2022/10/29/20221029-tai2-ntu-herbarium/</url>
-    <content><![CDATA[<h1 id="解決台大標本館TAI之數位標本上的比例尺有誤問題"><a href="#解決台大標本館TAI之數位標本上的比例尺有誤問題" class="headerlink" title="解決台大標本館TAI之數位標本上的比例尺有誤問題"></a>解決台大標本館TAI之數位標本上的比例尺有誤問題</h1><h2 id="現有網站的顯示"><a href="#現有網站的顯示" class="headerlink" title="現有網站的顯示"></a>現有網站的顯示</h2><p>有使用過<strong>台灣植物資訊整合查詢系統</strong>的人應該對下圖文字不陌生，根據文字解讀，TAI的數位標本比例尺應為5公分而非10公分，實際造訪網頁可以看到有些已變更為5公分。<br><img src="https://photos.smugmug.com/photos/i-Qd4k6bD/0/b9885b87/O/i-Qd4k6bD.jpg"></p>
-<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>那10公分的要怎麼變成5公分?</p>
-<span id="more"></span>
-<h2 id="思路、解決手法"><a href="#思路、解決手法" class="headerlink" title="思路、解決手法"></a>思路、解決手法</h2><h3 id="1-錯誤的比例尺需要取代"><a href="#1-錯誤的比例尺需要取代" class="headerlink" title="1. 錯誤的比例尺需要取代"></a>1. 錯誤的比例尺需要取代</h3><p>既然比例尺應為5公分而非10公分，那便應該將10公分的移除，更換為5公分。<br>這裡其實有2個做法，一為有最原始的檔案(未加任何比例尺的)，直接換5公分的上去，二為去除10公分的，再把5公分的擺上去，這裡走了第二條路。  </p>
-<h3 id="2-如何做"><a href="#2-如何做" class="headerlink" title="2. 如何做?"></a>2. 如何做?</h3><ol>
-<li>要先找到10公分比例尺的位置，使用opencv的<code>cv2.TM_CCOEFF_NORMED</code>可以幫忙這件事，得出的結果也可以作為閾值切分是否成功取代。  </li>
-<li>找到位置後要將10公分的比例尺塗掉，更換為5公分的，如下圖，紅色框為偵測到的10公分比例尺範圍，然後紅框左上為基準，向上取得藍框顏色平均，再用該顏色塗掉10公分比例尺，最後貼上5公分比例尺。<br><img src="https://photos.smugmug.com/photos/i-wVGGGnt/0/b87280cc/O/i-wVGGGnt.png"><br><img src="https://photos.smugmug.com/photos/i-mjjgLKR/0/b6e404ae/L/i-mjjgLKR-L.png"></li>
-</ol>
-<h3 id="3-理想是美好的，現實呢"><a href="#3-理想是美好的，現實呢" class="headerlink" title="3. 理想是美好的，現實呢?"></a>3. 理想是美好的，現實呢?</h3><p>1. 中文檔名，老問題了，用<code>numpy</code>協助解決吧!<br>2. 辨識轉黑白比較好，但貼上還是得用彩色的底圖。是的，所以記得準備好不同變數待命。<br>3. 要不要降噪?根據實驗(下圖)，降噪可以小幅提升opencv函數的數值結果，但會大幅增加運算時間，另外可以再想想今天的取代目標做降噪會不會是反效果?<br><img src="https://photos.smugmug.com/photos/i-WJSpmBp/0/07bf9c0c/O/i-WJSpmBp.png"><br>4. 真的就是偵測完貼上這麼簡單嗎?流程上是這樣沒錯，但實際貼就會發現，會漏餡，因為沒辦法很好的擋住原比例尺。那要怎麼辦?類似<strong>Photoshop</strong>的概念很重要，一是圖層概念，二是遮罩(mask)，三是圖層樣式。要知道5公分比例尺的貼上範圍、缺陷，所以可以做點前處理，外光暈是不錯的選擇。<br>5. 色彩轉換，opencv預設以BGR讀取圖片，貼比例尺時用PIL需要轉為RGB。<br>6. 跟時間賽跑，圖片量多，就算24小時讓電腦運轉大概1個月也跑不完，引入<code>threading</code>，將圖片分為奇偶數，開啟雙執行緒壓榨電腦效能。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>opencv</tag>
-        <tag>herbarium</tag>
-        <tag>TAI</tag>
-        <tag>NTU</tag>
-        <tag>PIL</tag>
-        <tag>threading</tag>
       </tags>
   </entry>
   <entry>
@@ -763,6 +763,44 @@
         <tag>勞工申訴</tag>
         <tag>勞動檢查</tag>
         <tag>離職</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]用科學方法檢測是否修圖</title>
+    <url>/2023/05/24/20230524-image-compare/</url>
+    <content><![CDATA[<h2 id="開發環境"><a href="#開發環境" class="headerlink" title="開發環境"></a>開發環境</h2><p><strong>Python 3.8</strong></p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+<li>比對每pixel的RGB值，如果一樣，返回白色，如有不同，返回黑色。</li>
+</ul>
+<p><img src="https://photos.smugmug.com/photos/i-NhJdX2r/0/ea378a6b/X5/i-NhJdX2r-X5.jpg"></p>
+<span id="more"></span>
+<h3 id="測試條件"><a href="#測試條件" class="headerlink" title="測試條件"></a>測試條件</h3><ul>
+<li>比對之兩圖片長寬需要相同，皆為jpg格式。</li>
+</ul>
+<h3 id="測試圖片"><a href="#測試圖片" class="headerlink" title="測試圖片"></a>測試圖片</h3><ol>
+<li>原始jpg</li>
+<li>將原始jpg以photoshop打開後以品質8的jpg重新保存</li>
+<li>將原始jpg以photoshop打開後對臉部液化以品質12(最高)的jpg重新保存</li>
+</ol>
+<h3 id="檢測步驟"><a href="#檢測步驟" class="headerlink" title="檢測步驟:"></a>檢測步驟:</h3><ol>
+<li>檢測原始圖片是否相等，把相同檔案比對，得到結果為一片白，表示沒有變更。</li>
+<li>檢測圖片1與圖片2，雖只有重新存檔，但可看到經比對後就是有差。</li>
+<li>檢測圖片1與圖片3，液化後可以看到臉差很多，其他地方一樣有差。</li>
+</ol>
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>所以，就算你只是重新存jpg，一樣不是原來那張圖。<br><a href="https://github.com/leeyaowen/Image_Compare/releases">Github執行檔下載</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>python</tag>
+        <tag>PIL</tag>
+        <tag>image compare</tag>
+        <tag>修圖</tag>
+        <tag>修圖比較</tag>
+        <tag>檢測</tag>
       </tags>
   </entry>
 </search>
