@@ -45,29 +45,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
-    <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
-    <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
-<span id="more"></span>
-<p>選擇月報表後可以看到以下資料，點擊下載csv檔可以獲得該月資料<br><img src="https://photos.smugmug.com/photos/i-wZJPz2X/0/66c8270f/XL/i-wZJPz2X-XL.png"><br>這邊以收集2021年資料為例，將其整理至一資料夾，如下圖<br><img src="https://photos.smugmug.com/photos/i-LzkqMhQ/0/0f3f4c60/O/i-LzkqMhQ.png"></p>
-<p>之後以R繪製雨量資料</p>
-<figure class="highlight r"><figcaption><span>R</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">####load packages####</span></span><br><span class="line">library<span class="punctuation">(</span>dplyr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>magrittr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggplot2<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>stringr<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####bind data####</span></span><br><span class="line">filenames<span class="operator">&lt;-</span>list.files<span class="punctuation">(</span><span class="string">&quot;./Binlang&quot;</span><span class="punctuation">,</span>pattern <span class="operator">=</span> <span class="string">&quot;.csv&quot;</span><span class="punctuation">)</span></span><br><span class="line">precpdf<span class="operator">&lt;-</span>read.csv<span class="punctuation">(</span>paste0<span class="punctuation">(</span><span class="string">&quot;./Binlang/&quot;</span><span class="punctuation">,</span>filenames<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">,</span>skip <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span>colClasses <span class="operator">=</span> <span class="string">&quot;character&quot;</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  mutate<span class="punctuation">(</span>month<span class="operator">=</span>str_sub<span class="punctuation">(</span>filenames<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">6</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="keyword">for</span> <span class="punctuation">(</span>i <span class="keyword">in</span> <span class="number">2</span><span class="operator">:</span><span class="built_in">length</span><span class="punctuation">(</span>filenames<span class="punctuation">)</span><span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">  dttemp<span class="operator">&lt;-</span>read.csv<span class="punctuation">(</span>paste0<span class="punctuation">(</span><span class="string">&quot;./Binlang/&quot;</span><span class="punctuation">,</span>filenames<span class="punctuation">[</span>i<span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">,</span>skip <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span>colClasses <span class="operator">=</span> <span class="string">&quot;character&quot;</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">    mutate<span class="punctuation">(</span>month<span class="operator">=</span>str_sub<span class="punctuation">(</span>filenames<span class="punctuation">[</span>i<span class="punctuation">]</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">6</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">  precpdf<span class="operator">&lt;-</span>bind_rows<span class="punctuation">(</span>precpdf<span class="punctuation">,</span>dttemp<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line">precpdf<span class="operator">$</span>Precp<span class="operator">&lt;-</span><span class="built_in">as.numeric</span><span class="punctuation">(</span>precpdf<span class="operator">$</span>Precp<span class="punctuation">)</span></span><br><span class="line">precpdf<span class="operator">&lt;-</span>precpdf <span class="operator">%&gt;%</span></span><br><span class="line">  group_by<span class="punctuation">(</span>month<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  summarise<span class="punctuation">(</span>precp<span class="operator">=</span><span class="built_in">sum</span><span class="punctuation">(</span>Precp<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  ungroup<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####plot####</span></span><br><span class="line">p<span class="operator">&lt;-</span>ggplot<span class="punctuation">(</span>data <span class="operator">=</span> precpdf<span class="punctuation">,</span>aes<span class="punctuation">(</span>x<span class="operator">=</span>month<span class="punctuation">,</span>y<span class="operator">=</span>precp<span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span>stat <span class="operator">=</span> <span class="string">&quot;identity&quot;</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">&quot;Binlang&quot;</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_text<span class="punctuation">(</span>aes<span class="punctuation">(</span>y<span class="operator">=</span>precp<span class="punctuation">,</span>label<span class="operator">=</span>precp<span class="punctuation">)</span><span class="punctuation">,</span>vjust<span class="operator">=</span><span class="operator">-</span><span class="number">0.5</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_classic<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>hjust <span class="operator">=</span> <span class="number">0.5</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  scale_y_continuous<span class="punctuation">(</span>limits <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span><span class="number">850</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">p</span><br><span class="line">ggsave<span class="punctuation">(</span>filename <span class="operator">=</span> <span class="string">&quot;Binlang_2021_precp.png&quot;</span><span class="punctuation">,</span>width <span class="operator">=</span> <span class="number">15</span><span class="punctuation">,</span>height <span class="operator">=</span> <span class="number">10</span><span class="punctuation">,</span>units <span class="operator">=</span> <span class="string">&quot;cm&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://photos.smugmug.com/photos/i-6KH9vX8/0/fe20c42a/XL/i-6KH9vX8-XL.png"></p>
-]]></content>
-      <categories>
-        <category>R</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>R</tag>
-        <tag>coding</tag>
-        <tag>cwb</tag>
-        <tag>data visualization</tag>
-        <tag>ggplot2</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[PhotoVogue]No. 288</title>
     <url>/2022/01/24/20220124-photovogue/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGoogle/i-QnvVPm7/0/42dbac6f/X3/288-X3.jpg"></p>
@@ -84,29 +61,6 @@
         <tag>bronica s2a</tag>
         <tag>photovogue</tag>
         <tag>vogue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]利用flickrapi爬取Flickr的圖片</title>
-    <url>/2022/02/03/20220203-flickr-crawler/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
-<span id="more"></span>
-<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
-<p>以下就是code的部分</p>
-<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-
-<p>使用自行注意著作權問題喔~</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>flickrapi</tag>
-        <tag>web crawler</tag>
-        <tag>網路爬蟲</tag>
       </tags>
   </entry>
   <entry>
@@ -127,6 +81,52 @@
       </tags>
   </entry>
   <entry>
+    <title>[python]利用flickrapi爬取Flickr的圖片</title>
+    <url>/2022/02/03/20220203-flickr-crawler/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-MMLCBKw/0/f2255d5d/X2/i-MMLCBKw-X2.png"><br>Flickr是世界數一數二大的圖片資料庫，雖然經過幾次轉手，經歷付費政策的風波，其仍具相當的價值<br>flickrapi可以幫助我們快速收集圖片資料，探索Flickr<br>這邊使用的python環境為3.7<br>使用<code>pip install flickrapi</code>是安裝flickrapi的好的開始</p>
+<span id="more"></span>
+<p>在使用flickrapi前記得去申請一組key跟secret方便後續使用</p>
+<p>以下就是code的部分</p>
+<figure class="highlight python"><figcaption><span>python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> flickrapi</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打自己的key跟secret，不要傻傻複製貼上，跑不動阿!!!</span></span><br><span class="line">flickr = flickrapi.FlickrAPI(api_key=KEY,</span><br><span class="line">                             secret=SECRET,</span><br><span class="line">                             cache=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 這邊打要搜尋的關鍵字</span></span><br><span class="line">searchword = <span class="string">&#x27;office ceiling&#x27;</span></span><br><span class="line"><span class="comment"># 這邊放搜尋張數上限</span></span><br><span class="line">limitnum = <span class="number">500</span></span><br><span class="line"></span><br><span class="line">os.makedirs(<span class="string">&#x27;./picture/%s&#x27;</span> % searchword, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">photos = flickr.walk(text=searchword,</span><br><span class="line">                     extras=<span class="string">&#x27;url_c&#x27;</span>,</span><br><span class="line">                     per_page=<span class="number">200</span>,</span><br><span class="line">                     sort=<span class="string">&#x27;relevance&#x27;</span>)</span><br><span class="line">urls = <span class="built_in">list</span>()</span><br><span class="line"><span class="keyword">for</span> i, photo <span class="keyword">in</span> <span class="built_in">enumerate</span>(photos):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = photo.get(<span class="string">&#x27;url_c&#x27;</span>)</span><br><span class="line">        urls.append(url)</span><br><span class="line">        urlretrieve(urls[i], <span class="string">&#x27;./picture/%s/%s-%s.jpg&#x27;</span> % (searchword, searchword, <span class="built_in">str</span>(i)))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(e)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> i&gt;limitnum-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>使用自行注意著作權問題喔~</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>python</tag>
+        <tag>coding</tag>
+        <tag>flickrapi</tag>
+        <tag>web crawler</tag>
+        <tag>網路爬蟲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[R]以R語言繪製氣象站的各月雨量資料(2022年1月版)</title>
+    <url>/2022/01/23/20220123-r-cwb-data-visualization/</url>
+    <content><![CDATA[<p>首先要到氣象局的<a href="https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp">觀測資料查詢</a>，這邊以屏東縣檳榔測站為例<br><img src="https://photos.smugmug.com/photos/i-WvxbsNb/0/772157cc/XL/i-WvxbsNb-XL.png"></p>
+<span id="more"></span>
+<p>選擇月報表後可以看到以下資料，點擊下載csv檔可以獲得該月資料<br><img src="https://photos.smugmug.com/photos/i-wZJPz2X/0/66c8270f/XL/i-wZJPz2X-XL.png"><br>這邊以收集2021年資料為例，將其整理至一資料夾，如下圖<br><img src="https://photos.smugmug.com/photos/i-LzkqMhQ/0/0f3f4c60/O/i-LzkqMhQ.png"></p>
+<p>之後以R繪製雨量資料</p>
+<figure class="highlight r"><figcaption><span>R</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">####load packages####</span></span><br><span class="line">library<span class="punctuation">(</span>dplyr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>magrittr<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggplot2<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>stringr<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####bind data####</span></span><br><span class="line">filenames<span class="operator">&lt;-</span>list.files<span class="punctuation">(</span><span class="string">&quot;./Binlang&quot;</span><span class="punctuation">,</span>pattern <span class="operator">=</span> <span class="string">&quot;.csv&quot;</span><span class="punctuation">)</span></span><br><span class="line">precpdf<span class="operator">&lt;-</span>read.csv<span class="punctuation">(</span>paste0<span class="punctuation">(</span><span class="string">&quot;./Binlang/&quot;</span><span class="punctuation">,</span>filenames<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">,</span>skip <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span>colClasses <span class="operator">=</span> <span class="string">&quot;character&quot;</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  mutate<span class="punctuation">(</span>month<span class="operator">=</span>str_sub<span class="punctuation">(</span>filenames<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">6</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="keyword">for</span> <span class="punctuation">(</span>i <span class="keyword">in</span> <span class="number">2</span><span class="operator">:</span><span class="built_in">length</span><span class="punctuation">(</span>filenames<span class="punctuation">)</span><span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">  dttemp<span class="operator">&lt;-</span>read.csv<span class="punctuation">(</span>paste0<span class="punctuation">(</span><span class="string">&quot;./Binlang/&quot;</span><span class="punctuation">,</span>filenames<span class="punctuation">[</span>i<span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">,</span>skip <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span>colClasses <span class="operator">=</span> <span class="string">&quot;character&quot;</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">    mutate<span class="punctuation">(</span>month<span class="operator">=</span>str_sub<span class="punctuation">(</span>filenames<span class="punctuation">[</span>i<span class="punctuation">]</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">6</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">  precpdf<span class="operator">&lt;-</span>bind_rows<span class="punctuation">(</span>precpdf<span class="punctuation">,</span>dttemp<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line">precpdf<span class="operator">$</span>Precp<span class="operator">&lt;-</span><span class="built_in">as.numeric</span><span class="punctuation">(</span>precpdf<span class="operator">$</span>Precp<span class="punctuation">)</span></span><br><span class="line">precpdf<span class="operator">&lt;-</span>precpdf <span class="operator">%&gt;%</span></span><br><span class="line">  group_by<span class="punctuation">(</span>month<span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  summarise<span class="punctuation">(</span>precp<span class="operator">=</span><span class="built_in">sum</span><span class="punctuation">(</span>Precp<span class="punctuation">,</span>na.rm <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  ungroup<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####plot####</span></span><br><span class="line">p<span class="operator">&lt;-</span>ggplot<span class="punctuation">(</span>data <span class="operator">=</span> precpdf<span class="punctuation">,</span>aes<span class="punctuation">(</span>x<span class="operator">=</span>month<span class="punctuation">,</span>y<span class="operator">=</span>precp<span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_bar<span class="punctuation">(</span>stat <span class="operator">=</span> <span class="string">&quot;identity&quot;</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  labs<span class="punctuation">(</span>title <span class="operator">=</span> <span class="string">&quot;Binlang&quot;</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_text<span class="punctuation">(</span>aes<span class="punctuation">(</span>y<span class="operator">=</span>precp<span class="punctuation">,</span>label<span class="operator">=</span>precp<span class="punctuation">)</span><span class="punctuation">,</span>vjust<span class="operator">=</span><span class="operator">-</span><span class="number">0.5</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme_classic<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>plot.title <span class="operator">=</span> element_text<span class="punctuation">(</span>hjust <span class="operator">=</span> <span class="number">0.5</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  scale_y_continuous<span class="punctuation">(</span>limits <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span><span class="number">850</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">p</span><br><span class="line">ggsave<span class="punctuation">(</span>filename <span class="operator">=</span> <span class="string">&quot;Binlang_2021_precp.png&quot;</span><span class="punctuation">,</span>width <span class="operator">=</span> <span class="number">15</span><span class="punctuation">,</span>height <span class="operator">=</span> <span class="number">10</span><span class="punctuation">,</span>units <span class="operator">=</span> <span class="string">&quot;cm&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://photos.smugmug.com/photos/i-6KH9vX8/0/fe20c42a/XL/i-6KH9vX8-XL.png"></p>
+]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>coding</tag>
+        <tag>R</tag>
+        <tag>cwb</tag>
+        <tag>data visualization</tag>
+        <tag>ggplot2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[R]去除字串的多餘空白-從gdata到stringr</title>
     <url>/2022/02/11/20220211-gdata-to-stringr/</url>
     <content><![CDATA[<p>以前處理資料時，因為都是一些人工輸入的資料，難免有瑕疵，<strong>多餘的空白</strong>是會造成資料處理上的麻煩之一</p>
@@ -138,8 +138,8 @@
         <category>R</category>
       </categories>
       <tags>
-        <tag>R</tag>
         <tag>coding</tag>
+        <tag>R</tag>
         <tag>stringr</tag>
         <tag>資料處理</tag>
         <tag>去除空白</tag>
@@ -173,8 +173,8 @@
       </categories>
       <tags>
         <tag>code</tag>
-        <tag>coding</tag>
         <tag>python</tag>
+        <tag>coding</tag>
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>resize</tag>
@@ -199,11 +199,26 @@
       </categories>
       <tags>
         <tag>code</tag>
-        <tag>coding</tag>
         <tag>python</tag>
+        <tag>coding</tag>
         <tag>opencv</tag>
         <tag>numpy</tag>
         <tag>raw</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[PhotoVogue]GS11</title>
+    <url>/2022/04/18/20220418-photovogue/</url>
+    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
+]]></content>
+      <categories>
+        <category>photography</category>
+      </categories>
+      <tags>
+        <tag>photography</tag>
+        <tag>photovogue</tag>
+        <tag>vogue</tag>
+        <tag>Minolta V2</tag>
       </tags>
   </entry>
   <entry>
@@ -223,21 +238,6 @@
         <tag>photography</tag>
         <tag>rangefinder</tag>
         <tag>黃斑對焦</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[PhotoVogue]GS11</title>
-    <url>/2022/04/18/20220418-photovogue/</url>
-    <content><![CDATA[<p>還是搞不懂大改版後的分類…<br>總算上去一張就是了<br><img src="https://photos.smugmug.com/PhotoVogue/PhotoVogueGS/i-XZn6dPB/0/a41baa81/O/GS11.jpg"></p>
-]]></content>
-      <categories>
-        <category>photography</category>
-      </categories>
-      <tags>
-        <tag>photography</tag>
-        <tag>photovogue</tag>
-        <tag>vogue</tag>
-        <tag>Minolta V2</tag>
       </tags>
   </entry>
   <entry>
@@ -518,8 +518,8 @@
       </categories>
       <tags>
         <tag>code</tag>
-        <tag>coding</tag>
         <tag>python</tag>
+        <tag>coding</tag>
         <tag>plant ecology</tag>
         <tag>tree pattern</tag>
         <tag>spatial point pattern</tag>
@@ -643,8 +643,8 @@
       </categories>
       <tags>
         <tag>code</tag>
-        <tag>coding</tag>
         <tag>python</tag>
+        <tag>coding</tag>
         <tag>opencv</tag>
         <tag>herbarium</tag>
         <tag>TAI</tag>
@@ -696,6 +696,81 @@
         <tag>backup</tag>
         <tag>npm</tag>
         <tag>terminal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[python]用科學方法檢測是否修圖</title>
+    <url>/2023/05/24/20230524-image-compare/</url>
+    <content><![CDATA[<h2 id="開發環境"><a href="#開發環境" class="headerlink" title="開發環境"></a>開發環境</h2><p><strong>Python 3.8</strong></p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+<li>比對每pixel的RGB值，如果一樣，返回白色，如有不同，返回黑色。</li>
+</ul>
+<p><img src="https://photos.smugmug.com/photos/i-NhJdX2r/0/ea378a6b/X5/i-NhJdX2r-X5.jpg"></p>
+<span id="more"></span>
+<h3 id="測試條件"><a href="#測試條件" class="headerlink" title="測試條件"></a>測試條件</h3><ul>
+<li>比對之兩圖片長寬需要相同，皆為jpg格式。</li>
+</ul>
+<h3 id="測試圖片"><a href="#測試圖片" class="headerlink" title="測試圖片"></a>測試圖片</h3><ol>
+<li>原始jpg</li>
+<li>將原始jpg以photoshop打開後以品質8的jpg重新保存</li>
+<li>將原始jpg以photoshop打開後對臉部液化以品質12(最高)的jpg重新保存</li>
+</ol>
+<h3 id="檢測步驟"><a href="#檢測步驟" class="headerlink" title="檢測步驟:"></a>檢測步驟:</h3><ol>
+<li>檢測原始圖片是否相等，把相同檔案比對，得到結果為一片白，表示沒有變更。</li>
+<li>檢測圖片1與圖片2，雖只有重新存檔，但可看到經比對後就是有差。</li>
+<li>檢測圖片1與圖片3，液化後可以看到臉差很多，其他地方一樣有差。</li>
+</ol>
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>所以，就算你只是重新存jpg，一樣不是原來那張圖。<br><a href="https://github.com/leeyaowen/Image_Compare/releases">Github執行檔下載</a></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>python</tag>
+        <tag>coding</tag>
+        <tag>PIL</tag>
+        <tag>image compare</tag>
+        <tag>修圖</tag>
+        <tag>修圖比較</tag>
+        <tag>檢測</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Interpolation of .nc file</title>
+    <url>/2024/12/11/20241211-Interpolation-of-nc-file/</url>
+    <content><![CDATA[<h2 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h2><ul>
+<li>將.nc檔案內插為2km解析度</li>
+<li>在Linux系統上執行(可能為無系統管理員權限的狀況)</li>
+<li>使用Python</li>
+</ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="自動生成-grid-2km-txt"><a href="#自動生成-grid-2km-txt" class="headerlink" title="自動生成 grid_2km.txt"></a>自動生成 grid_2km.txt</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> xarray <span class="keyword">as</span> xr</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generate_grid_file_from_netcdf</span>(<span class="params">input_file, output_grid_file, resolution</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    從 NetCDF 檔案自動生成目標網格文件。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :param input_file: NetCDF 檔案路徑</span></span><br><span class="line"><span class="string">    :param output_grid_file: 目標網格文件名</span></span><br><span class="line"><span class="string">    :param resolution: 目標網格解析度（度）</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 載入 NetCDF 檔案</span></span><br><span class="line">    dataset = xr.open_dataset(input_file) <span class="comment"># .nc檔案</span></span><br><span class="line">    lat = dataset[<span class="string">&quot;XLAT&quot;</span>] <span class="comment">#緯度</span></span><br><span class="line">    lon = dataset[<span class="string">&quot;XLONG&quot;</span>] <span class="comment">#經度</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 獲取經緯度範圍</span></span><br><span class="line">    lat_min, lat_max = lat.<span class="built_in">min</span>().item(), lat.<span class="built_in">max</span>().item()</span><br><span class="line">    lon_min, lon_max = lon.<span class="built_in">min</span>().item(), lon.<span class="built_in">max</span>().item()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Latitude range: <span class="subst">&#123;lat_min&#125;</span> to <span class="subst">&#123;lat_max&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Longitude range: <span class="subst">&#123;lon_min&#125;</span> to <span class="subst">&#123;lon_max&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 計算網格點數</span></span><br><span class="line">    x_size = <span class="built_in">int</span>((lon_max - lon_min) / resolution) + <span class="number">1</span></span><br><span class="line">    y_size = <span class="built_in">int</span>((lat_max - lat_min) / resolution) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 生成網格文件</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(output_grid_file, <span class="string">&quot;w&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(<span class="string">&quot;gridtype = latlon\n&quot;</span>)</span><br><span class="line">        f.write(<span class="string">f&quot;xsize    = <span class="subst">&#123;x_size&#125;</span>\n&quot;</span>)</span><br><span class="line">        f.write(<span class="string">f&quot;ysize    = <span class="subst">&#123;y_size&#125;</span>\n&quot;</span>)</span><br><span class="line">        f.write(<span class="string">f&quot;xfirst   = <span class="subst">&#123;lon_min&#125;</span>\n&quot;</span>)</span><br><span class="line">        f.write(<span class="string">f&quot;xinc     = <span class="subst">&#123;resolution&#125;</span>\n&quot;</span>)</span><br><span class="line">        f.write(<span class="string">f&quot;yfirst   = <span class="subst">&#123;lat_min&#125;</span>\n&quot;</span>)</span><br><span class="line">        f.write(<span class="string">f&quot;yinc     = <span class="subst">&#123;resolution&#125;</span>\n&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Grid file &#x27;<span class="subst">&#123;output_grid_file&#125;</span>&#x27; has been created.&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">input_nc_file = <span class="string">&quot;input.nc&quot;</span>  <span class="comment"># 原始 NetCDF 檔案</span></span><br><span class="line">grid_file = <span class="string">&quot;grid_2km.txt&quot;</span>  <span class="comment"># 目標網格文件</span></span><br><span class="line">resolution = <span class="number">0.018</span>  <span class="comment"># 2km ≈ 0.018度</span></span><br><span class="line"></span><br><span class="line">generate_grid_file_from_netcdf(input_nc_file, grid_file, resolution)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h3 id="調整維度順序"><a href="#調整維度順序" class="headerlink" title="調整維度順序"></a>調整維度順序</h3><ul>
+<li>將 <strong>Time</strong> 移到最前<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> xarray <span class="keyword">as</span> xr</span><br><span class="line"></span><br><span class="line">ds = xr.open_dataset(<span class="string">&quot;input.nc&quot;</span>)</span><br><span class="line"></span><br><span class="line">output_file = <span class="string">&quot;fixed.nc&quot;</span></span><br><span class="line">reordered_vars = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> var_name <span class="keyword">in</span> ds.data_vars:</span><br><span class="line">    var = ds[var_name]</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;Time&#x27;</span> <span class="keyword">in</span> var.dims:</span><br><span class="line">        <span class="comment"># 將 &#x27;Time&#x27; 移到最前</span></span><br><span class="line">        reordered_vars[var_name] = var.transpose(<span class="string">&quot;Time&quot;</span>, *[dim <span class="keyword">for</span> dim <span class="keyword">in</span> var.dims <span class="keyword">if</span> dim != <span class="string">&quot;Time&quot;</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 若無 &#x27;Time&#x27; 維度，保持不變</span></span><br><span class="line">        reordered_vars[var_name] = var</span><br><span class="line"></span><br><span class="line"><span class="comment"># 建立新的資料集</span></span><br><span class="line">reordered_ds = xr.Dataset(reordered_vars, coords=ds.coords)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 存為新的 NetCDF 檔案</span></span><br><span class="line">reordered_ds.to_netcdf(output_file)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Python-with-CDO-Climate-Data-Operators"><a href="#Python-with-CDO-Climate-Data-Operators" class="headerlink" title="Python with CDO(Climate Data Operators)"></a>Python with CDO(Climate Data Operators)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> cdo <span class="keyword">import</span> Cdo</span><br><span class="line"></span><br><span class="line">cdo = Cdo()</span><br><span class="line"></span><br><span class="line">input_file = <span class="string">&quot;fixed.nc&quot;</span></span><br><span class="line">output_file = <span class="string">&quot;output_2km.nc&quot;</span></span><br><span class="line"></span><br><span class="line">grid_file = <span class="string">&quot;grid_2km.txt&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;start cdo - <span class="subst">&#123;input_file&#125;</span>&#x27;</span>)</span><br><span class="line">cdo.remapbil(grid_file, <span class="built_in">input</span>=input_file, output=output_file)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Tips-on-Linux-server"><a href="#Tips-on-Linux-server" class="headerlink" title="Tips on Linux server"></a>Tips on Linux server</h3><ul>
+<li>創建虛擬環境</li>
+<li>安裝CDO<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda install cdo</span><br><span class="line">conda install python-cdo</span><br><span class="line">conda install netcdf4 #相依關係，調整維度用</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="後續"><a href="#後續" class="headerlink" title="後續"></a>後續</h3><ul>
+<li>建立批次處理流程</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>python</tag>
+        <tag>coding</tag>
+        <tag>Linux</tag>
+        <tag>nc</tag>
+        <tag>NetCDF</tag>
+        <tag>Interpolation</tag>
+        <tag>內插</tag>
       </tags>
   </entry>
   <entry>
@@ -763,44 +838,6 @@
         <tag>勞工申訴</tag>
         <tag>勞動檢查</tag>
         <tag>離職</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[python]用科學方法檢測是否修圖</title>
-    <url>/2023/05/24/20230524-image-compare/</url>
-    <content><![CDATA[<h2 id="開發環境"><a href="#開發環境" class="headerlink" title="開發環境"></a>開發環境</h2><p><strong>Python 3.8</strong></p>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
-<li>比對每pixel的RGB值，如果一樣，返回白色，如有不同，返回黑色。</li>
-</ul>
-<p><img src="https://photos.smugmug.com/photos/i-NhJdX2r/0/ea378a6b/X5/i-NhJdX2r-X5.jpg"></p>
-<span id="more"></span>
-<h3 id="測試條件"><a href="#測試條件" class="headerlink" title="測試條件"></a>測試條件</h3><ul>
-<li>比對之兩圖片長寬需要相同，皆為jpg格式。</li>
-</ul>
-<h3 id="測試圖片"><a href="#測試圖片" class="headerlink" title="測試圖片"></a>測試圖片</h3><ol>
-<li>原始jpg</li>
-<li>將原始jpg以photoshop打開後以品質8的jpg重新保存</li>
-<li>將原始jpg以photoshop打開後對臉部液化以品質12(最高)的jpg重新保存</li>
-</ol>
-<h3 id="檢測步驟"><a href="#檢測步驟" class="headerlink" title="檢測步驟:"></a>檢測步驟:</h3><ol>
-<li>檢測原始圖片是否相等，把相同檔案比對，得到結果為一片白，表示沒有變更。</li>
-<li>檢測圖片1與圖片2，雖只有重新存檔，但可看到經比對後就是有差。</li>
-<li>檢測圖片1與圖片3，液化後可以看到臉差很多，其他地方一樣有差。</li>
-</ol>
-<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>所以，就算你只是重新存jpg，一樣不是原來那張圖。<br><a href="https://github.com/leeyaowen/Image_Compare/releases">Github執行檔下載</a></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>coding</tag>
-        <tag>python</tag>
-        <tag>PIL</tag>
-        <tag>image compare</tag>
-        <tag>修圖</tag>
-        <tag>修圖比較</tag>
-        <tag>檢測</tag>
       </tags>
   </entry>
 </search>
